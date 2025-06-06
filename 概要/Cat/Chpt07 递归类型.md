@@ -67,8 +67,8 @@ $$
   \catbfunc[#1]{\otimes}}
 \newcommand{\list}[1]{                         % 范畴 Hask 中的函子 List
 	\texttt{[\(#1\)]}}
-\def\nil{{\tt []}}                             % 范畴 Hask 中的函子 List 的值构造器 nil
-\def\concat{\mbin{:}}                          % 范畴 Hask 中的函子 List 的值构造器 concat
+\def\nil{\texttt{[]}}                          % 范畴 Hask 中的函子 List 的值构造器 nil
+\def\concat{\mbin{\tt{:}}}                  % 范畴 Hask 中的函子 List 的值构造器 concat
 \def\yoneda{{\raise{-1px}{               % 米田嵌入
   \hspace{-1px}\smash{よ}\vph{(fgh)}\hspace{-1px}}}}
 \def\yoda{                                     % 尤达嵌入
@@ -92,7 +92,7 @@ $$
 \def\getcolimit#1{#1\textrm{ colim}}           % 获取余极限
 $$
 
-### 自然数与列表的泛性质
+### 泛性质
 
 默认对象 $\obj[N]$ 在范畴 $\cat$ 中有下述性质 :
 
@@ -138,8 +138,6 @@ $$
   \ar@[magenta][l]^[magenta]{s}
   \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !R*!L{\small\color{ForestGreen}\cat}\restore }\end{xy}}$
 
-
-
 默认函子 $\list{\_}:\cat\cathom[\catCat]\cat$ 在范畴 $\cat$ 中有下述性质 : 
 
 - $(\objt\cathom \obj[x])\cattimes[\catCat]((\obj[x]\cattimes\obj[b])\cathom\obj[x])\cong (\list{\obj[b]}\cathom\obj[x])$ , $\obj[x]$ 为任意 $\cat$ 中对象
@@ -175,7 +173,7 @@ $$
   \ar@[red]@{-->}[d]_[red]{h\pila}
   &
   {\list{\obj[b]}\cattimes\obj[b]\pila}
-  \ar[l]_{\kappa_s={\tt (\concat)}\pila}
+  \ar[l]_{\kappa_s=\texttt{(\(\concat\))}\pila}
   \ar@[red]@{-->}[d]^[red]{h \catotimes\getid {\obj[b]}\pila}
   \\
   & 
@@ -187,7 +185,7 @@ $$
   \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !R*!L{\small\color{ForestGreen}\cat}\restore   
   }\end{xy}}$ 
 
-### 列表的函子性
+### 函子性
 
 如何证明 $\list{\_}$ 构成函子呢 ? 请看
 
