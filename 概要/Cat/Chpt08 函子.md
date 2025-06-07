@@ -134,6 +134,8 @@ $$
     {\obj\pila}
     \ar[u]_{\getid{\objt}\pila} 
     \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat[1](\obj\catdiag)}\restore
+    \save[ul].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} 
+    !U*!D!L(8){\small\color{ForestGreen}\cat}\restore 
     }\end{xy}}$ $\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
     {\obj[x_2]\bbox[LightGreen]{\getid{\cat}}\pila} 
     \ar[r]^{\phi_1\pila} &
@@ -141,12 +143,13 @@ $$
     {\obj[x_1]\bbox[LightGreen]{\getid{\cat}}\pila} 
     \ar[r]_{\phi_2\pila} 
     \ar[u]^{f_1\bbox[LightGreen]{\getid{\cat}}\pila} 
-    \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat\getid{\cat}}\restore 
+    \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat\bbox[LightGreen]{\getid{\cat}}}\restore 
     &
     {\objt\bbox[LightGreen]{(\obj\catdiag)}\pila}
     \ar[u]_{\getid{\objt}\bbox[LightGreen]{(\obj\catdiag)}\pila}  
-    \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat[1](\obj\catdiag)}\restore
-    }\end{xy}}$ $\qquad \vcenter{\begin{xy}\xymatrix@!C=2cm{ 
+    \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat[1](\bbox[LightGreen]{\obj\catdiag\pila})}\restore
+    \save[ul].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} !U*!D!L(8){\small\color{ForestGreen}\cat}\restore  
+     } \end{xy}}$ $\qquad \vcenter{\begin{xy}\xymatrix@!C=2cm{ 
     &  
     {\cat\pila}
     &
@@ -179,7 +182,8 @@ $$
     \ar[r]_{\phi_2\pila} 
     &
     {\obj[x_2]\pila} 
-    \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat}\restore 
+    \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat}\restore\save[ul].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} 
+    !U*!D!L(8){\small\color{ForestGreen}\cat}\restore  
     }\end{xy}}$ $\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
     {\objt\bbox[LightGreen]{(\obj\catdiag)}\pila} 
     \ar[d]_{\getid{\objt}\bbox[LightGreen]{(\obj\catdiag)}\pila}  
@@ -190,10 +194,11 @@ $$
     \\
     {\objt\bbox[LightGreen]{(\obj\catdiag)}\pila}
     \ar[r]_{\phi_2\pila}  
-    \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat[1](\obj\catdiag)}\restore
+    \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat[1](\bbox[LightGreen]{\obj\catdiag\pila})}\restore
     &
     {\obj[x_2]\bbox[LightGreen]{\getid{\cat}}\pila} 
-    \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat\getid{\cat}}\restore 
+    \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat\bbox[LightGreen]{\getid{\cat}}}\restore
+    \save[ul].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} !U*!D!L(4){\small\color{ForestGreen}\cat}\restore 
     }\end{xy}}$ $\qquad \vcenter{\begin{xy}\xymatrix@!C=2cm{ 
     &  
     {\cat\pila}
