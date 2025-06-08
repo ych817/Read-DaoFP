@@ -1,4 +1,4 @@
-## 章节 08 函子
+## 章节 08 - 09 函子与自然变换
 
 $$
 {\rm \LaTeX}\text{ Definitions are here.}
@@ -94,14 +94,18 @@ $$
 
 ### 一些特殊的范畴
 
-先规定几种特殊的范畴 : 
+现在规定几种特殊的范畴 。
 
 - **离散范畴** : 只有对象不含箭头 ( 恒等箭头除外 ) 的范畴 。
+- $\catSet$ : **所有集合构成的范畴** , 为局部小范畴 , 满足
 
-- $\catSet$ : **集合范畴** , 为局部小范畴 , 满足
+  - $\catSet$ 中对象为任意集合 ;
+  - $\catSet$ 中箭头为集合间映射 。
+- $\catCat$ : **所有范畴构成的范畴** , 满足
+  - $\catCat$ 中任何对象都构成一个范畴 ;
+  - $\catCat$ 中任何箭头都构成一个函子 。
 
-  - $\catSet$ 中对象可以是任意集合
-  - $\catSet$ 中箭头便是集合间映射 。
+若 $\cat$ , $\cat[D]$ 为 $\catCat$ 中对象 , 则 :
 
 - $\getop\cat$ : **反范畴** , 满足
 
@@ -116,6 +120,13 @@ $$
     $\obj$ , $\obj[d]$ 为任意 $\cat$ , $\cat[D]$ 中的对象 ;
   - $\cat\cattimes[\catCat]\cat[D]$ 中箭头皆形如 $\phi\cons \psi$ , 
     $\phi$ , $\psi$ 为任意 $\cat$ , $\cat[D]$ 中的箭头 。
+
+- $\cat\cathom[\catCat]\cat[D]$ : **所有 $\cat$ 到 $\cat[D]$ 的函子的范畴** , 满足
+
+  - $\cat\cathom[\catCat]\cat[D]$ 中任何对象
+    都是 $\cat$ 到 $\cat[D]$ 的函子 ;
+  - $\cat\cathom[\catCat]\cat[D]$ 中任何箭头
+    都是函子间自然变换 。
 
 - $\cat/\obj$ : **俯范畴** , 这里 $\obj$ 为任意 $\cat$ 中对象 ; 满足
 
@@ -162,7 +173,7 @@ $$
     {\cat[1]\pila}
     \ar[ul]^{\obj\catdiag\pila}
     }\end{xy}}$ 
-  
+
 - $\obj/\cat$ : **仰范畴** , 这里 $\obj$ 为任意 $\cat$ 中对象 ; 满足
 
   - $\obj/\cat$ 中对象皆形如 $\cancel{\smash[b]{\objt\cons \obj[x]\cons{}}}\! \phi$ , 其中 $\obj[x]$ 
@@ -211,13 +222,11 @@ $$
     & &  
     {\cat\pila}
     \ar[ul]^{\getid{\cat}\pila}
-    }\end{xy}}$
-
-<div style="page-break-after: always"></div>
+    }\end{xy}}$ 
 
 ### 函子
 
-考虑范畴 $\cat$ , $\cat[D]$ , 现提供函子定义 : 
+接下来我们来提供函子的正式定义 : 
 
 - $P:\cat\cathom[\catCat]\cat[D]$ 为范畴当且仅当
   - 对任意 $\cat$ 中对象 $\obj$ , $\obj P$ 为 
@@ -225,13 +234,22 @@ $$
   - 对任意 $\cat$ 中箭头 $\phi_1:\obj[c_1]\cathom \obj[c_2]$ 和 $\phi_2:\obj[c_2]\cathom\obj[c_3]$ , 
     始终都有等式 $\,(\phi_1\catcirc \phi_2) P=\phi_1 P\catcirc[{\cat[D]}]\phi_2P$ 成立 。
 
-### 函子的复合
+### 函子的复合运算
 
 假如刚才的 $P$ 确实构成一个函子
 且 $Q: \cat[D]\cathom[\catCat]\cat[E]$ 也构成函子 , 那么
 
 - $P\catcirc[\catCat] Q: \cat\cathom[\catCat] \cat[E]$ 
   也构成一个函子 。
+
+### 恒等函子
+
+对于函子我们也有恒等映射 , 即 :
+
+- $\begin{aligned}[t]
+  \getid{\cat}\catcirc[\catCat] P & = P \\
+                                  & = P\catcirc[\catCat]\getid{\cat[D]}
+  \end{aligned}$ 
 
 ### 忠实和完全函子
 
@@ -250,24 +268,83 @@ $$
 > 刚才提到的 “ 单 / 满 / 双射 ”
 > 针对的都是范畴的箭头部分 。
 
-----
+<div style="page-break-after: always"></div>
+
+### 自然变换
 
 若还知道 $P_1,P_2:\cat\cathom[\catCat]\cat[D]$ 为函子 , 则
 
-$\qquad\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
-{\obj[x_1]\bbox[LightGreen]{P_1}\pila} 
-\ar[r]^{\obj[x_1]^{\eta_1}\pila} 
-\ar[d]_{f_1\bbox[LightGreen]{P_1}\pila} &
-{\obj[x_1]\bbox[LightGreen]{P_2}\pila} 
-\ar[d]^{f_2\bbox[LightGreen]{P_2}\pila}  \\
-{\obj[x_2]\bbox[LightGreen]{P_1}\pila} 
-\ar[r]_{\obj[x_2]^{\eta_1}\pila} 
-\save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat P_1}\restore
-&
-{\obj[x_2]\bbox[LightGreen]{P_2}\pila}  
-\save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat P_2}\restore
-\save[ul].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} !U*!D!L(6){\small\color{ForestGreen}\cat[D]}\restore 
-}\end{xy}}$ 
+- $\eta_1 : P_1\cathom[{\cat\cathom[\catCat]\cat[D]}]P_2$ 为自然变换当且仅当对任意 
+  $\cat$ 中对象 $\obj[x_1]$ , $\obj[x_2]$ 始终都会有下述交换图成立 : 
+
+  $\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
+  {\obj[x_1]\bbox[LightGreen]{P_1}\pila} 
+  \ar[r]^{\obj[x_1]^{\eta_1}\pila} 
+  \ar[d]_{f_1\bbox[LightGreen]{P_1}\pila} &
+  {\obj[x_1]\bbox[LightGreen]{P_2}\pila} 
+  \ar[d]^{f_1\bbox[LightGreen]{P_2}\pila}  \\
+  {\obj[x_2]\bbox[LightGreen]{P_1}\pila} 
+  \ar[r]_{\obj[x_2]^{\eta_1}\pila} 
+  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat P_1}\restore
+  &
+  {\obj[x_2]\bbox[LightGreen]{P_2}\pila}  
+  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat P_2}\restore
+  \save[ul].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} !U*!D!L(6){\small\color{ForestGreen}\cat[D]}\restore 
+  }\end{xy}}$ $\quad \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{ 
+  \cat\pila
+  \ar@`{[]+/l+3pc/,[d]+/l+3pc/}[d]^(.5){}="mid1"_{P_1\pila}
+  \ar@`{[]+/r+3pc/,[d]+/r+3pc/}[d]_(.5){}="mid2"^{P_2\pila}
+  \\
+  \cat[D]\pila
+  \ar@2{>} "mid1";"mid2"^{\eta_1\pila}
+  }\end{xy}}$ 
+
+### 自然变换的纵复合
+
+倘若已知 $\eta_1: P_1\cathom[{\cat\cathom[\catCat]\cat[D]}]P_2$ 
+另外加上 $\eta_2:P_2\cathom[{\cat\cathom[\catCat]\cat[D]}]P_3$ 
+为自然变换 , 那么便会有
+
+- $\eta_1\catcirc[{\cat\cathom[\catCat]\cat[D]}]\eta_2: P_1\cathom[{\cat\cathom[\catCat]\cat[D]}]P_2$ 亦为自然变换 , 
+  称作 $\eta_1$ 和 $\eta_2$ 的**纵复合** 。
+  
+  $\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
+  {\obj[x_1]\bbox[LightGreen]{P_1}\pila} 
+  \ar[r]^{\obj[x_1]^{\eta_1}\pila} 
+  \ar[d]_{f_1\bbox[LightGreen]{P_1}\pila} &
+  {\obj[x_1]\bbox[LightGreen]{P_2}\pila}
+  \ar[r]^{\obj[x_1]^{\eta_2}\pila} 
+  \ar[d]^{f_1\bbox[LightGreen]{P_2}\pila} & 
+  {\obj[x_1]\bbox[LightGreen]{P_3}\pila} 
+  \ar[d]^{f_1\bbox[LightGreen]{P_3}\pila} & 
+  \\
+  {\obj[x_2]\bbox[LightGreen]{P_1}\pila} 
+  \ar[r]_{\obj[x_2]^{\eta_1}\pila} 
+  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat P_1}\restore
+  &
+  {\obj[x_2]\bbox[LightGreen]{P_2}\pila}  
+  \ar[r]_{\obj[x_2]^{\eta_2}\pila} 
+  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat P_2}\restore
+  & 
+  {\obj[x_2]\bbox[LightGreen]{P_3}\pila}
+  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat P_3}\restore
+  \save[ull].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} !U*!D!L(12){\small\color{ForestGreen}\cat[D]}\restore 
+  }\end{xy}}$ $\quad \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{ 
+  \cat\pila
+  \ar@`{[]+/l+3pc/,[d]+/l+3pc/}[d]^(.5){}="mid1"_{P_1\pila}
+  \ar@`{[]+/r+0pc/,[d]+/r+0pc/}[d]_(.5){}="mid2a"^(.5){}="mid2b"|{P_2\pila}
+  \ar@`{[]+/r+3pc/,[d]+/r+3pc/}[d]_(.5){}="mid3"^{P_3\pila}
+  \\
+  \cat[D]\pila
+  \ar@2{>} "mid1";"mid2a"^{\eta_1\pila}
+  \ar@2{>} "mid2b";"mid3"^{\eta_2\pila}
+  }\end{xy}}$ 
+
+### 自然变换的横复合
+
+==TODO==
+
+
 
 - 函子 $P_1:\cat\cathom[\catCat] \cat[D]$ ,
   函子 $P_2:\cat\cathom[\catCat]\cat[D]$ , 
