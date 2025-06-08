@@ -92,8 +92,6 @@ $$
 \def\getcolimit#1{#1\textrm{ colim}}           % 获取余极限
 $$
 
-### 一些特殊的范畴
-
 先规定几种特殊的范畴 : 
 
 - **离散范畴** : 只有对象不含箭头 ( 恒等箭头除外 ) 的范畴 。
@@ -117,41 +115,41 @@ $$
   - $\cat\cattimes[\catCat]\cat[D]$ 中箭头皆形如 $\phi\cons \psi$ , 
     $\phi$ , $\psi$ 为任意 $\cat$ , $\cat[D]$ 中的箭头 。
 
-- $\cat/\obj$ : **俯范畴** , 这里 $\obj$ 为任意 $\cat$ 中对象 ; 满足
+- $\cat/\obj[b]$ : **俯范畴** , 满足
 
-  - $\cat/\obj$ 中对象皆形如 $\cancel{\smash[b]{\obj[x]\cons \objt\cons}} \phi$ , 其中 $\obj[x]$ 
-    和 $\phi:\obj[x]\cathom \obj$ 分别为 $\cat$ 中任意的对象和箭头 ;
+  - $\cat/\obj[b]$ 中对象皆形如 $\cancel{\smash[b]{\obj[x]\cons \objt\cons}} \phi$ , 其中 
+    $\obj[x]$ 和 $\phi:\obj[x]\cathom \obj[b]$ 分别为 $\cat$ 中任意的对象和箭头 ;
 
-  - $\obj/\cat$ 中箭头皆形如 $f_1\!\cancel{\cons \getid{\obj}}\!$ 且满足下述交换图 , 其中
-    $\obj[x_1]$ , $\obj[x_2]$ 为 $\cat$ 中任意对象且 $f_1$ , $\phi_1$ , $\phi_2$ 为 $\cat$ 中任意箭头 ; 
+  - $\cat/\obj[b]$ 中箭头皆形如 $f_1\!\cancel{\cons \getid{\obj}}\!$ 且满足下述交换图 , 其中
+    $\obj[x_1]$ , $\obj[x_2]$ 为 $\cat$ 中对象且 $\phi_1$ , $\phi_2$ , $f_1$ , $\getid{\objt}$ 皆为 $\cat$ 中箭头 ; 
 
     $\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
     {\obj[x_2]\pila} 
     \ar[r]^{\phi_1\pila} &
-    {\obj\pila}  \\
+    {\obj[b]\pila}  \\
     {\obj[x_1]\pila} 
     \ar[r]_{\phi_2\pila}
-    \ar[u]^{\mathllap{f_1\pila}} 
+    \ar[u]^{f_1\pila} 
     \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat}\restore &
-    {\obj\pila}
+    {\obj[b]\pila}
     \ar[u]_{\getid{\objt}\pila} 
-    \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat[1](\obj\catdiag)}\restore
+    \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat[1](\obj[b]\catdiag)}\restore
     \save[ul].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} 
     !U*!D!L(8){\small\color{ForestGreen}\cat}\restore 
-    }\end{xy}}$ $\quad\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
+    }\end{xy}}$ $\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
     {\obj[x_2]\bbox[LightGreen]{\getid{\cat}}\pila} 
     \ar[r]^{\phi_1\pila} &
-    {\objt\bbox[LightGreen]{(\obj\catdiag)}\pila}  \\
+    {\objt\bbox[LightGreen]{(\obj[b]\catdiag)}\pila}  \\
     {\obj[x_1]\bbox[LightGreen]{\getid{\cat}}\pila} 
     \ar[r]_{\phi_2\pila} 
-    \ar[u]^{\mathllap{f_1\bbox[LightGreen]{\getid{\cat}}\pila}} 
+    \ar[u]^{f_1\bbox[LightGreen]{\getid{\cat}}\pila} 
     \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat\bbox[LightGreen]{\getid{\cat}}}\restore 
     &
-    {\objt\bbox[LightGreen]{(\obj\catdiag)}\pila}
-    \ar[u]_{\mathrlap{\getid{\objt}\bbox[LightGreen]{(\obj\catdiag)}\pila}}  
-    \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat[1](\bbox[LightGreen]{\obj\catdiag\pila})}\restore
+    {\objt\bbox[LightGreen]{(\obj[b]\catdiag)}\pila}
+    \ar[u]_{\getid{\objt}\bbox[LightGreen]{(\obj[b]\catdiag)}\pila}  
+    \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat[1](\bbox[LightGreen]{\obj[b]\catdiag\pila})}\restore
     \save[ul].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} !U*!D!L(8){\small\color{ForestGreen}\cat}\restore  
-     } \end{xy}}$ $\quad \vcenter{\begin{xy}\xymatrix@!C=2cm{ 
+     } \end{xy}}$ $\qquad \vcenter{\begin{xy}\xymatrix@!C=2cm{ 
     &  
     {\cat\pila}
     &
@@ -160,54 +158,54 @@ $$
     \ar[ur]_{\getid{\cat}\pila}
     & &  
     {\cat[1]\pila}
-    \ar[ul]^{\obj\catdiag\pila}
+    \ar[ul]^{\obj[b]\catdiag\pila}
     }\end{xy}}$ 
   
-- $\obj/\cat$ : **仰范畴** , 这里 $\obj$ 为任意 $\cat$ 中对象 ; 满足
+- $\obj[a]/\cat$ : **仰范畴** , 满足
 
-  - $\obj/\cat$ 中对象皆形如 $\cancel{\smash[b]{\objt\cons \obj[x]\cons{}}}\! \phi$ , 其中 $\obj[x]$ 
-    和 $\phi:\obj\cathom \obj[x]$ 分别为 $\cat$ 中对象和箭头 ;
+  - $\obj[a]/\cat$ 中对象皆形如 $\cancel{\smash[b]{\objt\cons \obj[x]\cons{}}}\! \phi$ , 其中 
+    $\obj[x]$ 和 $\phi:\obj\cathom \obj[x]$ 分别为 $\cat$ 中任意的对象和箭头 ;
 
-  - $\cat/\obj$ 中箭头皆形如 $\!\cancel{\getid {\obj}\!\cons} g_1$ 且满足下述交换图 , 其中
-    $\obj[x_1]$ , $\obj[x_2]$ 为 $\cat$ 中任意对象且 $g_1$ , $\phi_1$ , $\phi_2$ 为 $\cat$ 中任意箭头 ; 
+  - $\obj[a]/\cat$ 中箭头皆形如 $\!\cancel{\getid {\obj}}\!\cons g_1$ 且满足下述交换图 , 其中
+    $\obj[x_1]$ , $\obj[x_2]$ 为 $\cat$ 中对象且 $\phi_1$ , $\phi_2$ , $\getid {\objt}$ , $g_1$ 皆为 $\cat$ 中箭头 ; 
 
     $\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
-    {\obj\pila}
+    {\obj[a]\pila}
     \ar[r]^{\phi_1\pila}  
-    \ar[d]_{\mathclap{\getid{\objt}\pila}}
+    \ar[d]_{\getid{\objt}\pila}
     &
     {\obj[x_1]\pila} 
     \ar[d]^{g_1\pila} 
     \\
-    {\obj\pila}
-    \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat[1](\obj\catdiag)}\restore
+    {\obj[a]\pila}
+    \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat[1](\obj[a]\catdiag)}\restore
     \ar[r]_{\phi_2\pila} 
     &
     {\obj[x_2]\pila} 
     \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat}\restore\save[ul].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} 
     !U*!D!L(8){\small\color{ForestGreen}\cat}\restore  
-    }\end{xy}}$ $\quad\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
-    {\objt\bbox[LightGreen]{(\obj\catdiag)}\pila} 
-    \ar[d]_{\mathllap{\getid{\objt}\bbox[LightGreen]{(\obj\catdiag)}\pila}}  
+    }\end{xy}}$ $\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
+    {\objt\bbox[LightGreen]{(\obj[a]\catdiag)}\pila} 
+    \ar[d]_{\getid{\objt}\bbox[LightGreen]{(\obj[a]\catdiag)}\pila}  
     \ar[r]^{\phi_1\pila}
     &
     {\obj[x_1]\bbox[LightGreen]{\getid{\cat}}\pila} 
-    \ar[d]^{\mathrlap{g_1\bbox[LightGreen]{\getid{\cat}}\pila}} 
+    \ar[d]^{g_1\bbox[LightGreen]{\getid{\cat}}\pila} 
     \\
-    {\objt\bbox[LightGreen]{(\obj\catdiag)}\pila}
+    {\objt\bbox[LightGreen]{(\obj[a]\catdiag)}\pila}
     \ar[r]_{\phi_2\pila}  
-    \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat[1](\bbox[LightGreen]{\obj\catdiag\pila})}\restore
+    \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat[1](\bbox[LightGreen]{\obj[a]\catdiag\pila})}\restore
     &
     {\obj[x_2]\bbox[LightGreen]{\getid{\cat}}\pila} 
     \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat\bbox[LightGreen]{\getid{\cat}}}\restore
     \save[ul].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} !U*!D!L(8){\small\color{ForestGreen}\cat}\restore 
-    }\end{xy}}$ $\quad \vcenter{\begin{xy}\xymatrix@!C=2cm{ 
+    }\end{xy}}$ $\qquad \vcenter{\begin{xy}\xymatrix@!C=2cm{ 
     &  
     {\cat\pila}
     &
     \\
     {\cat[1]\pila}
-    \ar[ur]_{\obj\catdiag\pila}
+    \ar[ur]_{\obj[a]\catdiag\pila}
     & &  
     {\cat\pila}
     \ar[ul]^{\getid{\cat}\pila}
@@ -215,9 +213,7 @@ $$
 
 <div style="page-break-after: always"></div>
 
-### 函子
-
-考虑范畴 $\cat$ , $\cat[D]$ , 现提供函子定义 : 
+考虑范畴 $\cat$ 和 $\cat[D]$ , 现提供函子定义 : 
 
 - $P:\cat\cathom[\catCat]\cat[D]$ 为范畴当且仅当
   - 对任意 $\cat$ 中对象 $\obj$ , $\obj P$ 为 
@@ -225,30 +221,16 @@ $$
   - 对任意 $\cat$ 中箭头 $\phi_1:\obj[c_1]\cathom \obj[c_2]$ 和 $\phi_2:\obj[c_2]\cathom\obj[c_3]$ , 
     始终都有等式 $\,(\phi_1\catcirc \phi_2) P=\phi_1 P\catcirc[{\cat[D]}]\phi_2P$ 成立 。
 
-### 函子的复合
-
-假如刚才的 $P$ 确实构成一个函子
-且 $Q: \cat[D]\cathom[\catCat]\cat[E]$ 也构成函子 , 那么
-
-- $P\catcirc[\catCat] Q: \cat\cathom[\catCat] \cat[E]$ 
-  也构成一个函子 。
-
-### 忠实和完全函子
-
-若 $\cat$ , $\cat[D]$ , $\cat[E]$ 皆为**局部小范畴** , 则
+假如 $\cat$ , $\cat[D]$ 皆为**局部小范畴** , 并且
+刚才的 $P$ 确实构成一个函子 ,   则
 
 - $P$ 是**忠实的**当且仅当对任意 $\cat$ 中的对象 $\obj[c_1]$ , $\obj[c_2]$
   $(\obj[c_1]\cathom\obj[c_2])$ 与 $(\obj[c_1]P\cathom[{\cat[D]}]\obj[c_2]P)$ 之间始终存在单射 ;
 - $P$ 是**完全的**当且仅当对任意 $\cat$ 中的对象 $\obj[c_1]$ , $\obj[c_2]$
   $(\obj[c_1]\cathom\obj[c_2])$ 与 $(\obj[c_1]P\cathom[{\cat[D]}]\obj[c_2]P)$ 之间始终存在满射 ;
-- $P$ 是**完全忠实的**当且仅当对任意 $\cat$ 中的对象 $\obj[c_1]$ , $\obj[c_2]$
-  $(\obj[c_1]\cathom\obj[c_2])$ 与 $(\obj[c_1]P\cathom[{\cat[D]}]\obj[c_2]P)$ 之间始终存在双射 ( 即
-  集合间同构 ) 。
-
-> [!note]
->
-> 刚才提到的 “ 单 / 满 / 双射 ”
-> 针对的都是范畴的箭头部分 。
+- $P$ 是**完全忠实的**当且仅当
+  $\cathom$ 与 $\cathom[{\cat[D]}]$ 间存在自然同构 , 即
+  $(\obj[c_1]\cathom\_)$ 与 $(\obj[c_1]\cathom[{\cat[D]}]\_)$ 间存在自然同构
 
 ----
 

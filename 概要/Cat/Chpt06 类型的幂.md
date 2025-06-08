@@ -273,7 +273,7 @@ _(.7){(\varphi_1\catcirc g_1):\obj[a_1]\cathom\obj[b_2]}
 
   图 1 有助于理解 。
 
-  $(\_\cathom g_1):\getop\cat\!\!\cancel{\smash{{}\cattimes[\catCat]{}}\cat}\cathom[\catCat]\catSet$ 为函子且
+  $(\_\cathom g_1):\getop\cat\!\!\cancel{\smash{{}\cattimes[\catCat]{}}\cat}\cathom[\catCat]\catSet$ ,
   $(\_\cathom g_1):\obj[a_1]\longmapsto (\obj[a_1]\cathom g_1)=(\getid{\obj[a_1]}\cathom g_1)=\obj[a_1]^{(\_\catcirc g_1)}$
   $(\_\cathom g_1): f_1\longmapsto (f_1\cathom g_1) = (f_1\catcirc \_)~~\catcirc[{\cat\cathom[]\catSet}]~~ (\_ \catcirc g_1)= (\_ \catcirc g_1)~~\catcirc[{\cat\cathom[]\catSet}]~~ (f_1\catcirc \_)$ 
 
@@ -284,7 +284,7 @@ _(.7){(\varphi_1\catcirc g_1):\obj[a_1]\cathom\obj[b_2]}
   > 不难看出
   >
   > - $\begin{aligned}[t]
-  >   \yoneda:{}&\cat\cathom[\catCat](\getop\cat\cathom\catSet) \\
+  >   \yoneda:{}&\cat\cathom[\catCat](\getop\cat\cathom[\catCat]\catSet) \\
   >           &\obj[b_1]\longmapsto (\_\cathom\obj[b_1]) &&\text{构成一个函子,称作预层} \\
   >           & g_1\longmapsto (\_\cathom g_1)=(\_\circ g_1) &&\text{构成一个函子间映射,即自然变换}
   >   \end{aligned}$ 
@@ -297,7 +297,7 @@ _(.7){(\varphi_1\catcirc g_1):\obj[a_1]\cathom\obj[b_2]}
 
   图 2 有助于理解 。  
 
-  $(f_1\cathom\_):\cancel{\getop\cat{}\cattimes[\catCat]}\cat\cathom[\catCat]\catSet$ 为函子且
+  $(f_1\cathom\_):\cancel{\getop\cat{}\cattimes[\catCat]}\cat\cathom[\catCat]\catSet$ , 
   $(f_1\cathom\_):\obj[b_1]\longmapsto (f_1\cathom \obj[b_1])=(f_1\cathom \getid{\obj[b_1]})=\obj[b_1]^{(f_1\catcirc \_)}$
   $(f_1\cathom\_):g_1\longmapsto (f_1\cathom g_1)=(f_1\catcirc \_)~~\catcirc[{\cat\cathom[]\catSet}]~~ (\_ \catcirc g_1)= (\_ \catcirc g_1)~~\catcirc[{\cat\cathom[]\catSet}]~~ (f_1\catcirc \_)$ 
 
@@ -308,7 +308,7 @@ _(.7){(\varphi_1\catcirc g_1):\obj[a_1]\cathom\obj[b_2]}
   > 不难看出
   >
   > - $\begin{aligned}[t]
-  >   \yoda:{}&\getop\cat\cathom[\catCat](\cat\cathom\catSet) \\
+  >   \yoda:{}&\getop\cat\cathom[\catCat](\cat\cathom[\catCat]\catSet) \\
   >           &\obj[a_1]\longmapsto (\obj[a_1]\cathom\_) &&\text{构成一个函子} \\
   >           & f_1\longmapsto (f_1\cathom\_)=(f_1\circ \_) &&\text{构成一个函子间映射,即自然变换}
   >   \end{aligned}$ 
