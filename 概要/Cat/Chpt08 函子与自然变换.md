@@ -272,83 +272,92 @@ $$
 
 ### 自然变换
 
-若还知道 $P_1,P_2:\cat\cathom[\catCat]\cat[D]$ 为函子 , 则
+如果还知道 $P':\cat\cathom[\catCat]\cat[D]$ 为函子 , 那么
 
-- $\eta_1 : P_1\cathom[{\cat\cathom[\catCat]\cat[D]}]P_2$ 为自然变换当且仅当对任意 
+- $\eta : P\cathom[{\cat\cathom[\catCat]\cat[D]}]P'$ 为自然变换当且仅当对任意 
   $\cat$ 中对象 $\obj[x_1]$ , $\obj[x_2]$ 始终都会有下述交换图成立 : 
 
   $\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
-  {\obj[x_1]\bbox[LightGreen]{P_1}\pila} 
-  \ar[r]^{\obj[x_1]^{\eta_1}\pila} 
-  \ar[d]_{f_1\bbox[LightGreen]{P_1}\pila} &
-  {\obj[x_1]\bbox[LightGreen]{P_2}\pila} 
-  \ar[d]^{f_1\bbox[LightGreen]{P_2}\pila}  \\
-  {\obj[x_2]\bbox[LightGreen]{P_1}\pila} 
-  \ar[r]_{\obj[x_2]^{\eta_1}\pila} 
-  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat P_1}\restore
+  {\obj[x_1]\bbox[LightGreen]{P}\pila} 
+  \ar[r]^{\obj[x_1]^{\eta}\pila} 
+  \ar[d]_{f_1\bbox[LightGreen]{P}\pila} &
+  {\obj[x_1]\bbox[LightGreen]{P'}\pila} 
+  \ar[d]^{f_1\bbox[LightGreen]{P'}\pila}  \\
+  {\obj[x_2]\bbox[LightGreen]{P}\pila} 
+  \ar[r]_{\obj[x_2]^{\eta}\pila} 
+  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat P}\restore
   &
-  {\obj[x_2]\bbox[LightGreen]{P_2}\pila}  
-  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat P_2}\restore
+  {\obj[x_2]\bbox[LightGreen]{P'}\pila}  
+  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat P'}\restore
   \save[ul].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} !U*!D!L(6){\small\color{ForestGreen}\cat[D]}\restore 
   }\end{xy}}$ $\quad \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{ 
   \cat\pila
-  \ar@`{[]+/l+3pc/,[d]+/l+3pc/}[d]^(.5){}="mid1"_{P_1\pila}
-  \ar@`{[]+/r+3pc/,[d]+/r+3pc/}[d]_(.5){}="mid2"^{P_2\pila}
+  \ar@`{[]+/l+3pc/,[d]+/l+3pc/}[d]^(.5){}="mid1"|{P\pila}
+  \ar@`{[]+/r+3pc/,[d]+/r+3pc/}[d]_(.5){}="mid2"|{P'\pila}
   \\
   \cat[D]\pila
-  \ar@2{>} "mid1";"mid2"^{\eta_1\pila}
+  \ar@2{>} "mid1";"mid2"^{\eta\pila}
   }\end{xy}}$ 
 
 ### 自然变换的纵复合
 
-倘若已知 $\eta_1: P_1\cathom[{\cat\cathom[\catCat]\cat[D]}]P_2$ 
-另外加上 $\eta_2:P_2\cathom[{\cat\cathom[\catCat]\cat[D]}]P_3$ 
-为自然变换 , 那么便会有
+若已知 $\eta: P\cathom[{\cat\cathom[\catCat]\cat[D]}]P'$ 构成自然变换且
+还知道 $\eta':P'\cathom[{\cat\cathom[\catCat]\cat[D]}]P''$ 为自然变换则
 
-- $\eta_1\catcirc[{\cat\cathom[\catCat]\cat[D]}]\eta_2: P_1\cathom[{\cat\cathom[\catCat]\cat[D]}]P_2$ 亦为自然变换 , 
-  称作 $\eta_1$ 和 $\eta_2$ 的**纵复合** 。
+- $\eta~~\catcirc[{\cat\cathom[\catCat]\cat[D]}]~~\eta': P\cathom[{\cat\cathom[\catCat]\cat[D]}]P'$ 为自然变换 , 
+  称作 $\eta$ 和 $\eta'$ 的**纵复合** 。
   
   $\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
-  {\obj[x_1]\bbox[LightGreen]{P_1}\pila} 
-  \ar[r]^{\obj[x_1]^{\eta_1}\pila} 
-  \ar[d]_{f_1\bbox[LightGreen]{P_1}\pila} &
-  {\obj[x_1]\bbox[LightGreen]{P_2}\pila}
-  \ar[r]^{\obj[x_1]^{\eta_2}\pila} 
-  \ar[d]^{f_1\bbox[LightGreen]{P_2}\pila} & 
-  {\obj[x_1]\bbox[LightGreen]{P_3}\pila} 
-  \ar[d]^{f_1\bbox[LightGreen]{P_3}\pila} & 
+  {\obj[x_1]\bbox[LightGreen]{P}\pila} 
+  \ar[r]^{\obj[x_1]^{\eta}\pila} 
+  \ar[d]_{f_1\bbox[LightGreen]{P}\pila} &
+  {\obj[x_1]\bbox[LightGreen]{P'}\pila}
+  \ar[r]^{\obj[x_1]^{\eta'}\pila} 
+  \ar[d]^{f_1\bbox[LightGreen]{P'}\pila} & 
+  {\obj[x_1]\bbox[LightGreen]{P''}\pila} 
+  \ar[d]^{f_1\bbox[LightGreen]{P''}\pila} & 
   \\
-  {\obj[x_2]\bbox[LightGreen]{P_1}\pila} 
-  \ar[r]_{\obj[x_2]^{\eta_1}\pila} 
-  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat P_1}\restore
+  {\obj[x_2]\bbox[LightGreen]{P}\pila} 
+  \ar[r]_{\obj[x_2]^{\eta}\pila} 
+  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat P}\restore
   &
-  {\obj[x_2]\bbox[LightGreen]{P_2}\pila}  
-  \ar[r]_{\obj[x_2]^{\eta_2}\pila} 
-  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat P_2}\restore
+  {\obj[x_2]\bbox[LightGreen]{P'}\pila}  
+  \ar[r]_{\obj[x_2]^{\eta'}\pila} 
+  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat P'}\restore
   & 
-  {\obj[x_2]\bbox[LightGreen]{P_3}\pila}
-  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat P_3}\restore
+  {\obj[x_2]\bbox[LightGreen]{P''}\pila}
+  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat P''}\restore
   \save[ull].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} !U*!D!L(12){\small\color{ForestGreen}\cat[D]}\restore 
   }\end{xy}}$ $\quad \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{ 
   \cat\pila
-  \ar@`{[]+/l+3pc/,[d]+/l+3pc/}[d]^(.5){}="mid1"_{P_1\pila}
-  \ar@`{[]+/r+0pc/,[d]+/r+0pc/}[d]_(.5){}="mid2a"^(.5){}="mid2b"|{P_2\pila}
-  \ar@`{[]+/r+3pc/,[d]+/r+3pc/}[d]_(.5){}="mid3"^{P_3\pila}
+  \ar@`{[]+/l+3pc/,[d]+/l+3pc/}[d]^(.5){}="mid1"|{P\pila}
+  \ar@`{[]+/r+0pc/,[d]+/r+0pc/}[d]_(.5){}="mid2a"^(.5){}="mid2b"|{P'\pila}
+  \ar@`{[]+/r+3pc/,[d]+/r+3pc/}[d]_(.5){}="mid3"|{P''\pila}
   \\
   \cat[D]\pila
-  \ar@2{>} "mid1";"mid2a"^{\eta_1\pila}
-  \ar@2{>} "mid2b";"mid3"^{\eta_2\pila}
+  \ar@2{>} "mid1";"mid2a"^{\eta\pila}
+  \ar@2{>} "mid2b";"mid3"^{\eta'\pila}
   }\end{xy}}$ 
 
 ### 自然变换的横复合
 
-==TODO==
+若还知道 $Q':\cat[D]\cathom[\catCat]\cat[E]$ 也是个函子
+及自然变换 $\theta: Q\cathom[{\cat[D]\cathom[\catCat]\cat[E]}]Q'$  ,  则有
+
+- $\eta\circ \theta : P\catcirc[\catCat]Q \cathom[{\cat\cathom[\catCat]\cat[E]}]P'\catcirc[\catCat]Q'$ 为自然变换 , 
+  称作 $\eta$ 和 $\theta$ 的**横复合** 。
 
 
 
-- 函子 $P_1:\cat\cathom[\catCat] \cat[D]$ ,
-  函子 $P_2:\cat\cathom[\catCat]\cat[D]$ , 
-  函子的复合 : $P_1\circ P_2$ 
+
+
+
+
+---
+
+- 函子 $P:\cat\cathom[\catCat] \cat[D]$ ,
+  函子 $Q:\cat\cathom[\catCat]\cat[D]$ , 
+  函子的复合 : $P\circ Q$ 
 - 自然变换 $\eta_1:P_1\cathom[\catCat] Q_1$ , 
   自然变换 $\eta_2: P_1\cathom[\catCat] Q_1$ ,
   自然变换 $\theta_1: Q_1\cathom[\catCat]R_1$ 
