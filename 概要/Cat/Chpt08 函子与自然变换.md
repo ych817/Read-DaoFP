@@ -346,8 +346,67 @@ $$
 
 - $\eta\circ \theta : P\catcirc[\catCat]Q \cathom[{\cat\cathom[\catCat]\cat[E]}]P'\catcirc[\catCat]Q'$ 为自然变换 , 
   称作 $\eta$ 和 $\theta$ 的**横复合** 。
-
-
+  
+  $\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
+  &
+  {\obj[x_1]\bbox[LightGreen]{P}\pila} 
+  \ar[r]^{\obj[x_1]^{\eta}\pila} 
+  \ar[d]_{\mathllap{f_1\bbox[LightGreen]{P}\pila}} 
+  \ar@{->}@[lightgray][ddl]|[lightgray]{Q} 
+  \ar@{->}@[lightgray][dddr]|[lightgray]{Q'} 
+  &
+  {\obj[x_1]\bbox[LightGreen]{P'}\pila} 
+  \ar[d]^{\mathrlap{f_1\bbox[LightGreen]{P'}\pila}} 
+  \ar@{->}@[lightgray][ddl]|[lightgray]{Q} 
+  \ar@{->}@[lightgray][dddr]|[lightgray]{Q'} 
+  & \\
+  &
+  {\obj[x_2]\bbox[LightGreen]{P}\pila} 
+  \ar[r]_{\obj[x_2]^{\eta}\pila} 
+  \ar@{->}@[lightgray][ddl]|[lightgray]{Q} 
+  \ar@{->}@[lightgray][dddr]|[lightgray]{Q'} &
+  {\obj[x_2]\bbox[LightGreen]{P'}\pila}
+  \ar@{->}@[lightgray][ddl]|[lightgray]{Q}
+  \ar@{->}@[lightgray][dddr]|[lightgray]{Q'} 
+  \save[ul].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} !U*!D!L(6){\small\color{ForestGreen}\cat[D]}\restore  & & \\
+  {\obj[x_1]\bbox[LightGreen]{PQ}\pila} 
+  \ar[r]^{\obj[x_1]^{\eta}\bbox[LightGreen]{Q}\pila} 
+  \ar[d]_{\mathllap{f_1\bbox[LightGreen]{PQ}\pila}} 
+  \ar@[gray][drr]|(.7)[gray]{(\obj[x_1]P)^\theta\pila} &
+  {\obj[x_1]\bbox[LightGreen]{P'Q}\pila} 
+  \ar[d]^{\mathrlap{f_1\bbox[LightGreen]{P'Q}\pila}} 
+  \ar@[gray][drr]|(.3)[gray]{(\obj[x_1]P')^\theta\pila} \\
+  {\obj[x_2]\bbox[LightGreen]{PQ}\pila} 
+  \ar[r]_{\obj[x_2]^{\eta}\bbox[LightGreen]{Q}\pila} 
+  \ar@[gray][drr]|(.7)[gray]{(\obj[x_2]P)^\theta\pila} &
+  {\obj[x_2]\bbox[LightGreen]{P'Q}\pila}  
+  \ar@[gray][drr]|(.3)[gray]{(\obj[x_2]P')^\theta\pila}
+  \save[ul].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} !D*!U!L(7){\small\color{ForestGreen}\cat[E]}\restore &
+  {\obj[x_1]\bbox[LightGreen]{PQ'}\pila} 
+  \ar[r]^{\obj[x_1]^{\eta}\bbox[LightGreen]{Q'}\pila} 
+  \ar[d]_{\mathllap{f_1\bbox[LightGreen]{PQ'}\pila}} &
+  {\obj[x_1]\bbox[LightGreen]{P'Q'}\pila} 
+  \ar[d]^{\mathrlap{f_1\bbox[LightGreen]{P'Q'}\pila}}  \\
+  & & 
+  {\obj[x_2]\bbox[LightGreen]{PQ'}\pila} 
+  \ar[r]_{\obj[x_2]^{\eta}\bbox[LightGreen]{Q'}\pila} &
+  {\obj[x_2]\bbox[LightGreen]{P'Q'}\pila}  
+  \save[ul].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} !D*!U!L(7){\small\color{ForestGreen}\cat[E]}\restore 
+  }\end{xy}}$ $\quad \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{ 
+  \cat\pila
+  \ar@`{[]+/l+3pc/,[d]+/l+3pc/}[d]^(.5){}="mida1"|{P\pila}
+  \ar@`{[]+/r+3pc/,[d]+/r+3pc/}[d]_(.5){}="mida2"|{P'\pila}
+  \\
+  \cat[D]\pila
+  \ar@2{>} "mida1";"mida2"^{\eta\pila}
+  \ar@`{[]+/l+3pc/,[d]+/l+3pc/}[d]^(.5){}="midb1"|{Q\pila}
+  \ar@`{[]+/r+3pc/,[d]+/r+3pc/}[d]_(.5){}="midb2"|{Q'\pila}
+  \\
+  \cat[E]\pila
+  \ar@2{>} "midb1";"midb2"^{\theta\pila}
+  }\end{xy}}$
+  
+  
 
 
 
