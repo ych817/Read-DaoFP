@@ -305,11 +305,11 @@ $$
   \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat P'}\restore
   \save[ul].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} !U*!D!L(6){\small\color{ForestGreen}\cat[D]}\restore 
   }\end{xy}}$ $\quad \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{ 
-  \cat\pila
-  \ar@`{[]+/l+3pc/,[d]+/l+3pc/}[d]^(.5){}="mid1"|{P\pila}
-  \ar@`{[]+/r+3pc/,[d]+/r+3pc/}[d]_(.5){}="mid2"|{P'\pila}
-  \\
   \cat[D]\pila
+  \ar@{<-}@`{[]+/l+3pc/,[d]+/l+3pc/}[d]^(.5){}="mid1"|{P\pila}
+  \ar@{<-}@`{[]+/r+3pc/,[d]+/r+3pc/}[d]_(.5){}="mid2"|{P'\pila}
+  \\
+  \cat\pila
   \ar@2{>} "mid1";"mid2"^{\eta\pila}
   }\end{xy}}$ 
 
@@ -343,12 +343,12 @@ $$
   \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat P''}\restore
   \save[ull].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} !U*!D!L(12){\small\color{ForestGreen}\cat[D]}\restore 
   }\end{xy}}$ $\quad \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{ 
-  \cat\pila
-  \ar@`{[]+/l+3pc/,[d]+/l+3pc/}[d]^(.5){}="mid1"|{P\pila}
-  \ar@`{[]+/r+0pc/,[d]+/r+0pc/}[d]_(.5){}="mid2a"^(.5){}="mid2b"|{P'\pila}
-  \ar@`{[]+/r+3pc/,[d]+/r+3pc/}[d]_(.5){}="mid3"|{P''\pila}
-  \\
   \cat[D]\pila
+  \\
+  \cat[C]\pila
+  \ar@`{[]+/l+3pc/,[u]+/l+3pc/}[u]_(.5){}="mid1"|{P\pila}
+  \ar@`{[]+/r+0pc/,[u]+/r+0pc/}[u]^(.5){}="mid2a"_(.5){}="mid2b"|{P'\pila}
+  \ar@`{[]+/r+3pc/,[u]+/r+3pc/}[u]^(.5){}="mid3"|{P''\pila}
   \ar@2{>} "mid1";"mid2a"^{\eta\pila}
   \ar@2{>} "mid2b";"mid3"^{\eta'\pila}
   }\end{xy}}$ 
@@ -360,27 +360,6 @@ $$
   称作 $\eta$ 和 $\theta$ 的**横复合** 。
   
   $\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
-  &
-  {\obj[x_1]\bbox[LightGreen]{P}\pila} 
-  \ar[r]^{\obj[x_1]^{\eta}\pila} 
-  \ar[d]_{\mathllap{f_1\bbox[LightGreen]{P}\pila}} 
-  \ar@{->}@[lightgray][ddl]|[lightgray]{Q} 
-  \ar@{->}@[lightgray][dddr]|[lightgray]{Q'} 
-  &
-  {\obj[x_1]\bbox[LightGreen]{P'}\pila} 
-  \ar[d]^{\mathrlap{f_1\bbox[LightGreen]{P'}\pila}} 
-  \ar@{->}@[lightgray][ddl]|[lightgray]{Q} 
-  \ar@{->}@[lightgray][dddr]|[lightgray]{Q'} 
-  & \\
-  &
-  {\obj[x_2]\bbox[LightGreen]{P}\pila} 
-  \ar[r]_{\obj[x_2]^{\eta}\pila} 
-  \ar@{->}@[lightgray][ddl]|[lightgray]{Q} 
-  \ar@{->}@[lightgray][dddr]|[lightgray]{Q'} &
-  {\obj[x_2]\bbox[LightGreen]{P'}\pila}
-  \ar@{->}@[lightgray][ddl]|[lightgray]{Q}
-  \ar@{->}@[lightgray][dddr]|[lightgray]{Q'} 
-  \save[ul].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} !U*!D!L(6){\small\color{ForestGreen}\cat[D]}\restore  & & \\
   {\obj[x_1]\bbox[LightGreen]{PQ}\pila} 
   \ar[r]^{\obj[x_1]^{\eta}\bbox[LightGreen]{Q}\pila} 
   \ar[d]_{\mathllap{f_1\bbox[LightGreen]{PQ}\pila}} 
@@ -393,7 +372,7 @@ $$
   \ar@[gray][drr]|(.7)[gray]{(\obj[x_2]P)^\theta\pila} &
   {\obj[x_2]\bbox[LightGreen]{P'Q}\pila}  
   \ar@[gray][drr]|(.3)[gray]{(\obj[x_2]P')^\theta\pila}
-  \save[ul].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} !D*!U!L(7){\small\color{ForestGreen}\cat[E]}\restore &
+  \save[ul].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} !U*!D!L(7){\small\color{ForestGreen}\cat[E]}\restore &
   {\obj[x_1]\bbox[LightGreen]{PQ'}\pila} 
   \ar[r]^{\obj[x_1]^{\eta}\bbox[LightGreen]{Q'}\pila} 
   \ar[d]_{\mathllap{f_1\bbox[LightGreen]{PQ'}\pila}} &
@@ -403,20 +382,42 @@ $$
   {\obj[x_2]\bbox[LightGreen]{PQ'}\pila} 
   \ar[r]_{\obj[x_2]^{\eta}\bbox[LightGreen]{Q'}\pila} &
   {\obj[x_2]\bbox[LightGreen]{P'Q'}\pila}  
-  \save[ul].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} !D*!U!L(7){\small\color{ForestGreen}\cat[E]}\restore 
+  \save[ul].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} !U*!D!L(7){\small\color{ForestGreen}\cat[E]}\restore 
+  \\
+  &
+  {\obj[x_1]\bbox[LightGreen]{P}\pila} 
+  \ar[r]^{\obj[x_1]^{\eta}\pila} 
+  \ar[d]_{\mathllap{f_1\bbox[LightGreen]{P}\pila}} 
+  \ar@{->}@[lightgray][uuul]|[lightgray]{Q} 
+  \ar@{->}@[lightgray][uur]|[lightgray]{Q'} 
+  &
+  {\obj[x_1]\bbox[LightGreen]{P'}\pila} 
+  \ar[d]^{\mathrlap{f_1\bbox[LightGreen]{P'}\pila}} 
+  \ar@{->}@[lightgray][uuul]|[lightgray]{Q} 
+  \ar@{->}@[lightgray][uur]|[lightgray]{Q'} 
+  & \\
+  &
+  {\obj[x_2]\bbox[LightGreen]{P}\pila} 
+  \ar[r]_{\obj[x_2]^{\eta}\pila} 
+  \ar@{->}@[lightgray][uuul]|[lightgray]{Q} 
+  \ar@{->}@[lightgray][uur]|[lightgray]{Q'} &
+  {\obj[x_2]\bbox[LightGreen]{P'}\pila}
+  \ar@{->}@[lightgray][uuul]|[lightgray]{Q}
+  \ar@{->}@[lightgray][uur]|[lightgray]{Q'} 
+  \save[ul].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} !D*!U!L(6){\small\color{ForestGreen}\cat[D]}\restore  & &
   }\end{xy}}$ $\quad \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{ 
-  \cat\pila
-  \ar@`{[]+/l+3pc/,[d]+/l+3pc/}[d]^(.5){}="mida1"|{P\pila}
-  \ar@`{[]+/r+3pc/,[d]+/r+3pc/}[d]_(.5){}="mida2"|{P'\pila}
+  \cat[E]\pila
+  \ar@{<-}@`{[]+/l+3pc/,[d]+/l+3pc/}[d]^(.5){}="mida1"|{Q\pila}
+  \ar@{<-}@`{[]+/r+3pc/,[d]+/r+3pc/}[d]_(.5){}="mida2"|{Q'\pila}
   \\
   \cat[D]\pila
-  \ar@2{>} "mida1";"mida2"^{\eta\pila}
-  \ar@`{[]+/l+3pc/,[d]+/l+3pc/}[d]^(.5){}="midb1"|{Q\pila}
-  \ar@`{[]+/r+3pc/,[d]+/r+3pc/}[d]_(.5){}="midb2"|{Q'\pila}
+  \ar@2{>} "mida1";"mida2"^{\theta\pila}
+  \ar@{<-}@`{[]+/l+3pc/,[d]+/l+3pc/}[d]^(.5){}="midb1"|{P\pila}
+  \ar@{<-}@`{[]+/r+3pc/,[d]+/r+3pc/}[d]_(.5){}="midb2"|{P'\pila}
   \\
-  \cat[E]\pila
-  \ar@2{>} "midb1";"midb2"^{\theta\pila}
-  }\end{xy}}$
+  \cat\pila
+  \ar@2{>} "midb1";"midb2"^{\eta\pila}
+  }\end{xy}}$ 
 
 若 $\theta': Q'\cathom[{\cat[D]\cathom[\catCat]\cat[E]}]Q''$ 为自然变换则
 
@@ -424,21 +425,21 @@ $$
   改变横纵复合的先后顺序也不会影响最终结果 。
 
   $\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{ 
-  \cat\pila
-  \ar@`{[]+/l+3pc/,[d]+/l+3pc/}[d]^(.5){}="mida1"|{P\pila}
-  \ar@`{[]+/r+0pc/,[d]+/r+0pc/}[d]_(.5){}="mida2a"^(.5){}="mida2b"|{P'\pila}
-  \ar@`{[]+/r+3pc/,[d]+/r+3pc/}[d]_(.5){}="mida3"|{P''\pila}
+  \cat[E]\pila
+  \ar@{<-}@`{[]+/l+3pc/,[d]+/l+3pc/}[d]^(.5){}="mida1"|{Q\pila}
+  \ar@{<-}@`{[]+/r+0pc/,[d]+/r+0pc/}[d]_(.5){}="mida2a"^(.5){}="mida2b"|{Q'\pila}
+  \ar@{<-}@`{[]+/r+3pc/,[d]+/r+3pc/}[d]_(.5){}="mida3"|{Q''\pila}
   \\
   \cat[D]\pila
-  \ar@2{>} "mida1";"mida2a"^{\eta\pila}
-  \ar@2{>} "mida2b";"mida3"^{\eta'\pila}
-  \ar@`{[]+/l+3pc/,[d]+/l+3pc/}[d]^(.5){}="midb1"|{Q\pila}
-  \ar@`{[]+/r+0pc/,[d]+/r+0pc/}[d]_(.5){}="midb2a"^(.5){}="midb2b"|{Q'\pila}
-  \ar@`{[]+/r+3pc/,[d]+/r+3pc/}[d]_(.5){}="midb3"|{Q''\pila}
+  \ar@2{>} "mida1";"mida2a"^{\theta\pila}
+  \ar@2{>} "mida2b";"mida3"^{\theta'\pila}
+  \ar@{<-}@`{[]+/l+3pc/,[d]+/l+3pc/}[d]^(.5){}="midb1"|{P\pila}
+  \ar@{<-}@`{[]+/r+0pc/,[d]+/r+0pc/}[d]_(.5){}="midb2a"^(.5){}="midb2b"|{P'\pila}
+  \ar@{<-}@`{[]+/r+3pc/,[d]+/r+3pc/}[d]_(.5){}="midb3"|{P''\pila}
   \\
-  \cat[E]\pila
-  \ar@2{>} "midb1";"midb2a"^{\theta\pila}
-  \ar@2{>} "midb2b";"midb3"^{\theta'\pila}
+  \cat\pila
+  \ar@2{>} "midb1";"midb2a"^{\eta\pila}
+  \ar@2{>} "midb2b";"midb3"^{\eta'\pila}
   }\end{xy}}$
 
 <div style="page-break-after: always"></div>
@@ -447,11 +448,31 @@ $$
 
 同样对于自然变换也有恒等映射 。
 
-- $\begin{aligned}[t]
-  \getid{P}&:P\cathom[{\cat[C]\cathom[\catCat] \cat[D]}] P \\
-  \obj[x]^{\getid{P}}&: \obj[x]P\cathom[{\cat[D]}] \obj[x]P \\
-  \obj[x]^{\getid{P}}&:= \getid{\obj[x_1]P}
-  \end{aligned}$ , 并且对范畴 $\cat$ 中任意对象 $\obj[x]$ 都会有
+- $\getid{P}:P\cathom[{\cat[C]\cathom[\catCat] \cat[D]}] P$ 为恒等自然变换当且仅当
+  对范畴 $\cat$ 中任意对象 $\obj[x]$ 有下述交换图成立 :
+
+  $\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
+  {\obj[x_1]\bbox[LightGreen]{P}\pila} 
+  \ar[r]^{\obj[x_1]^\eta=\getid{\obj[x_1]}\pila} 
+  \ar[d]_{f_1\bbox[LightGreen]{P}\pila} &
+  {\obj[x_1]\bbox[LightGreen]{P'}\pila} 
+  \ar[d]^{f_1\bbox[LightGreen]{P'}\pila}  \\
+  {\obj[x_2]\bbox[LightGreen]{P}\pila} 
+  \ar[r]_{\obj[x_2]^{\eta}=\getid{\obj[x_2]}\pila} 
+  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat P}\restore
+  &
+  {\obj[x_2]\bbox[LightGreen]{P'}\pila}  
+  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat P'}\restore
+  \save[ul].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} !U*!D!L(6){\small\color{ForestGreen}\cat[D]}\restore 
+  }\end{xy}}$ $\quad \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{ 
+  \cat[D]\pila
+  \ar@{<-}@`{[]+/l+0pc/,[d]+/l+0pc/}[d]|{P\pila}^{}="mid"
+  \\
+  \cat\pila
+  \save "mid" 
+  \ar@2@`{"mid"+/ur+5pc/,"mid"+/dr+5pc/}^{\eta\pila}"mid"
+  \restore
+  }\end{xy}}$ 
 
 ### 自然同构
 
