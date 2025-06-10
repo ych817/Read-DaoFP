@@ -299,7 +299,7 @@ $$
   \ar@2{>} "mid1";"mid2"^{\eta\pila}
   }\end{xy}}$ 
 
-### 自然变换的纵复合
+### 自然变换的复合
 
 若已知 $\eta: P\cathom[{\cat\cathom[\catCat]\cat[D]}]P'$ 构成自然变换且
 还知道 $\eta':P'\cathom[{\cat\cathom[\catCat]\cat[D]}]P''$ 为自然变换则
@@ -339,10 +339,8 @@ $$
   \ar@2{>} "mid2b";"mid3"^{\eta'\pila}
   }\end{xy}}$ 
 
-### 自然变换的横复合
-
-若还知道 $Q':\cat[D]\cathom[\catCat]\cat[E]$ 也是个函子
-及自然变换 $\theta: Q\cathom[{\cat[D]\cathom[\catCat]\cat[E]}]Q'$  ,  则有
+如果还知道 $Q':\cat[D]\cathom[\catCat]\cat[E]$ 也是个函子
+以及自然变换 $\theta: Q\cathom[{\cat[D]\cathom[\catCat]\cat[E]}]Q'$  ,  则有
 
 - $\eta\circ \theta : P\catcirc[\catCat]Q \cathom[{\cat\cathom[\catCat]\cat[E]}]P'\catcirc[\catCat]Q'$ 为自然变换 , 
   称作 $\eta$ 和 $\theta$ 的**横复合** 。
@@ -405,12 +403,52 @@ $$
   \cat[E]\pila
   \ar@2{>} "midb1";"midb2"^{\theta\pila}
   }\end{xy}}$
-  
-  
+
+若 $\theta': Q'\cathom[{\cat[D]\cathom[\catCat]\cat[E]}]Q''$ 为自然变换则
+
+- $(\eta\circ\theta)~~\catcirc[{\cat\cathom[\catCat]\cat[E]}]~~(\eta'\circ\theta') = (\eta ~~\catcirc[{\cat\cathom[\catCat]\cat[D]}]~~ \eta')\circ (\theta ~~\catcirc[{\cat[D]\cathom[\catCat]\cat[E]}]~~\theta')$ , 
+  改变横纵复合的先后顺序也不会影响最终结果 。
+
+  $\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{ 
+  \cat\pila
+  \ar@`{[]+/l+3pc/,[d]+/l+3pc/}[d]^(.5){}="mida1"|{P\pila}
+  \ar@`{[]+/r+0pc/,[d]+/r+0pc/}[d]_(.5){}="mida2a"^(.5){}="mida2b"|{P'\pila}
+  \ar@`{[]+/r+3pc/,[d]+/r+3pc/}[d]_(.5){}="mida3"|{P''\pila}
+  \\
+  \cat[D]\pila
+  \ar@2{>} "mida1";"mida2a"^{\eta\pila}
+  \ar@2{>} "mida2b";"mida3"^{\eta'\pila}
+  \ar@`{[]+/l+3pc/,[d]+/l+3pc/}[d]^(.5){}="midb1"|{Q\pila}
+  \ar@`{[]+/r+0pc/,[d]+/r+0pc/}[d]_(.5){}="midb2a"^(.5){}="midb2b"|{Q'\pila}
+  \ar@`{[]+/r+3pc/,[d]+/r+3pc/}[d]_(.5){}="midb3"|{Q''\pila}
+  \\
+  \cat[E]\pila
+  \ar@2{>} "midb1";"midb2a"^{\theta\pila}
+  \ar@2{>} "midb2b";"midb3"^{\theta'\pila}
+  }\end{xy}}$
+
+<div style="page-break-after: always"></div>
+
+### 恒等自然变换
+
+同样对于自然变换也有恒等映射 。
+
+- $\begin{aligned}[t]
+  \getid{P}&:P\cathom[{\cat[C]\cathom[\catCat] \cat[D]}] P \\
+  \obj[x]^{\getid{P}}&: \obj[x]P\cathom[{\cat[D]}] \obj[x]P \\
+  \obj[x]^{\getid{P}}&:= \getid{\obj[x_1]P}
+  \end{aligned}$ , 并且对范畴 $\cat$ 中任意对象 $\obj[x]$ 都会有
+
+### 自然同构
+
+在范畴论中我们更关心的是自然同构 。
+
+- $\eta : P\cathom[{\cat\cathom[\catCat]\cat[D]}]P'$ 为**自然同构**当且仅当
+  $\obj[x]^\eta$ 总是同构 , 这里 $\obj[x]$ 为任意 $\cat$ 中对象 。
 
 
 
-
+<div style="page-break-after: always"></div>
 
 ---
 
