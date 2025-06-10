@@ -251,7 +251,7 @@ $$
                                   & = P\catcirc[\catCat]\getid{\cat[D]}
   \end{aligned}$ 
 
-### 忠实和完全函子
+### 忠实 , 完全和本质满函子
 
 若 $\cat$ , $\cat[D]$ , $\cat[E]$ 皆为**局部小范畴** , 则
 
@@ -260,13 +260,27 @@ $$
 - $P$ 是**完全的**当且仅当对任意 $\cat$ 中的对象 $\obj[c_1]$ , $\obj[c_2]$
   $(\obj[c_1]\cathom\obj[c_2])$ 与 $(\obj[c_1]P\cathom[{\cat[D]}]\obj[c_2]P)$ 之间始终存在满射 ;
 - $P$ 是**完全忠实的**当且仅当对任意 $\cat$ 中的对象 $\obj[c_1]$ , $\obj[c_2]$
-  $(\obj[c_1]\cathom\obj[c_2])$ 与 $(\obj[c_1]P\cathom[{\cat[D]}]\obj[c_2]P)$ 之间始终存在双射 ( 即
-  集合间同构 ) 。
+  $(\obj[c_1]\cathom\obj[c_2])$ 与 $(\obj[c_1]P\cathom[{\cat[D]}]\obj[c_2]P)$ 之间始终存在双射 。
 
 > [!note]
 >
 > 刚才提到的 “ 单 / 满 / 双射 ”
 > 针对的都是范畴的箭头部分 。
+
+- $P$ 是**本质满的**当且仅当对任意 $\cat[D]$ 中对象 $\obj[d]$
+  都存在 $\cat$ 中对象 $\obj$ 使 $\obj P\cathom[{\cat[D]}]\obj[d]$ 之间有双射 。
+
+> [!tip]
+>
+> 不难发现
+>
+> - 忠实函子的复合是忠实函子
+> - 完全函子的复合是完全函子
+> - 完全忠实函子的复合是完全忠实函子
+> - 若两个函子中有一个是完全忠实函子 , 
+>   且它们的复合也是一个完全忠实函子 , 
+>   则剩下的那个函子也是完全忠实函子 。
+> - 本质满函子的复合是本质满函子
 
 <div style="page-break-after: always"></div>
 
@@ -445,8 +459,6 @@ $$
 
 - $\eta : P\cathom[{\cat\cathom[\catCat]\cat[D]}]P'$ 为**自然同构**当且仅当
   $\obj[x]^\eta$ 总是同构 , 这里 $\obj[x]$ 为任意 $\cat$ 中对象 。
-
-
 
 <div style="page-break-after: always"></div>
 
