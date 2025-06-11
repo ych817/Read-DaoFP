@@ -39,13 +39,11 @@ $$
 \def\ID{\textrm{ID}}                           % 范畴的 ID
 \def\Obj{\textrm{Obj}}                         % 范畴的对象
 \def\Arr{\textrm{Arr}}                         % 范畴的箭头
-\def\circH{\mbin{\overline\circ}}              % 自然变换的横复合
-\def\circV{\mbin{\circ}}                       % 自然变换的纵复合
 % 打印常/变量名
 \newcommand{\obj}[1][c]{{\sf #1}}              % 对象
-\def\obji{\obj[0]}                             % 对象 : 始
-\def\objt{\obj[1]}                             % 对象 : 终
-\newcommand{\cat}[1][C]{\mathcal{#1}}          % 范畴 : C(默认)
+\def\obji{\obj[{0}]}                           % 对象 : 始
+\def\objt{\obj[{1}]}                           % 对象 : 终
+\newcommand{\cat}[1][C]{{\sf #1}}              % 范畴 : C(默认)
 \def\catCat{\cat[Cat]}                         % 范畴 : Cat
 \def\catSet{\cat[Set]}                         % 范畴 : Set
 \def\catHask{\cat[Hask]}                       % 范畴 : Hask — 笛卡尔闭范畴 (+/× 都在里面)
@@ -55,6 +53,8 @@ $$
   \overset{\mclap{\small\pila #1}}{#2}}}
 \newcommand{\catbfunc}[2][\cat]{\mbin{\smash{  % 范畴 C 中的函子 : 二元
   \overset{\mclap{\small\pila #1}}{#2}}}}
+\newcommand{\catbrel}[2][\cat]{\mrel{\smash{   % 范畴 C 中的同构
+  \overset{\mclap{\small\pila #1}}{#2}}}}      
 \newcommand{\catdiag}[1][\cat]{                % 范畴 C 中的函子 : 对角
   \catufunc[#1]{\Delta}}
 \newcommand{\cathom}[1][\cat]{\mbin{\smash{    % 范畴 C 中的函子 : Hom
@@ -65,6 +65,8 @@ $$
   \catbfunc[#1]{\times}}
 \newcommand{\catotimes}[1][\cat]{              % 范畴 C 中的张量积
   \catbfunc[#1]{\otimes}}
+\newcommand{\catcong}[1][\cat]{                % 范畴 C 中的同构
+  \catbrel[#1]{\cong}}
 \newcommand{\list}[1]{                         % 范畴 Hask 中的函子 List
 	\texttt{[\(#1\)]}}
 \def\nil{\texttt{[]}}                          % 范畴 Hask 中的函子 List 的值构造器 nil
