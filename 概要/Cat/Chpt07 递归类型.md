@@ -56,7 +56,9 @@ $$
 \newcommand{\catbrel}[2][\cat]{\mrel{\smash{   % 范畴 C 中的同构
   \overset{\mclap{\small\pila #1}}{#2}}}}      
 \newcommand{\catdiag}[1][\cat]{                % 范畴 C 中的函子 : 对角
-  \catufunc[#1]{\Delta}}
+  \catufunc[#1]{_{:#1}\Delta}}
+\newcommand{\catcnst}[2]{                      % 范畴 C 中的函子 : 常值
+  \catufunc[]{_{\smash{:#1}}\Delta_{#2}}}
 \newcommand{\cathom}[1][\cat]{\mbin{\smash{    % 范畴 C 中的函子 : Hom
   \xrightarrow{\small #1}}}}
 \newcommand{\catplus}[1][\cat]{                % 范畴 C 中的函子 : +
@@ -78,7 +80,7 @@ $$
 \def\limit#1{{\rm lim}}                        % 极限
 \def\colimit#1{{\rm colim}}                    % 余极限
 % 用方法求值
-\def\getid#1{{}_{:#1}\id}                      % 获取对象的 id
+\def\getid#1{{}_{\smash{:#1}}\id}                      % 获取对象的 id
 \def\getabsurd#1{{}_{:#1}\absurd}              % 获取对象的 absurd
 \def\getbang#1{{}_{:#1}\bang}                  % 获取对象的 bang
 \def\getdom#1{#1\textrm{ dom}}                 % 获取箭头的定义域
