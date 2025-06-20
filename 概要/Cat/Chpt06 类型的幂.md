@@ -181,7 +181,7 @@ $$
   }\end{xy}}
   \end{array}$ $\qquad \vcenter{\begin{xy}\xymatrix@!C=2cm@!R=1.5cm{
   {\obj[a_1]\pila}
-  \ar[rr]^(.75){\varphi_1: \obj[a_1]\cathom\obj[b_1]\pila} 
+  \ar[rr]^(.75){i_1: \obj[a_1]\cathom\obj[b_1]\pila} 
   & 
   \vph{\large x}
   \ar@{|-->}[d]_{h_1=f_1\cathom g_1\pila}
@@ -191,7 +191,7 @@ $$
   \\
   {\obj[a_2]\pila}
   \ar[u]^{f_1\pila} 
-  \ar[rr]^(.75){\varphi_2: \obj[a_2]\cathom\obj[b_2]\pila} 
+  \ar[rr]^(.75){i_2: \obj[a_2]\cathom\obj[b_2]\pila} 
   & 
   \vph{\large x}
   \ar@{|-->}[d]_{h_2=f_2\cathom g_2\pila}
@@ -201,7 +201,7 @@ $$
   \\
   {\obj[a_3]\pila}
   \ar[u]^{f_2\pila} 
-  \ar[rr]^(.75){\varphi_3: \obj[a_3]\cathom\obj[b_3]\pila}
+  \ar[rr]^(.75){i_3: \obj[a_3]\cathom\obj[b_3]\pila}
   \save[].[uu]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !UR*!L{\smash{\small\color{ForestGreen}\cat}}\restore 
   &  
   \vph{\large x}
@@ -217,7 +217,7 @@ $$
 $\hspace{175pt}\begin{xy}\xymatrix@!C=2cm@R=.5cm{
 \obj[a_1]\pila 
 \ar@`{[]+/r+3pc/,[drr]+/ul+3pc/}[drr]
-^(.7){\varphi_1:\obj[a_1]\cathom\obj[b_1]}
+^(.7){i_1:\obj[a_1]\cathom\obj[b_1]}
 _(.5){}="mid1"
 &
 &\vph{\obj[a_1]}
@@ -231,7 +231,7 @@ _(.5){}="mid1"
 \obj[a_2]\pila 
 \ar[uu]^{f_1\pila}
 \ar@`{[]+/r+3pc/,[urr]+/dl+3pc/}[urr]
-_(.7){(f_1\catcirc \varphi_1):\obj[a_2]\cathom\obj[b_3]}
+_(.7){(f_1\catcirc i_1):\obj[a_2]\cathom\obj[b_3]}
 ^(.5){}="mid2"
 \ar@{|-->} "mid1";"mid2"^{\obj[b_1]^{(f_1\catcirc\_)}}
 \save[].[uu]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !UR*!L{\smash{\small\color{ForestGreen}\cat}}\restore 
@@ -248,10 +248,10 @@ $\hspace{175pt}\vcenter{\begin{xy}\xymatrix@!C=2cm@R=.5cm{
 \obj[a_1]\pila 
 \ar@`{[]+/dl+5pc/,[]+/ul+5pc/}[]^{\getid{\obj[a_1]}} 
 \ar@`{[]+/ur+3pc/,[urr]+/l+3pc/}[urr] 
-^(.7){\varphi_1:\obj[a_1]\cathom\obj[b_1]} 
+^(.7){i_1:\obj[a_1]\cathom\obj[b_1]} 
 _(.5){}="mid1" 
 \ar@`{[]+/dr+3pc/,[drr]+/l+3pc/}[drr] 
-_(.7){(\varphi_1\catcirc g_1):\obj[a_1]\cathom\obj[b_2]} 
+_(.7){(i_1\catcirc g_1):\obj[a_1]\cathom\obj[b_2]} 
 ^(.5){}="mid2" 
 &
 & 
