@@ -89,3 +89,93 @@ $$
                                                   % ＋ × ⊗ ○ →
 $$
 
+$$
+\qquad\begin{array}{c}
+\mathclap{
+\xymatrix@!C=2cm@R=.5cm{
+{\pla\obj[c_1]} 
+\ar@[red][rr]^[red]{\pla\arr[i]}_(.3){}="mid1"
+&
+&
+{\pla\obj}
+\ar[dd]^{\pla\arr}
+\\
+&
+&
+\\
+{\pla\obj[c_1']} 
+%\ar[uu]^{\pla\arr[f_1]}
+\ar[rr]_{\pla\arr[i']}
+\ar@[red]@{.>}[uurr]^(.31){}="mid2"
+& &
+{\pla\obj[c']} 
+\ar@{-->}"mid1";"mid2"_{\obj^\alpha\pla}
+}
+}
+\\[-10pt] % -----------------------------------
+\xymatrix@!C=2cm@R=.5cm{
+{\pla\obj[c_1]} 
+\ar@[red][rr]^[red]{\pla\arr[i]}_(.7){}="mid1"
+\ar@[red]@{.>}[ddrr]^(.69){}="mid2"
+&
+&
+{\pla\obj}
+\ar[dd]^{\pla\arr}
+\\
+&
+&
+\\
+{\pla\obj[c_1']} 
+%\ar[uu]^{\pla\arr[f_1]}
+\ar[rr]_{\pla\arr[i']\pla}
+& &
+{\pla\obj[c']}
+\ar@{-->}"mid1";"mid2"^{\pla(\evlbin\cathom
+  {\obj[c_1]}
+  { \arr})}
+}
+\qquad\qquad\qquad
+\xymatrix@!C=2cm@R=.5cm{
+{\pla\obj[c_1]} 
+\ar[rr]^{\pla\arr[i]}
+&
+&
+{\pla\obj}
+\ar[dd]^{\pla\arr}
+\\
+&
+&
+\\
+{\pla\obj[c_1']} 
+%\ar[uu]^{\pla\arr[f_1]}
+\ar@[red]@{.>}[rr]_[red]{\pla\arr[i']}^(.7){}="mid2"
+\ar@[red][uurr]_(.69){}="mid1"
+& &
+\obj[c']
+\ar@{-->}"mid1";"mid2"^{\pla(\evlbin\cathom
+  {\obj[c_1']}
+  { \arr})}
+}
+\\[-10pt] % --------------------------------
+\xymatrix@!C=2cm@R=.5cm{
+{\pla\obj[c_1]} 
+\ar[rr]^{\pla\arr[i]}
+\ar@[red][ddrr]_(.31){}="mid1"
+&
+&
+{\pla\obj}
+\ar[dd]^{\pla\arr}
+\\
+&
+&
+\\
+{\pla\obj[c_1']} 
+%\ar[uu]^{\pla\arr[f_1]}
+\ar@[red]@{.>}[rr]_[red]{\pla\arr[i']}^(.3){}="mid2"
+& &
+{\pla\obj[c']}
+\ar@{-->}"mid1";"mid2"_{\pla\obj[c']^\alpha}
+}
+\end{array}
+$$
+
