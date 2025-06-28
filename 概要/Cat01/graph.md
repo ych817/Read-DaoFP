@@ -11,6 +11,7 @@ $$
 \let\mclap=\mathclap
 \def\verts#1{\lvert#1\rvert}
 \def\pla{\vph{fg}}                              % 柱子, 用于指定盒子的最小高度
+%\def\pla{\bbox[0pt,red]{\,\vph{fg}}}            % 测试柱子是否被使用
 \def\etc{\textrm{etc}}                          % 对应省略号 (等等等等)
 \def\wld{\_}                                    % 对应通配符 _
 % 值构造器 ====================================================================
@@ -26,8 +27,8 @@ $$
 \def\catCat{\cat[Cat]}                          % 范畴 : Cat
 \def\catSet{\cat[Set]}                          % 范畴 : Set
 \def\catHask{\cat[Hask]}                        % 范畴 : Hask — 笛卡尔闭范畴 (+/× 都在里面)
-\newcommand{\arr}[1][f]{{#1}}               % 箭头
-\newcommand{\fct}[1][F]{{#1}}               % 函子
+\newcommand{\arr}[1][f]{{#1}}                   % 箭头
+\newcommand{\fct}[1][F]{{#1}}                   % 函子
 \newcommand{\ntf}[1][\eta]{{#1}}                % 自然变换
 % 打印方法名 ------------------------------------------------------------------
 \newcommand{\opr}[2][\cat]{\smash{              % 方法的名称 (形式 1)
@@ -60,7 +61,7 @@ $$
 \newcommand{\catcirc}[1][\cat]{                 % 范畴 C 中的运算 ○
   \opr[#1]{\circ}}
 \newcommand{\cathom}[1][\cat]{\smash{           % 范畴 C 中的运算 →
-  \xrightarrow{\small #1}}}
+  \xrightarrow{\small\pla #1}}}
 \newcommand{\catcong}[1][\cat]{\smash{          % 范畴 C 中的同构 ≅
   \opr[#1]{\cong}}}
 \newcommand{\Di}[2][\cat]{                      % 对角函子
@@ -73,13 +74,13 @@ $$
   \texttt{尤}}
 % 用方法求值 -------------------------------------------------------------------
 \def\evlcry#1#2{                                % 用方法求值 (柯里化)
-    #2{#1}}                                     % 针对的方法有
+    #2{#1}}                                       % 针对的方法有
                                                   % Id id bang absurd
 \def\evlcrytxt#1#2{                             % 用方法求值 (柯里化)
-	#2~{#1}}                                    % 针对的方法有 
+	#2~{#1}}                                      % 针对的方法有 
 	                                              % Di Obj Arr src dom img
 \def\evlcrynat#1#2{                             % 用方法求值 (柯里化)
-    #2^{#1}}                                    % 针对的方法 (自然变换) 有 
+    #2^{#1}}                                      % 针对的方法 (自然变换) 有 
                                                   % η θ
 \def\evlbig#1#2#3{                              % 用方法求值 (大算符)
     #2\rst{#1}undr#3}                             % 针对的方法 (大算符) 有 
@@ -89,93 +90,110 @@ $$
                                                   % ＋ × ⊗ ○ →
 $$
 
-$$
-\qquad\begin{array}{c}
-\mathclap{
-\xymatrix@!C=2cm@R=.5cm{
-{\pla\obj[c_1]} 
-\ar@[red][rr]^[red]{\pla\arr[i]}_(.3){}="mid1"
-&
-&
-{\pla\obj}
-\ar[dd]^{\pla\arr}
-\\
-&
-&
-\\
-{\pla\obj[c_1']} 
-%\ar[uu]^{\pla\arr[f_1]}
-\ar[rr]_{\pla\arr[i']}
-\ar@[red]@{.>}[uurr]^(.31){}="mid2"
-& &
-{\pla\obj[c']} 
-\ar@{-->}"mid1";"mid2"_{\obj^\alpha\pla}
-}
-}
-\\[-10pt] % -----------------------------------
-\xymatrix@!C=2cm@R=.5cm{
-{\pla\obj[c_1]} 
-\ar@[red][rr]^[red]{\pla\arr[i]}_(.7){}="mid1"
-\ar@[red]@{.>}[ddrr]^(.69){}="mid2"
-&
-&
-{\pla\obj}
-\ar[dd]^{\pla\arr}
-\\
-&
-&
-\\
-{\pla\obj[c_1']} 
-%\ar[uu]^{\pla\arr[f_1]}
-\ar[rr]_{\pla\arr[i']\pla}
-& &
-{\pla\obj[c']}
-\ar@{-->}"mid1";"mid2"^{\pla(\evlbin\cathom
-  {\obj[c_1]}
-  { \arr})}
-}
-\qquad\qquad\qquad
-\xymatrix@!C=2cm@R=.5cm{
-{\pla\obj[c_1]} 
-\ar[rr]^{\pla\arr[i]}
-&
-&
-{\pla\obj}
-\ar[dd]^{\pla\arr}
-\\
-&
-&
-\\
-{\pla\obj[c_1']} 
-%\ar[uu]^{\pla\arr[f_1]}
-\ar@[red]@{.>}[rr]_[red]{\pla\arr[i']}^(.7){}="mid2"
-\ar@[red][uurr]_(.69){}="mid1"
-& &
-\obj[c']
-\ar@{-->}"mid1";"mid2"^{\pla(\evlbin\cathom
-  {\obj[c_1']}
-  { \arr})}
-}
-\\[-10pt] % --------------------------------
-\xymatrix@!C=2cm@R=.5cm{
-{\pla\obj[c_1]} 
-\ar[rr]^{\pla\arr[i]}
-\ar@[red][ddrr]_(.31){}="mid1"
-&
-&
-{\pla\obj}
-\ar[dd]^{\pla\arr}
-\\
-&
-&
-\\
-{\pla\obj[c_1']} 
-%\ar[uu]^{\pla\arr[f_1]}
-\ar@[red]@{.>}[rr]_[red]{\pla\arr[i']}^(.3){}="mid2"
-& &
-{\pla\obj[c']}
-\ar@{-->}"mid1";"mid2"_{\pla\obj[c']^\alpha}
-}
-\end{array}
-$$
+上一页的第一条定理若用交换图表示则应为
 
+$\qquad\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
+{\pla\obj[c]\bbox[LightGreen]{\evlbin\cathom
+  {{}}
+  {\obj[c_2]}}} 
+\ar[r]^{\pla\evlcrynat{\ntf[\beta]}
+  {\obj[c]}} 
+\ar[d]_{\pla\arr\bbox[LightGreen]{\evlbin\cathom
+  {{}}
+  {\obj[c_2]}}} &
+{\obj[c]\bbox[LightGreen]{\pla\evlbin\cathom
+  {{}}
+  {\obj[c_2']}}} 
+\ar[d]^{\pla\arr\bbox[LightGreen]{\evlbin\cathom
+  {{}}
+  {\obj[c_2']}}} \\
+{\pla\obj[c']\bbox[LightGreen]{\evlbin\cathom
+  {{}}
+  {\obj[c_2]}}} 
+\ar[r]_{\pla\evlcrynat{\ntf[\beta]}
+  {\obj[c']}} 
+\save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
+!D*!U{\small\pla\color{ForestGreen}\cat\bbox[LightGreen]{\evlbin\cathom
+  {{}}
+  {\obj[c_2]}}}\restore &
+{\pla\obj[c']\bbox[LightGreen]{\evlbin\cathom
+  {{}}
+  {\obj[c_2']}}}
+\save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
+!D*!U{\small\pla\color{ForestGreen}\cat\bbox[LightGreen]{\evlbin\cathom
+  {{}}
+  {\obj[c_2']}}}\restore 
+\save[ul].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{}
+!U*!D!L(4){\small\pla\color{ForestGreen}\cat[Set]}\restore 
+}\end{xy}}$
+
+$\Rightarrow$ 易证 , $\Leftarrow$ 用到了米田技巧 ( 考虑特殊情况 )
+
+$\qquad\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
+{\pla\obj[c_2]\bbox[LightGreen]{\evlbin\cathom
+  {{}}
+  {\obj[c_2]}}} 
+\ar[r]^{\pla\evlcrynat{\ntf[\beta]}
+  {\obj[c_2]}} 
+\ar[d]_{\pla\arr\bbox[LightGreen]{\evlbin\cathom
+  {{}}
+  {\obj[c_2]}}} &
+{\pla\obj[c_2]\bbox[LightGreen]{\evlbin\cathom
+  {{}}
+  {\obj[c_2']}}} 
+\ar[d]^{\pla\arr\bbox[LightGreen]{\evlbin\cathom
+  {{}}
+  {\obj[c_2']}}}  \\
+{\pla\obj[c']\bbox[LightGreen]{\evlbin\cathom
+  {{}}
+  {\obj[c_2]}}} 
+\ar[r]_{\pla\evlcrynat{\ntf[\beta]}
+  {\obj[c']}} &
+{\pla\obj[c']\bbox[LightGreen]{\evlbin\cathom
+  {{}}
+  {\obj[c_2']}}}  
+}\end{xy}} \qquad
+% ----
+\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
+{\pla\id[{\obj[c_2]}]} 
+\ar@{|->}[r]^{\pla\evlcrynat{\ntf[\beta]}
+  {\obj[c_2]}} 
+\ar@{|->}[d]_{\pla\arr\bbox[LightGreen]{\evlbin\cathom
+  {{}}
+  {\obj[c_2]}}} &
+{\pla\smash[h]{\bbox[LightGray]{\id[{\obj[c_2]}](\evlcrynat{\ntf[\beta]}
+  {\obj[c_2]})}}} 
+\ar@{|->}[d]^{\pla\arr\bbox[LightGreen]{\evlbin\cathom
+  {{}}
+  {\obj[c_2']}}}  \\
+{\pla\arr} 
+\ar@{|->}[r]_{\pla\evlcrynat{\ntf[\beta]}
+  {\obj[c']}} &
+{\pla\arr\circ\bbox[LightGray]{(\etc)}}
+}\end{xy}}$
+
+为了方便就用 $\bbox[LightGray]{(\etc)}$ 表示 $\bbox[LightGray]{\evlcry{(\evlcrynat{\ntf[\beta]}
+  {\obj[c_2]})}
+    {\id[{\obj[c_2]}]}}$ 。 由上图可
+知 $\arr(\evlcrynat{\ntf[\beta]}
+  {\obj[c']})=\evlbin\catcirc
+    \arr
+    {\bbox[LightGray]{(\etc)}}$ , 故 $\evlcrynat{\ntf[\beta]}
+  {\obj[c']} = \bbox[LightBlue]{\evlbin\cathom
+    {\obj[c']}
+    {{}}}\bbox[LightGray]{(\etc)}$ ; 
+而 $\evlcrynat{\ntf[\beta]}
+  {\obj[c']} = \bbox[LightBlue]{\evlbin\cathom
+    {\obj[c']}
+    {{}}}\bbox[LightGray]{(\etc)}=\evlcrynat{(\evlbin\catcirc
+    {\wld}
+    {\bbox[LightGray]{(\etc)}})}
+    {\obj[c']}$是同构 , 从而
+知 $(\bbox[LightGray]{\evlbin\catcirc
+  {(\etc)}
+  {{}}}\wld)$ 是同构 , ==$\bbox[LightGray]{(\etc)} : \evlbin\cathom
+  {\obj[c_2]}
+  {\obj[c_2']}$ 也是== 。
+
+> 高亮部分省去了部分推理过程 , 
+> 具体在米田嵌入处会详细介绍 。
