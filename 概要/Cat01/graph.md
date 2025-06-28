@@ -10,8 +10,8 @@ $$
 \let\mrlap=\mathrlap
 \let\mclap=\mathclap
 \def\verts#1{\lvert#1\rvert}
-\def\pla{\vph{fg}}                              % 柱子, 用于指定盒子的最小高度
-%\def\pla{\bbox[0pt,red]{\,\vph{fg}}}            % 测试柱子是否被使用
+%\def\pla{\vph{fg}}                              % 柱子, 用于指定盒子的最小高度
+\def\pla{\bbox[0pt,red]{\,\vph{fg}}}            % 测试柱子是否被使用
 \def\etc{\textrm{etc}}                          % 对应省略号 (等等等等)
 \def\wld{\_}                                    % 对应通配符 _
 % 值构造器 ====================================================================
@@ -77,8 +77,8 @@ $$
     #2{#1}}                                       % 针对的方法有
                                                   % Id id bang absurd
 \def\evlcrytxt#1#2{                             % 用方法求值 (柯里化)
-	#2~{#1}}                                      % 针对的方法有 
-	                                              % Di Obj Arr src dom img
+	#2~{#1}}                                        % 针对的方法有 
+	                                                % Di Obj Arr src dom img
 \def\evlcrynat#1#2{                             % 用方法求值 (柯里化)
     #2^{#1}}                                      % 针对的方法 (自然变换) 有 
                                                   % η θ
@@ -90,39 +90,39 @@ $$
                                                   % ＋ × ⊗ ○ →
 $$
 
-上一页的第一条定理若用交换图表示则应为
+上一页的第二条定理若用交换图表示则应为
 
 $\qquad\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
-{\pla\obj[c]\bbox[LightGreen]{\evlbin\cathom
-  {{}}
-  {\obj[c_2]}}} 
-\ar[r]^{\pla\evlcrynat{\ntf[\beta]}
+{\pla\bbox[LightGreen]{\evlbin\cathom
+  {\obj[c_1]}
+  {{}}}\obj[c]} 
+\ar[r]^{\pla\evlcrynat{\ntf[\eta_1]}
   {\obj[c]}} 
-\ar[d]_{\pla\arr\bbox[LightGreen]{\evlbin\cathom
-  {{}}
-  {\obj[c_2]}}} &
-{\obj[c]\bbox[LightGreen]{\pla\evlbin\cathom
-  {{}}
-  {\obj[c_2']}}} 
-\ar[d]^{\pla\arr\bbox[LightGreen]{\evlbin\cathom
-  {{}}
-  {\obj[c_2']}}} \\
-{\pla\obj[c']\bbox[LightGreen]{\evlbin\cathom
-  {{}}
-  {\obj[c_2]}}} 
-\ar[r]_{\pla\evlcrynat{\ntf[\beta]}
+\ar[d]_{\bbox[LightGreen]{\pla\evlbin\cathom
+  {\obj[c_1]}
+  {{}}}\arr} &
+{\pla\bbox[LightGreen]{\evlbin\cathom
+  {\obj[c_1']}
+  {{}}}\obj[c]} 
+\ar[d]^{\bbox[LightGreen]{\pla\evlbin\cathom
+  {\obj[c_1]}
+  {{}}}\arr}  \\
+{\pla\bbox[LightGreen]{\evlbin\cathom
+  {\obj[c_1]}
+  {{}}}\obj[c']} 
+\ar[r]_{\pla\evlcrynat{\ntf[\eta_1]}
   {\obj[c']}} 
-\save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
-!D*!U{\small\pla\color{ForestGreen}\cat\bbox[LightGreen]{\evlbin\cathom
-  {{}}
-  {\obj[c_2]}}}\restore &
-{\pla\obj[c']\bbox[LightGreen]{\evlbin\cathom
-  {{}}
-  {\obj[c_2']}}}
-\save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
-!D*!U{\small\pla\color{ForestGreen}\cat\bbox[LightGreen]{\evlbin\cathom
-  {{}}
-  {\obj[c_2']}}}\restore 
+\save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U
+{\small\pla\color{ForestGreen}\bbox[LightGreen]{\evlbin\cathom
+  {\obj[c_1]}
+  {{}}}\cat}\restore &
+{\bbox[LightGreen]{\pla\evlbin\cathom
+  {\obj[c_1']}
+  {{}}}\obj[c']} 
+\save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U
+{\small\pla\color{ForestGreen}\bbox[LightGreen]{\evlbin\cathom
+  {\obj[c_1']}
+  {{}}}\cat}\restore 
 \save[ul].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{}
 !U*!D!L(4){\small\pla\color{ForestGreen}\cat[Set]}\restore 
 }\end{xy}}$
@@ -130,70 +130,69 @@ $\qquad\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
 $\Rightarrow$ 易证 , $\Leftarrow$ 用到了米田技巧 ( 考虑特殊情况 )
 
 $\qquad\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
-{\pla\obj[c_2]\bbox[LightGreen]{\evlbin\cathom
-  {{}}
-  {\obj[c_2]}}} 
-\ar[r]^{\pla\evlcrynat{\ntf[\beta]}
-  {\obj[c_2]}} 
-\ar[d]_{\pla\arr\bbox[LightGreen]{\evlbin\cathom
-  {{}}
-  {\obj[c_2]}}} &
-{\pla\obj[c_2]\bbox[LightGreen]{\evlbin\cathom
-  {{}}
-  {\obj[c_2']}}} 
-\ar[d]^{\pla\arr\bbox[LightGreen]{\evlbin\cathom
-  {{}}
-  {\obj[c_2']}}}  \\
-{\pla\obj[c']\bbox[LightGreen]{\evlbin\cathom
-  {{}}
-  {\obj[c_2]}}} 
-\ar[r]_{\pla\evlcrynat{\ntf[\beta]}
+{\bbox[LightGreen]{\pla\evlbin\cathom
+  {\obj[c_1]}
+  {{}}}\obj[c_1]} 
+\ar[r]^{\pla\evlcrynat{\ntf[\eta_1]}
+  {\obj[c]}} 
+\ar[d]_{\pla\bbox[LightGreen]{\evlbin\cathom
+  {\obj[c_1]}
+  {{}}}\arr} &
+{\pla\bbox[LightGreen]{\evlbin\cathom
+  {\obj[c_1']}
+  {{}}}\obj[c_1]} 
+\ar[d]^{\pla\bbox[LightGreen]{\evlbin\cathom
+  {\obj[c_1]}
+  {{}}}\arr}  \\
+{\pla\bbox[LightGreen]{\evlbin\cathom
+  {\obj[c_1]}
+  {{}}}\obj[c']} 
+\ar[r]_{\pla\evlcrynat{\ntf[\eta_1]}
   {\obj[c']}} &
-{\pla\obj[c']\bbox[LightGreen]{\evlbin\cathom
-  {{}}
-  {\obj[c_2']}}}  
-}\end{xy}} \qquad
-% ----
+{\pla\bbox[LightGreen]{\evlbin\cathom
+  {\obj[c_1']}
+  {{}}}\obj[c']}
+}\end{xy}}
+\qquad
 \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
-{\pla\id[{\obj[c_2]}]} 
-\ar@{|->}[r]^{\pla\evlcrynat{\ntf[\beta]}
-  {\obj[c_2]}} 
-\ar@{|->}[d]_{\pla\arr\bbox[LightGreen]{\evlbin\cathom
-  {{}}
-  {\obj[c_2]}}} &
-{\pla\smash[h]{\bbox[LightGray]{\id[{\obj[c_2]}](\evlcrynat{\ntf[\beta]}
-  {\obj[c_2]})}}} 
-\ar@{|->}[d]^{\pla\arr\bbox[LightGreen]{\evlbin\cathom
-  {{}}
-  {\obj[c_2']}}}  \\
-{\pla\arr} 
-\ar@{|->}[r]_{\pla\evlcrynat{\ntf[\beta]}
+{\pla\id[{\obj[c_1]}]}
+\ar@{|->}[r]^{\pla\evlcrynat{\ntf[\eta_1]}
+  {\obj[c]}} 
+\ar@{|->}[d]_{\pla\bbox[LightGreen]{\evlbin\cathom
+  {\obj[c_1]}
+  {{}}}\arr} &
+{\pla\smash[h]{\bbox[LightGray]{\id[{\obj[c_1]}](\evlcrynat{\ntf[\eta_1]}
+  {\obj[c]})}}} 
+\ar@{|->}[d]^{\pla\bbox[LightGreen]{\evlbin\cathom
+  {\obj[c_1]}
+  {{}}}\arr}  \\
+{\pla\arr}
+\ar@{|->}[r]_{\pla\evlcrynat{\ntf[\eta_1]}
   {\obj[c']}} &
-{\pla\arr\circ\bbox[LightGray]{(\etc)}}
+{\pla\bbox[LightGray]{(\etc)}\circ\arr}
 }\end{xy}}$
 
-为了方便就用 $\bbox[LightGray]{(\etc)}$ 表示 $\bbox[LightGray]{\evlcry{(\evlcrynat{\ntf[\beta]}
-  {\obj[c_2]})}
-    {\id[{\obj[c_2]}]}}$ 。 由上图可
-知 $\arr(\evlcrynat{\ntf[\beta]}
-  {\obj[c']})=\evlbin\catcirc
-    \arr
-    {\bbox[LightGray]{(\etc)}}$ , 故 $\evlcrynat{\ntf[\beta]}
-  {\obj[c']} = \bbox[LightBlue]{\evlbin\cathom
-    {\obj[c']}
-    {{}}}\bbox[LightGray]{(\etc)}$ ; 
-而 $\evlcrynat{\ntf[\beta]}
-  {\obj[c']} = \bbox[LightBlue]{\evlbin\cathom
-    {\obj[c']}
-    {{}}}\bbox[LightGray]{(\etc)}=\evlcrynat{(\evlbin\catcirc
-    {\wld}
-    {\bbox[LightGray]{(\etc)}})}
-    {\obj[c']}$是同构 , 从而
-知 $(\bbox[LightGray]{\evlbin\catcirc
-  {(\etc)}
-  {{}}}\wld)$ 是同构 , ==$\bbox[LightGray]{(\etc)} : \evlbin\cathom
-  {\obj[c_2]}
-  {\obj[c_2']}$ 也是== 。
+为了方便就用 $\bbox[LightGray]{(\etc)}$ 表示 $\bbox[LightGray]{\evlcry{(\evlcrynat{\ntf[\eta_1]}
+  {\obj[c]})}
+    {\id[{\obj[c_1]}]}}$ 。由上图
+知 $\evlcry{(\evlcrynat{\ntf[\eta_1]}
+  {\obj[c']})}{\arr}=\evlbin\catcirc
+  {\bbox[LightGray]{(\etc)}}
+  \arr$ , 故 $\evlcrynat{\ntf[\eta_1]}
+  {\obj[c']}=\bbox[LightGray]{(\etc)}\bbox[LightBlue]{\evlbin\cathom
+  {{}}
+  {\obj[c']}}$ ;
+而 $\evlcrynat{\ntf[\eta_1]}
+  {\obj[c']}=\bbox[LightGray]{(\etc)}\bbox[LightBlue]{\evlbin\cathom
+  {{}}
+  {\obj[c']}}=\obj[c']^{(\evlbin\catcirc
+  {\bbox[LightGray]{(\etc)}}
+  \wld)}$是同构, 从而
+知 $(\evlbin\catcirc
+  \wld
+  {\bbox[LightGray]{(\etc)}})$ 是同构 , ==$\bbox[LightGray]{(\etc)}:\evlbin\cathom
+    {\obj[c_1]}
+    {\obj[c_1']}$ 也是== 。
 
 > 高亮部分省去了部分推理过程 , 
 > 具体在米田嵌入处会详细介绍 。
