@@ -29,12 +29,12 @@ $$
 \def\catCat{\cat[Cat]}                          % 范畴 : Cat
 \def\catSet{\cat[Set]}                          % 范畴 : Set
 \def\catHask{\cat[Hask]}                        % 范畴 : Hask — 笛卡尔闭范畴 +/× 都在里面
-\newcommand{\arr}[1][f]{{#1}}                   % 箭头
-\newcommand{\arr}[1][f]{\bbox[0pt, violet]{ #1}} % 测试箭头是否被使用
-\newcommand{\fct}[1][F]{{#1}}                   % 函子
-\newcommand{\fct}[1][f]{\bbox[0pt,orange]{ #1}}  % 测试函子是否被使用
-\newcommand{\ntf}[1][\eta]{{#1}}                % 自然变换
-\newcommand{\ntf}[1][f]{\bbox[0pt,pink]{ #1}}     % 测试自然变换是否被使用
+\newcommand{\arr}[1][f]{\pla \smash{#1}}        % 箭头
+\newcommand{\arr}[1][f]{\bbox[0pt, violet]{\pla \smash{#1}}} % 测试箭头是否被使用
+\newcommand{\fct}[1][F]{\pla \smash{#1}}        % 函子
+\newcommand{\fct}[1][F]{\bbox[0pt,orange]{\pla \smash{#1}}}  % 测试函子是否被使用
+\newcommand{\ntf}[1][\eta]{\pla \smash{#1}}     % 自然变换
+\newcommand{\ntf}[1][\eta]{\bbox[0pt,pink]{\pla \smash{#1}}} % 测试自然变换是否被使用
 % 打印方法名 ------------------------------------------------------------------
 \newcommand{\opr}[2][\cat]{\smash{              % 方法的名称 形式 1
   \overset{\mclap{\small #1}}{#2}}}
@@ -89,9 +89,9 @@ $$
   %}
 }	                                              
 \newcommand{\evlcrynat}[3][\prs]{               % 用方法求值 柯里化
-  %\bbox[border: 1px solid Orchid]{%              % 针对的方法 自然变换 有 
+  \bbox[border: 1px solid Orchid]{%              % 针对的方法 自然变换 有 
     #1{#3^{#2}}                                   % η θ
-  %}
+  }
 }
 \def\evlbig#1#2#3{                              % 用方法求值 大算符
   \bbox[border: 1px solid Turquoise]{%            % 针对的方法 大算符 有 
@@ -99,32 +99,48 @@ $$
   }
 }
 \newcommand{\evlbin}[4][\prs]{                  % 用方法求值 二元运算
-  %\bbox[border: 1px solid red]{%                 % 针对的方法 二元运算 有
+  \bbox[border: 1px solid red]{%                 % 针对的方法 二元运算 有
     #1{#3 \mbin{#2} #4}%                          % ＋ × ⊗ ○ →
-  %}
+  }
 }
 $$
 
 ### 自然变换
 
-如果还知道 $\fct[F']:\cat\cathom[\catCat]\cat[D]$ 为函子 , 那么
+如果还知道 $\fct[F']:\evlbin[]{\cathom[\catCat]}
+    \cat
+    {\cat[D]}$ 为函子 , 那么
 
-- $\ntf[\eta] : \fct[F]\cathom[{\cat\cathom[\catCat]\cat[D]}]\fct[F']$ 为自然变换当且仅当对任意 
+- $\ntf[\eta] : \evlbin[]{\cathom[{\evlbin[]{\cathom[\catCat]}
+    \cat
+    {\cat[D]}}]}
+      {\fct[F]}
+      {\fct[F']}$ 为自然变换当且仅当对任意 
   $\cat$ 中对象 $\obj[c]$ , $\obj[c']$ 始终都会有下述交换图成立 : 
 
   $\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
-  {\obj[c]\bbox[LightGreen]{\fct[F]}} 
-  \ar[r]^{\obj[c]^{\ntf[\eta]}} 
-  \ar[d]_{f_1\bbox[LightGreen]{\fct[F]}} &
-  {\obj[c]\bbox[LightGreen]{\fct[F']}} 
-  \ar[d]^{f_1\bbox[LightGreen]{\fct[F']}}  \\
-  {\obj[c']\bbox[LightGreen]{\fct[F]}} 
-  \ar[r]_{\obj[c']^{\ntf[\eta]}} 
-  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat \bbox[LightGreen]{\fct[F]}}\restore
+  {\evlcry[]{\bbox[LightGreen]{\fct[F]}}
+  {\obj[c]}} 
+  \ar[r]^{\evlcrynat[]{\ntf[\eta]}
+  {\obj[c]}} 
+  \ar[d]_{\evlcry[]{\bbox[LightGreen]{\fct[F]}}
+  {\arr[f_1]}} &
+  {\evlcry[]{\bbox[LightGreen]{\fct[F']}}
+  {\obj[c]}} 
+  \ar[d]^{\evlcry[]{\bbox[LightGreen]{\fct[F']}}
+  {\arr[f_1]}}  \\
+  {\evlcry[]{\bbox[LightGreen]{\fct[F]}}
+  {\obj[c']}} 
+  \ar[r]_{\evlcrynat[]{\ntf[\eta]}
+  {\obj[c']}} 
+  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\evlcry[]{\bbox[LightGreen]{\fct[F]}}
+  {\cat}}\restore
   &
-  {\obj[c']\bbox[LightGreen]{\fct[F']}}  
-  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat \bbox[LightGreen]{\fct[F']}}\restore
-  \save[ul].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} !U*!D!L(6){\small\color{ForestGreen}\cat[D]}\restore 
+  {\evlcry[]{\bbox[LightGreen]{\fct[F']}}
+  {\obj[c']}}  
+  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\evlcry[]{\bbox[LightGreen]{\fct[F']}}
+  {\cat}}\restore
+  \save[u].[].[l]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} !U*!D!R(7){\small\color{ForestGreen}\cat[D]}\restore 
   }\end{xy}}$ $\quad \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{ 
   \cat[D]
   \ar@{<-}@`{[]+/l+3pc/,[d]+/l+3pc/}[d]^(.5){}="mid1"|{\fct[F]}
@@ -136,34 +152,69 @@ $$
 
 ### 自然变换的复合
 
-若已知 $\ntf[\eta]: \fct[F]\cathom[{\cat\cathom[\catCat]\cat[D]}]\fct[F']$ 构成自然变换且
-还知道 $\ntf[\eta']:\fct[F']\cathom[{\cat\cathom[\catCat]\cat[D]}]\fct[F'']$ 为自然变换则有
+若已知 $\ntf[\eta] : \evlbin[]{\cathom[{\evlbin[]{\cathom[\catCat]}
+    \cat
+    {\cat[D]}}]}
+      {\fct[F]}
+      {\fct[F']}$ 构成自然变换且
+还知道 $\ntf[\eta'] : \evlbin[]{\cathom[{\evlbin[]{\cathom[\catCat]}
+    \cat
+    {\cat[D]}}]}
+      {\fct[F']}
+      {\fct[F'']}$ 为自然变换则
 
-- $\ntf[\eta]~~\catcirc[{\cat\cathom[\catCat]\cat[D]}]~~\ntf[\eta']: \fct[F]\cathom[{\cat\cathom[\catCat]\cat[D]}]\fct[F']$ 为自然变换 , 
+- $\evlbin[]{\catcirc[{\cat\cathom[\catCat]\cat[D]}]}
+    {\ntf[\eta]~~}
+    {~~\ntf[\eta']}: \evlbin[]{\cathom[{\evlbin[]{\cathom[\catCat]}
+      \cat
+      {\cat[D]}}]}
+        {\fct[F]}
+        {\fct[F'']}$ 为自然变换 , 
   称作 $\ntf[\eta]$ 和 $\ntf[\eta']$ 的**纵复合** 。
 
   $\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
-  {\obj[c]\bbox[LightGreen]{\fct[F]}} 
-  \ar[r]^{\obj[c]^{\ntf[\eta]}} 
-  \ar[d]_{f_1\bbox[LightGreen]{\fct[F]}} &
-  {\obj[c]\bbox[LightGreen]{\fct[F']}}
-  \ar[r]^{\obj[c]^{\ntf[\eta']}} 
-  \ar[d]^{f_1\bbox[LightGreen]{\fct[F']}} & 
-  {\obj[c]\bbox[LightGreen]{\fct[F'']}} 
-  \ar[d]^{f_1\bbox[LightGreen]{\fct[F'']}} & 
+  {\evlcry[]{\bbox[LightGreen]{\fct[F]}}
+  {\obj[c]}} 
+  \ar[r]^{\evlcrynat[]{\ntf[\eta]}
+  {\obj[c]}} 
+  \ar[d]_{\evlcry[]{\bbox[LightGreen]{\fct[F]}}
+  {\arr[f_1]}} &
+  {\evlcry[]{\bbox[LightGreen]{\fct[F']}}
+  {\obj[c]}}
+  \ar[r]^{\evlcrynat[]{\ntf[\eta']}
+  {\obj[c]}} 
+  \ar[d]^{\evlcry[]{\bbox[LightGreen]{\fct[F']}}
+  {\arr[f_1]}} & 
+  {\evlcry[]{\bbox[LightGreen]{\fct[F'']}}
+  {\obj[c]}} 
+  \ar[d]^{\evlcry[]{\bbox[LightGreen]{\fct[F'']}}
+  {\arr[f_1]}} & 
   \\
-  {\obj[c']\bbox[LightGreen]{\fct[F]}} 
-  \ar[r]_{\obj[c']^{\ntf[\eta]}} 
-  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat \bbox[LightGreen]{\fct[F]}}\restore
+  {\evlcry[]{\bbox[LightGreen]{\fct[F]}}
+  {\obj[c']}} 
+  \ar[r]_{\evlcrynat[]{\ntf[\eta]}
+  {\obj[c']}} 
+  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U
+  {\small\color{ForestGreen}\evlcry[]{\bbox[LightGreen]{\fct[F]}}
+  {\cat}}\restore
   &
-  {\obj[c']\bbox[LightGreen]{\fct[F']}}  
-  \ar[r]_{\obj[c']^{\ntf[\eta']}} 
-  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat \bbox[LightGreen]{\fct[F']}}\restore
+  {\evlcry[]{\bbox[LightGreen]{\fct[F']}}
+  {\obj[c']}}  
+  \ar[r]_{\evlcrynat[]{\ntf[\eta']}
+  {\obj[c']}} 
+  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U
+  {\small\color{ForestGreen}\evlcry[]{\bbox[LightGreen]{\fct[F']}}
+  {\cat}}\restore
   & 
-  {\obj[c']\bbox[LightGreen]{\fct[F'']}}
-  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat \bbox[LightGreen]{\fct[F'']}}\restore
-  \save[ull].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} !U*!D!L(12){\small\color{ForestGreen}\cat[D]}\restore 
-  }\end{xy}}$ $\quad \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{ 
+  {\evlcry[]{\bbox[LightGreen]{\fct[F'']}}
+  {\obj[c']}}
+  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U
+  {\small\color{ForestGreen}\evlcry[]{\bbox[LightGreen]{\fct[F'']}}
+  {\cat}}\restore
+  \save[u].[].[ll]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} !U*!D!R(13)
+  {\small\color{ForestGreen}\cat[D]}\restore 
+  }\end{xy}}\quad 
+  \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{ 
   \cat[D]
   \\
   \cat[C]
@@ -174,55 +225,116 @@ $$
   \ar@2{>} "mid2b";"mid3"^{\ntf[\eta']}
   }\end{xy}}$ 
 
-如果还知道 $\fct[G']:\cat[D]\cathom[\catCat]\cat[E]$ 也是个函子
-及自然变换 ${\ntf[\theta]}: \fct[G]\cathom[{\cat[D]\cathom[\catCat]\cat[E]}]\fct[G']$ , 那么有
+如果还知道 $\fct[G']:\evlbin[]{\cathom[\catCat]}
+  {\cat[D]}
+  {\cat[E]}$ 也是个函子
+及自然变换 ${\ntf[\theta]}: \evlbin[]{\cathom[{\evlbin[]{\cathom[\catCat]}
+  {\cat[D]}
+  {\cat[E]}}]}{\fct[G]}{\fct[G']}$ 那么便有
 
-- $\ntf[\eta]\circ \ntf[\theta] : \fct[F]\catcirc[\catCat]\fct[G] \cathom[{\cat\cathom[\catCat]\cat[E]}]\fct[F']\catcirc[\catCat]\fct[G']$ 为
+- $\evlbin[]\circ
+    {\ntf[\eta]}
+    {\ntf[\theta]} : 
+  \evlbin[]{\cathom[{\cat\cathom[\catCat]\cat[E]}]}
+    {\evlbin[]{\catcirc[\catCat]}
+      {\fct[F]}
+      {\fct[G]}}
+    {\evlbin[]{\catcirc[\catCat]}
+      {\fct[F']}
+      {\fct[G']}}$ 为
   自然变换 , 称作 $\ntf[\eta]$ 和 $\ntf[\theta]$ 的**横复合** 。
 
   $\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
-  {\obj[c]\bbox[LightGreen]{\fct[F]\fct[G]}} 
-  \ar[r]^{\obj[c]^{\ntf[\eta]}\bbox[LightGreen]{\fct[G]}} 
-  \ar[d]_{\mathllap{f_1\bbox[LightGreen]{\fct[F]\fct[G]}}} 
-  \ar@[gray][drr]|(.7)[gray]{(\obj[c]\fct[F])^{\ntf[\theta]}} &
-  {\obj[c]\bbox[LightGreen]{\fct[F']\fct[G]}} 
-  \ar[d]^{\mathrlap{f_1\bbox[LightGreen]{\fct[F']\fct[G]}}} 
-  \ar@[gray][drr]|(.3)[gray]{(\obj[c]\fct[F'])^{\ntf[\theta]}} \\
-  {\obj[c']\bbox[LightGreen]{\fct[F]\fct[G]}} 
-  \ar[r]_{\obj[c']^{\ntf[\eta]}\bbox[LightGreen]{\fct[G]}} 
-  \ar@[gray][drr]|(.7)[gray]{(\obj[c']\fct[F])^{\ntf[\theta]}} &
-  {\obj[c']\bbox[LightGreen]{\fct[F']\fct[G]}}  
-  \ar@[gray][drr]|(.3)[gray]{(\obj[c']\fct[F'])^{\ntf[\theta]}}
+  {\evlcry[]{\bbox[LightGreen]{\fct[G]}}
+  {\evlcry[]{\bbox[LightGreen]{\fct[F]}}
+    {\obj[c]}}} 
+  \ar[r]^{\evlcry[]{\bbox[LightGreen]{\fct[G]}}
+  {\evlcrynat[]{\ntf[\eta]}
+    {\obj[c]}}} 
+  \ar[d]_{\mathllap{\evlcry[]{\bbox[LightGreen]{\fct[G]}}
+  {\evlcry[]{\bbox[LightGreen]{\fct[F]}}
+    {\arr[f_1]}}}} 
+  \ar@[gray][drr]|(.7)[gray]{\evlcrynat[]{\ntf[\theta]}
+  {\evlcry{\fct[F]}
+    {\obj[c]}}} &
+  {\evlcry[]{\bbox[LightGreen]{\fct[G]}}
+  {\evlcry[]{\bbox[LightGreen]{\fct[F']}}
+    {\obj[c]}}} 
+  \ar[d]^{\mathrlap{\evlcry[]{\bbox[LightGreen]{\fct[G]}}
+  {\evlcry[]{\bbox[LightGreen]{\fct[F']}}
+    {\arr[f_1]}}}} 
+  \ar@[gray][drr]|(.3)[gray]{\evlcrynat[]{\ntf[\theta]}
+  {\evlcry{\fct[F']}
+    {\obj[c]}}} \\
+  {\evlcry[]{\bbox[LightGreen]{\fct[G]}}
+  {\evlcry[]{\bbox[LightGreen]{\fct[F]}}
+    {\obj[c']}}} 
+  \ar[r]_{\evlcry[]{\bbox[LightGreen]{\fct[G]}}
+  {\evlcrynat[]{\ntf[\eta]}
+    {\obj[c']}}} 
+  \ar@[gray][drr]|(.7)[gray]{\evlcrynat[]{\ntf[\theta]}
+  {\evlcry{\fct[F]}
+    {\obj[c']}}} &
+  {\evlcry[]{\bbox[LightGreen]{\fct[G]}}
+  {\evlcry[]{\bbox[LightGreen]{\fct[F']}}
+    {\obj[c']}}}  
+  \ar@[gray][drr]|(.3)[gray]{\evlcrynat[]{\ntf[\theta]}
+  {\evlcry{\fct[F']}
+    {\obj[c']}}}
   \save[ul].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} !U*!D!L(7){\small\color{ForestGreen}\cat[E]}\restore &
-  {\obj[c]\bbox[LightGreen]{\fct[F]\fct[G']}} 
-  \ar[r]^{\obj[c]^{\ntf[\eta]}\bbox[LightGreen]{\fct[G']}} 
-  \ar[d]_{\mathllap{f_1\bbox[LightGreen]{\fct[F]\fct[G']}}} &
-  {\obj[c]\bbox[LightGreen]{\fct[F']\fct[G']}} 
-  \ar[d]^{\mathrlap{f_1\bbox[LightGreen]{\fct[F']\fct[G']}}}  \\
+  {\evlcry[]{\bbox[LightGreen]{\fct[G']}}
+  {\evlcry[]{\bbox[LightGreen]{\fct[F]}}
+    {\obj[c]}}} 
+  \ar[r]^{\evlcry[]{\bbox[LightGreen]{\fct[G']}}
+  {\evlcrynat[]{\ntf[\eta]}
+    {\obj[c]}}} 
+  \ar[d]_{\mathllap{\evlcry[]{\bbox[LightGreen]{\fct[G']}}
+  {\evlcry[]{\bbox[LightGreen]{\fct[F]}}
+    {\arr[f_1]}}}} &
+  {\evlcry[]{\bbox[LightGreen]{\fct[G']}}
+  {\evlcry[]{\bbox[LightGreen]{\fct[F']}}
+    {\obj[c]}}} 
+  \ar[d]^{\mathrlap{\evlcry[]{\bbox[LightGreen]{\fct[G']}}
+  {\evlcry[]{\bbox[LightGreen]{\fct[F']}}
+    {\arr[f_1]}}}}  \\
   & & 
-  {\obj[c']\bbox[LightGreen]{\fct[F]\fct[G']}} 
-  \ar[r]_{\obj[c']^{\ntf[\eta]}\bbox[LightGreen]{\fct[G']}} &
-  {\obj[c']\bbox[LightGreen]{\fct[F']\fct[G']}}  
+  {\evlcry[]{\bbox[LightGreen]{\fct[G']}}
+  {\evlcry[]{\bbox[LightGreen]{\fct[F]}}
+    {\obj[c']}}} 
+  \ar[r]_{\evlcry[]{\bbox[LightGreen]{\fct[G']}}
+  {\evlcrynat[]{\ntf[\eta]}
+    {\obj[c']}}} &
+  {\evlcry[]{\bbox[LightGreen]{\fct[G']}}
+  {\evlcry[]{\bbox[LightGreen]{\fct[F']}}
+    {\obj[c']}}}  
   \save[ul].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} !U*!D!L(7){\small\color{ForestGreen}\cat[E]}\restore 
   \\
   &
-  {\obj[c]\bbox[LightGreen]{\fct[F]}} 
-  \ar[r]^{\obj[c]^{\ntf[\eta]}} 
-  \ar[d]_{\mathllap{f_1\bbox[LightGreen]{\fct[F]}}} 
+  {\evlcry[]{\bbox[LightGreen]{\fct[F]}}
+  {\obj[c]}} 
+  \ar[r]^{\evlcrynat[]{\ntf[\eta]}
+  {\obj[c]}} 
+  \ar[d]_{\mathllap{\evlcry[]{\bbox[LightGreen]{\fct[F]}}
+  {\arr[f_1]}}} 
   \ar@{->}@[lightgray][uuul]|[lightgray]{\fct[G]} 
   \ar@{->}@[lightgray][uur]|[lightgray]{\fct[G']} 
   &
-  {\obj[c]\bbox[LightGreen]{\fct[F']}} 
-  \ar[d]^{\mathrlap{f_1\bbox[LightGreen]{\fct[F']}}} 
+  {\evlcry[]{\bbox[LightGreen]{\fct[F']}}
+  {\obj[c]}} 
+  \ar[d]^{\mathrlap{\evlcry[]{\bbox[LightGreen]{\fct[F']}}
+  {\arr[f_1]}}} 
   \ar@{->}@[lightgray][uuul]|[lightgray]{\fct[G]} 
   \ar@{->}@[lightgray][uur]|[lightgray]{\fct[G']} 
   & \\
   &
-  {\obj[c']\bbox[LightGreen]{\fct[F]}} 
-  \ar[r]_{\obj[c']^{\ntf[\eta]}} 
+  {\evlcry[]{\bbox[LightGreen]{\fct[F]}}
+  {\obj[c']}} 
+  \ar[r]_{\evlcrynat[]{\ntf[\eta]}
+  {\obj[c']}} 
   \ar@{->}@[lightgray][uuul]|[lightgray]{\fct[G]} 
   \ar@{->}@[lightgray][uur]|[lightgray]{\fct[G']} &
-  {\obj[c']\bbox[LightGreen]{\fct[F']}}
+  {\evlcry[]{\bbox[LightGreen]{\fct[F']}}
+  {\obj[c']}}
   \ar@{->}@[lightgray][uuul]|[lightgray]{\fct[G]}
   \ar@{->}@[lightgray][uur]|[lightgray]{\fct[G']} 
   \save[ul].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} !D*!U!L(6){\small\color{ForestGreen}\cat[D]}\restore  & &
@@ -240,10 +352,25 @@ $$
   \ar@2{>} "midb1";"midb2"^{\ntf[\eta]}
   }\end{xy}}$ 
 
-若 ${\ntf[\theta']}: \fct[G']\cathom[{\cat[D]\cathom[\catCat]\cat[E]}]\fct[G'']$ 为自然变换则
+若 ${\ntf[\theta']}: \evlbin[]{\cathom[{\evlbin[]{\cathom[\catCat]}
+  {\cat[D]}
+  {\cat[E]}}]}{\fct[G]}{\fct[G']}$ 为自然变换则
 
-- $(\ntf[\eta]\circ{\ntf[\theta]})~~\catcirc[{\cat\cathom[\catCat]\cat[E]}]~~(\ntf[\eta']\circ{\ntf[\theta']}) = (\ntf[\eta] ~~\catcirc[{\cat\cathom[\catCat]\cat[D]}]~~ \ntf[\eta'])\circ ({\ntf[\theta]} ~~\catcirc[{\cat[D]\cathom[\catCat]\cat[E]}]~~{\ntf[\theta']})$ , 
-  即便改变了横纵复合的先后顺序也不会影响最终结果 。
+- $\evlbin[]{\catcirc[{\cat\cathom[\catCat]\cat[E]}]}
+      {\evlbin\circ
+        {\ntf[\eta]}
+        {\ntf[\theta]}~~}
+      {~~\evlbin\circ
+        {\ntf[\eta']}
+        {\ntf[\theta']}} = 
+      \evlbin[]\circ
+        {\evlbin{\catcirc[{\cat\cathom[\catCat]\cat[D]}]}
+          {\ntf[\eta]~~}  
+          {~~\ntf[\eta']}}
+        {\evlbin{\catcirc[{\cat[D]\cathom[\catCat]\cat[E]}]}
+          {\ntf[\theta]~~}  
+          {~~\ntf[\theta']}}$ , 
+  即便改变横纵复合先后顺序也不影响最终结果 。
 
   $\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{ 
   \cat[E]
@@ -269,21 +396,35 @@ $$
 
 同样对于自然变换也有恒等映射 。
 
-- $\getid{\fct[F]}:\fct[F]\cathom[{\cat[C]\cathom[\catCat] \cat[D]}] \fct[F]$ 为恒等自然变换当且仅当
-  对范畴 $\cat$ 中任意对象 $\obj[x]$ 有下述交换图成立 :
+- $\id[{\fct[F]}]:\evlbin[]{\cathom[{\evlbin{\cathom[\catCat]}
+    {\cat[C]}
+    {\cat[D]}}]}
+      {\fct[F]}
+      {\fct[F]}$ 为恒等自然变换当且仅当
+  对范畴 $\cat$ 中任意对象 $\obj[x]$ 都有下述交换图成立 :
 
   $\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
-  {\obj[c]\bbox[LightGreen]{\fct[F]}} 
-  \ar[r]^{\obj[c]^{\ntf[\eta]}=\getid{\obj[c]}} 
-  \ar[d]_{f_1\bbox[LightGreen]{\fct[F]}} &
-  {\obj[c]\bbox[LightGreen]{\fct[F']}} 
-  \ar[d]^{f_1\bbox[LightGreen]{\fct[F']}}  \\
-  {\obj[c']\bbox[LightGreen]{\fct[F]}} 
-  \ar[r]_{\obj[c']^{\ntf[\eta]}=\getid{\obj[c']}} 
-  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat \bbox[LightGreen]{\fct[F]}}\restore
+  {\evlcry[]{\bbox[LightGreen]{\fct[F]}}
+  {\obj[c]}} 
+  \ar[r]^{\evlcrynat[]{\ntf[\eta]}
+  {\obj[c]}=\id[{\obj[c]}]} 
+  \ar[d]_{\evlcry[]{\bbox[LightGreen]{\fct[F]}}
+  {\arr[f_1]}} &
+  {\evlcry[]{\bbox[LightGreen]{\fct[F']}}
+  {\obj[c]}} 
+  \ar[d]^{\evlcry[]{\bbox[LightGreen]{\fct[F']}}
+  {\arr[f_1]}}  \\
+  {\evlcry[]{\bbox[LightGreen]{\fct[F]}}
+  {\obj[c']}} 
+  \ar[r]_{\evlcrynat[]{\ntf[\eta]}
+  {\obj[c']}=\id[{\obj[c']}]} 
+  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\evlcry[]{\bbox[LightGreen]{\fct[F]}}
+  {\cat}}\restore
   &
-  {\obj[c']\bbox[LightGreen]{\fct[F']}}  
-  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat \bbox[LightGreen]{\fct[F']}}\restore
+  {\evlcry[]{\bbox[LightGreen]{\fct[F']}}
+  {\obj[c']}}  
+  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\evlcry[]{\bbox[LightGreen]{\fct[F']}}
+  {\cat}}\restore
   \save[ul].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} !U*!D!L(6){\small\color{ForestGreen}\cat[D]}\restore 
   }\end{xy}}$ $\quad \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{ 
   \cat[D]
@@ -299,16 +440,39 @@ $$
 
 自然同构与你想象中的同构不太像 。
 
-- $\ntf[\eta] : \fct[F]\cathom[{\cat\cathom[\catCat]\cat[D]}]\fct[F']$ 为**自然同构**当且仅当
-  $\obj[x]^{\ntf[\eta]}$ 总是同构 , 这里 $\obj[x]$ 为任意 $\cat$ 中对象 。
+- $\ntf[\eta] : \evlbin[]{\cathom[{\evlbin[]{\cathom[\catCat]}
+    \cat
+    {\cat[D]}}]}
+      {\fct[F]}
+      {\fct[F']}$ 为**自然同构**当且仅当
+  $\evlcrynat[]{\ntf[\eta]}
+    {\obj[x]}$ 总是同构 , 这里 $\obj[x]$ 为任意 $\cat$ 中对象 。
 
-  此时 $\fct[F]$ , $\fct[F']$ 的关系可用 $\fct[F]\catcong[{\cat\cathom[\catCat]\cat[D]}]\fct[F']$ 表示
+  此时 $\fct[F]$ , $\fct[F']$ 的关系可用 $\evlbin[]{\catcong[{\evlbin[]{\cathom[\catCat]}
+    \cat
+    {\cat[D]}}]}
+      {\fct[F]~}
+      {~\fct[F']}$ 表示
 
 ### 范畴等价的定义
 
 我们用自然同构来定义范畴的等价 。
 
-- $\cat[C]\catcong[\catCat] \cat[D]$ 当且仅当
-  存在函子 $\fct[F]:\cat\cathom[\catCat]\cat[D]$ 及 $\fct[F]':\cat[D]\cathom[\catCat]\cat$ 
+- $\evlbin[]{\catcong[\catCat]}
+    {\cat[C]}
+    {\cat[D]}$ 当且仅当
+  存在函子 $\fct[F]:\evlbin[]{\cathom[\catCat]}
+    \cat
+    {\cat[D]}$ 及 $\fct[F']: \evlbin[]{\cathom[\catCat]}
+      {\cat[D]}
+      \cat$ 
 
-  使 $\fct[F]\catcirc[\catCat]\fct[F]'~~\catcong[{\cat\cathom[\catCat]\cat[C]}]~\getid{\cat}$ 且 $\fct[F]'\catcirc[\catCat] \fct[F] ~~\catcong[{\cat[D]\cathom[\catCat]\cat[D]}]~\getid{\cat[D]}$ 。
+  使 $\evlbin[]{\catcong[{\cat\cathom[\catCat]\cat[C]}]}
+    {\evlbin[]{\catcirc[\catCat]}
+      {\fct[F]}
+      {\fct[F']}}
+    {\id[\cat]}$ 并且有 $\evlbin[]{\catcong[{\cat[D]\cathom[\catCat]\cat[D]}]}
+      {\evlbin[]{\catcirc[\catCat]}
+        {\fct[F']}
+        {\fct[F]}}
+      {\id[{\cat[D]}]}$ 。
