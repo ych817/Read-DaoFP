@@ -469,7 +469,7 @@ $$
   &
   {\obj[x_2]\bbox[LightGreen]{P_2}\pila}  
   \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{} !D*!U{\small\color{ForestGreen}\cat \bbox[LightGreen]{P_2}}\restore
-  \save[ul].[]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} !U*!D!L(6){\small\color{ForestGreen}\cat[D]}\restore 
+  \save[u].[].[l]*+<10pt>[F-:<8pt>:ForestGreen]\frm{} !U*!D!L(6){\small\color{ForestGreen}\cat[D]}\restore 
   }\end{xy}}\quad \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{ 
   \cat[D]\pila
   \ar@{<-}@`{[]+/l+0pc/,[d]+/l+0pc/}[d]|{P_1\pila}^{}="mid"
