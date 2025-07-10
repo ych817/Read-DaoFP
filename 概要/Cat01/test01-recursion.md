@@ -25,5 +25,6 @@ $$
 \scomb{\sexplist{add}1[]2}
 $$
 
+想到一个事情 :
 
-
+- $\lambda x.f ~x$ 完全可以写成 $x\mapsto {(x~f)}$ 
