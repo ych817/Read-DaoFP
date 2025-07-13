@@ -100,79 +100,8 @@ $$
 }
 \newcommand{\evlbig}[4][\prs]{                  % 用方法求值 二元运算
   \bbox[border: 1px solid Orchid]{%              % 针对的方法 二元运算 有
-    #1{#4\rst{#2}undr{\prs{#3}}}%         % ＋ × ⊗ ○ →
+    #1{#3 \rst{#2}undr{#4}}%                          % ＋ × ⊗ ○ →
   }
 }
 $$
 
-## 极限与余极限
-
-$$
-\vcenter{\begin{xy}\xymatrix@!C=2.5cm{
-{\evlbig[]\cattimes
-  {\obj[i]:\cat[ⓘ]}
-  {\evlcry{\fct[C]}{\obj[i]}}}
-& 
-{\evlcrytxt[]{\Di{\cat[ⓘ]}}{\hspace{-10pt}\evlbig\cattimes
-  {\obj[i]:\cat[ⓘ]}
-  {\evlcry{\fct[C]}{\obj[i]}}}}
-\ar[r]^{\quad\ntf[\pi]=\evlbig[]
-  {{\Huge\cons}}
-  {\obj[i]:\cat[ⓘ]}
-  {\arr[{\pi_{\obj[i]}}]}} 
-&
-{\evlbig[]
-  {{\Huge\cons}}
-  {\obj[i]:\cat[ⓘ]}
-  {\evlcry{\fct[C]}{\obj[i]}}}
-\ar@{->}@`{[]+/u+3pc/,[ll]+/u+3pc/}[ll]_{\cattimes}
-\\ 
-{\obj[c]}
-\ar@[red]@{-->}[u]^[red]{\arr}
-\ar@{->}@`{[]+/d+2pc/,[r]+/d+2pc/}[r]_{\Di{\cat[ⓘ]}}
-\save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
-!R*!L{\small\color{ForestGreen}\cat}\restore
-&  
-{\evlcrytxt[]{\Di{\cat[ⓘ]}}
-  \obj}  
-\ar@[red]@{-->}[u]^[red]{\evlcrytxt[]{\Di{\cat[ⓘ]}}\arr} 
-\ar@[magenta][ur]_[magenta]{\arr[f]=\evlbig[]
-  {{\Huge\cons}}
-  {\obj[i]:\cat[ⓘ]}
-  {\arr[{f_{\obj[i]}}]}}
-\save[].[u].[ur]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
-!R*!L{\small\color{ForestGreen}
-\evlbin[]{\cattimes[\catCat]}
-  \cat
-  \cat}\restore
-&
-}\end{xy}}
-\qquad
-\vcenter{\begin{xy}\xymatrix@!C=2cm{ 
-{\obj[c_1]}
-\save[].[rr]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}!UR*!L
-{\small\color{ForestGreen}\evlcry[]{\fct[I]}
-  {\cat[②]}}\restore  
-& &  
-{\obj[c_2]}
-\\ 
-& 
-{\evlbin[]\cattimes
-  {\obj[c_1]}
-  {\obj[c_2]}}
-\ar[ul]_{\arr[\pi_1]}
-\ar[ur]^{\arr[\pi_2]}
-& 
-\\ 
-&  
-{\obj[c]}
-\ar@[red]@{-->}[u]^[red]{\arr} 
-\ar@[magenta]@`{[]+/l+5pc/,[uul]+/d+2pc/}[uul]^[magenta]{\arr[f_1]}
-\ar@[magenta]@`{[]+/r+5pc/,[uur]+/d+2pc/}[uur]_[magenta]{\arr[f_2]} 
-\save[]*+<5pt>[F-:<5pt>:ForestGreen]\frm{}!DR*!L
-{\small\color{ForestGreen}\evlcry[]{\evlcrytxt{\Di{\cat[②]}}
-  \obj}
-    {\cat[②]}}\restore
-&  
-}\end{xy}}
-$$
