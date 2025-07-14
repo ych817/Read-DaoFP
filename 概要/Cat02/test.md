@@ -77,6 +77,10 @@ $$
   \hspace{-1px}\pla\smash{よ}\hspace{-1px}}}}
 \def\yoda{\pla \smash{                          % 尤达嵌入
   尤}}
+\def\lim{%                                      % 极限
+  \textrm{lim}}
+\def\colim{%                                    % 余极限
+  \textrm{colim}}                      
 % 用方法求值 -------------------------------------------------------------------
 \newcommand{\evlcry}[3][\prs]{                  % 用方法求值 柯里化
   \bbox[border: 1px solid Orchid]{%              % 针对的方法有
@@ -100,7 +104,7 @@ $$
 }
 \newcommand{\evlbig}[4][\prs]{                  % 用方法求值 二元运算
   \bbox[border: 1px solid Orchid]{%              % 针对的方法 二元运算 有
-    #1{#3 \rst{#2}undr{#4}}%                          % ＋ × ⊗ ○ →
+    #1{#4\rst{#2}undr{#3}}%                       % ＋ × ⊗ ○ →
   }
 }
 $$

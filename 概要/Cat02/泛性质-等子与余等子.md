@@ -77,15 +77,19 @@ $$
   \hspace{-1px}\pla\smash{よ}\hspace{-1px}}}}
 \def\yoda{\pla \smash{                          % 尤达嵌入
   尤}}
+\def\lim{%                                      % 极限
+  \textrm{lim}}
+\def\colim{%                                    % 余极限
+  \textrm{colim}}                      
 % 用方法求值 -------------------------------------------------------------------
 \newcommand{\evlcry}[3][\prs]{                  % 用方法求值 柯里化
   \bbox[border: 1px solid Orchid]{%              % 针对的方法有
     #1{#3{#2}}                                    % Id id bang absurd
   }
-}                                                                                     
+} 
 \newcommand{\evlcrytxt}[3][\prs]{               % 用方法求值 柯里化
   \bbox[border: 1px solid Orchid]{%              % 针对的方法有 
-	  #1{#3~{#2}}                                 % Di Obj Arr src dom img                     
+	  #1{#3~{#2}}                                 % Di Obj Arr src dom img
   }
 }	                                              
 \newcommand{\evlcrynat}[3][\prs]{               % 用方法求值 柯里化
@@ -93,14 +97,14 @@ $$
     #1{#3^{#2}}                                   % η θ
   }
 }
-\def\evlbig#1#2#3{                              % 用方法求值 大算符
-  \bbox[border: 1px solid Orchid]{%              % 针对的方法 大算符 有 
-    #2\rst{#1}undr#3%                             % ∑ ∏ ⨿  
-  }
-}
 \newcommand{\evlbin}[4][\prs]{                  % 用方法求值 二元运算
   \bbox[border: 1px solid Orchid]{%              % 针对的方法 二元运算 有
     #1{#3 \mbin{#2} #4}%                          % ＋ × ⊗ ○ →
+  }
+}
+\newcommand{\evlbig}[4][\prs]{                  % 用方法求值 二元运算
+  \bbox[border: 1px solid Orchid]{%              % 针对的方法 二元运算 有
+    #1{#4\rst{#2}undr{#3}}%                       % ＋ × ⊗ ○ →
   }
 }
 $$
