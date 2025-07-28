@@ -110,3 +110,72 @@ $$
 $$
 
 ### 伴随函子的 unit 与 counit
+
+$\qquad \begin{xy}\xymatrix@!C=2cm{
+\cat
+\ar@`{[]+/dr+2pc/,[r]+/dl+2pc/}[r]_{\fct[R]}
+\ar@`{[]+/ul+5pc/,[]+/ur+5pc/}[]^{\Id}
+&
+\cat[D]
+\ar@`{[]+/ul+2pc/,[l]+/ur+2pc/}[l]_{\fct[L]}
+\ar@`{[]+/ul+5pc/,[]+/ur+5pc/}[]^{\Id[{\cat[D]}]}
+}\end{xy}$
+
+伴随函子 : 对任意 $\obj[c]$ 和 $\obj[d]$ 有 $\evlbin[]{\catcong[\catSet]}
+  {\evlbin{\cathom}
+    {\evlcry[]{\fct[L]}{\obj[d]}}
+    {\obj[c]}}
+  {\evlbin{\cathom[{\cat[D]}]}
+    {\obj[d]}
+    {\evlcry[]{\fct[R]}{\obj[c]}}}$ 。
+
+不难看出这其实蕴含着一个二元的自然同构 $\ntf[\phi]$ 。
+
+- 套用反变米田引理我们便可获得
+
+  $\evlbin[]{\catcong[\catSet]}
+  {\underbracket[.4pt]
+    {\evlbin{\cathom[{\evlbin[]{\cathom[\catCat]}
+      {\evlcrynat[]\op\cat}
+      {\catSet}}]}
+        {\bbox[LightGreen]{\evlbin[]\cathom
+          {\wld}
+          {\evlcry[]{\fct[R]}{\obj[c]}}}}
+        {\bbox[YellowGreen]{\evlbin\cathom
+          {\evlcry[]{\fct[L]}
+            {\wld}}
+          {\obj[c]}}}}_
+     {\text{一堆自然变换}}}
+  {\underbracket[.4pt]
+    {\bbox[YellowGreen]{\evlbin\cathom
+      {\evlcry[]{\fct[L]}
+        {\evlcry[]{\fct[R]}
+          {\obj[c]}}}
+      {\obj[c]}}}_
+    {\text{一堆元素}}}$
+
+- 套用协变米田引理我们便可获得
+
+  $\evlbin[]{\catcong[\catSet]}
+  {\underbracket[.4pt]
+    {\evlbin{\cathom[{\evlbin[]{\cathom[\catCat]}
+      {\cat}
+      {\catSet}}]}
+        {\bbox[LightGreen]{\evlbin\cathom
+          {\evlcry[]{\fct[L]}{\obj[d]}}
+          {\wld}}}
+        {\bbox[YellowGreen]{\evlbin\cathom
+          {\obj[d]}
+          {\evlcry[]{\fct[R]}\wld}}}}_
+     {\text{一堆自然变换}}}
+  {\underbracket[.4pt]
+    {\bbox[YellowGreen]{\evlbin{\cathom[{\cat[D]}]}
+          {\obj[d]}
+          {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\obj[d]}}}}}_
+    {\text{一堆元素}}}$ 
+
+  之前证米田引理的时候有提到过
+  任何左侧集合中的 $\ntf[\phi]$ 都会与右侧集合中的 $\evlcry[]{\evlcrynat{\ntf[\phi]}{\evlcry{\fct[L]}{\obj[d]}}}{\id[{\evlcry{\fct[L]}{\obj[d]}}]}$ 一一对应 。
+
+----
+

@@ -109,3 +109,27 @@ $$
 }
 $$
 
+$\evlbin[]{\catcong[\catSet]}
+  {\evlbin{\cathom}
+    {\evlcry[]{\fct[L]}{\wld}}
+    {\obj[c]}}
+  {\evlbin{\cathom[{\cat[D]}]}
+    {\wld}
+    {\evlcry[]{\fct[R]}{\obj[c]}}}$ , 将 $\obj[c]$ 替换为 $\evlcry[]{\fct[L]}{\wld}$ 后即为
+
+$\evlbin[]{\catcong[\catSet]}
+  {\evlbin{\cathom}
+    {\evlcry[]{\fct[L]}{\wld}}
+    {\evlcry[]{\fct[L]}{\wld}}}
+  {\evlbin{\cathom[{\cat[D]}]}
+    {\wld}
+    {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\wld}}}}$ , 等价于
+
+$\evlbin[]{\catcong[\catSet]}
+  {\evlbin{\cathom}
+    {\evlcry[]{\fct[L]}{\wld}}
+    {\evlcry[]{\fct[L]}{\wld}}}
+  {\evlbin{\cathom[{\cat[D]}]}
+    {\evlcry[]{\Id[{\cat[D]}]}{\wld}}
+    {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\wld}}}}$
+
