@@ -122,28 +122,68 @@ $\qquad \begin{xy}\xymatrix@!C=2cm{
 }\end{xy}$
 
 伴随函子 : 对任意 $\obj[c]$ 和 $\obj[d]$ 有 $\evlbin[]{\catcong[\catSet]}
-  {\evlbin{\cathom}
-    {\evlcry[]{\fct[L]}{\obj[d]}}
-    {\obj[c]}}
   {\evlbin{\cathom[{\cat[D]}]}
     {\obj[d]}
-    {\evlcry[]{\fct[R]}{\obj[c]}}}$ 。
+    {\evlcry[]{\fct[R]}{\obj[c]}}}  
+  {\evlbin{\cathom}
+    {\evlcry[]{\fct[L]}{\obj[d]}}
+    {\obj[c]}}$ 。
 
-不难看出这其实蕴含着一个二元的自然同构 $\ntf[\phi]$ 。
+不难看出这其实蕴含着一个二元的自然同构 $\ntf[\phi]$ , 见下 :
+
+$\qquad\begin{aligned}[t]
+\ntf[\phi]:{}&
+\evlbin[]{\cathom[{
+  \evlbin[]\cathom
+    {\evlbin\cattimes{\cat[D]}{\cat}}
+    {\catSet}}]}
+  {\evlbin{\cathom[{\cat[D]}]}
+    {\wld}
+    {\evlcry[]{\fct[R]}{\wld}}}
+  {\evlbin{\cathom}
+    {\evlcry[]{\fct[L]}{\wld}}
+    {\wld}}
+\\
+\evlcrynat[]{\ntf[\phi]}{\evlbin\cons{\wld}{\bbox[pink]{\obj[c]}}}:{}&
+\evlbin[]{\cathom[{
+  \evlbin[]\cathom
+    {\cat[D]}
+    {\catSet}}]}
+  {\evlbin{\cathom[{\cat[D]}]}
+    {\wld}
+    {\evlcry[]{\fct[R]}{\obj[c]}}}
+  {\evlbin{\cathom}
+    {\evlcry[]{\fct[L]}{\wld}}
+    {\obj[c]}}
+\\
+\evlcrynat[]{\ntf[\phi]}{\evlbin\cons{\bbox[pink]{\obj[d]}}{\wld}}:{}&
+\evlbin[]{\cathom[{
+  \evlbin[]\cathom
+    {\cat}
+    {\catSet}}]}
+  {\evlbin{\cathom[{\cat[D]}]}
+    {\obj[d]}
+    {\evlcry[]{\fct[R]}{\wld}}}
+  {\evlbin{\cathom}
+    {\evlcry[]{\fct[L]}{\obj[d]}}
+    {\wld}}
+\end{aligned}$
+
+如此一来
 
 - 套用反变米田引理我们便可获得
 
   $\evlbin[]{\catcong[\catSet]}
   {\underbracket[.4pt]
     {\evlbin{\cathom[{\evlbin[]{\cathom[\catCat]}
-      {\evlcrynat[]\op\cat}
+      {\evlcrynat[]\op{\cat[D]}}
       {\catSet}}]}
-        {\bbox[LightGreen]{\evlbin[]\cathom
-          {\wld}
+        {\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+          {\bbox[white]{\pla\wld}}
           {\evlcry[]{\fct[R]}{\obj[c]}}}}
-        {\bbox[YellowGreen]{\evlbin\cathom
+        {\bbox[YellowGreen]{\evlbin{\cathom[{\cat}]}
           {\evlcry[]{\fct[L]}
-            {\wld}}
+            {\bbox[white]{\pla\wld}}}
           {\obj[c]}}}}_
      {\text{一堆自然变换}}}
   {\underbracket[.4pt]
@@ -152,7 +192,52 @@ $\qquad \begin{xy}\xymatrix@!C=2cm{
         {\evlcry[]{\fct[R]}
           {\obj[c]}}}
       {\obj[c]}}}_
-    {\text{一堆元素}}}$
+    {\text{一堆元素}}}$ 
+
+  如此对每个左侧集合中的自然同构 $\evlcrynat[]{\ntf[\phi]}{\evlbin\cons{\wld}{\bbox[pink]{\obj[c]}}}$ 
+  就会有一个右侧集合中的箭头与之相对应 , 即 $\evlcry[]{\evlcrynat[]{\ntf[\phi]}
+    {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c]}}{\bbox[pink]{\obj[c]}}}}{\id[{\evlcry[]{\fct[R]}{\obj[c]}}]}$ 。
+  接下来证明这群箭头将构成一个自然变换 。
+
+  $\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2.5cm{
+  {\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+          {\bbox[white]{\evlcry[]{\fct[R]}{\obj[c]}}}
+          {\evlcry[]{\fct[R]}{\obj[c]}}}}
+  \ar[r]^{\evlcrynat[]{\ntf[\phi]}
+    {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c]}}{\bbox[pink]{\obj[c]}}}} 
+  \ar[d]_{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+          {\bbox[white]{\evlcrynat[]\op{\arr[g]}}}
+          {\evlcry[]{\fct[R]}{\obj[c]}}}} 
+  &
+  {\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
+          {\evlcry[]{\fct[L]}{\bbox[white]{\evlcry[]{\fct[R]}{\obj[c]}}}}
+          {\obj[c]}}}
+  \ar[d]^{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
+          {\evlcry[]{\fct[L]}{\bbox[white]{\evlcrynat[]\op{\arr[g]}}}}
+          {\obj[c]}}}
+  \\
+  {\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+          {\bbox[white]{\evlcry[]{\fct[R]}{\obj[c']}}}
+          {\evlcry[]{\fct[R]}{\obj[c]}}}}
+  \ar[r]_{\evlcrynat[]{\ntf[\phi]}
+    {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c']}}{\bbox[pink]{\obj[c]}}}} 
+  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
+  !D*!U{\small\color{ForestGreen}
+    \bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+      {\bbox[white]{\cat[D]}}
+      {\evlcry[]{\fct[R]}{\obj[c]}}}}\restore 
+  \save[].[u].[r]*+<10pt>[F-:<8pt>:ForestGreen]\frm{}
+  !D*!U!L(4){\small\color{ForestGreen}\cat[Set]}\restore 
+  &
+  {\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
+          {\evlcry[]{\fct[L]}{\bbox[white]{\evlcry[]{\fct[R]}{\obj[c']}}}}
+          {\obj[c]}}}
+  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}!D*!U
+  {\small\color{ForestGreen}
+    \bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
+      {\evlcry[]{\fct[L]}{\bbox[white]{\cat[D]}}}
+      {\obj[c]}}}\restore 
+  }\end{xy}}$
 
 - 套用协变米田引理我们便可获得
 
@@ -163,19 +248,104 @@ $\qquad \begin{xy}\xymatrix@!C=2cm{
       {\catSet}}]}
         {\bbox[LightGreen]{\evlbin\cathom
           {\evlcry[]{\fct[L]}{\obj[d]}}
-          {\wld}}}
-        {\bbox[YellowGreen]{\evlbin\cathom
+          {\bbox[white]{\pla\wld}}}}
+        {\bbox[YellowGreen]{\evlbin{\cathom[{\cat[D]}]}
           {\obj[d]}
-          {\evlcry[]{\fct[R]}\wld}}}}_
+          {\evlcry[]{\fct[R]}{\bbox[white]{\pla\wld}}}}}}_
      {\text{一堆自然变换}}}
   {\underbracket[.4pt]
     {\bbox[YellowGreen]{\evlbin{\cathom[{\cat[D]}]}
           {\obj[d]}
           {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\obj[d]}}}}}_
-    {\text{一堆元素}}}$ 
+    {\text{一堆元素}}}$
 
-  之前证米田引理的时候有提到过
-  任何左侧集合中的 $\ntf[\phi]$ 都会与右侧集合中的 $\evlcry[]{\evlcrynat{\ntf[\phi]}{\evlcry{\fct[L]}{\obj[d]}}}{\id[{\evlcry{\fct[L]}{\obj[d]}}]}$ 一一对应 。
+  如此对每个左侧集合中的自然同构 $\evlcrynat[]{\ntf[\phi]}{\evlbin\cons{\bbox[pink]{\obj[d]}}{\wld}}$ 
+  就会有一个右侧集合中的箭头与之相对应 。
+  接下来证明这一群箭头将会构成自然变换 。
 
 ----
+
+$\qquad\begin{array}{c}
+\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
+{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+  {\obj[d]}
+  {\evlcry[]{\fct[R]}{\bbox[white]{\obj[c']}}}}}
+\ar[r]^{\evlcrynat[]{\ntf[\phi]}
+  {\evlbin\cons{\bbox[pink]{\obj[d']}}{\obj[c']}}}
+\save[].[d]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}!U*!D
+{\small\color{ForestGreen}
+  \bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+  {\obj[d]}
+  {\evlcry[]{\fct[R]}{\bbox[white]{\cat}}}}}\restore 
+\save[].[d].[r]*+<10pt>[F-:<8pt>:ForestGreen]\frm{}
+!U*!D!L(4){\small\color{ForestGreen}\cat[Set]}\restore
+&
+{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
+  {\evlcry[]{\fct[L]}{\obj[d]}}
+  {\bbox[white]{\obj[c']}}}}
+\save[].[d]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}!U*!D
+{\small\color{ForestGreen}
+  \bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
+  {\evlcry[]{\fct[L]}{\obj[d]}}
+  {\bbox[white]{\cat}}}}\restore 
+\\
+{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+  {\obj[d]}
+  {\evlcry[]{\fct[R]}{\bbox[white]{\obj[c]}}}}}
+\ar[r]_{\evlcrynat[]{\ntf[\phi]}
+  {\evlbin\cons{\bbox[pink]{\obj[d]}}{\obj[c]}}} 
+\ar[u]^{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+  {\obj[d]}
+  {\evlcry[]{\fct[R]}{\bbox[white]{\arr[f]}}}}}  
+&
+{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
+  {\evlcry[]{\fct[L]}{\obj[d]}}
+  {\bbox[white]{\obj[c]}}}}
+\ar[u]_{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
+  {\evlcry[]{\fct[L]}{\obj[d]}}
+  {\bbox[white]{\arr[f]}}}}
+}\end{xy}}
+\\
+\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
+{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+        {\bbox[white]{\obj[d]}}
+        {\evlcry[]{\fct[R]}{\obj[c]}}}}
+\ar[r]^{\evlcrynat[]{\ntf[\phi]}
+  {\evlbin\cons{\obj[d]}{\bbox[pink]{\obj[c]}}}} 
+\ar[d]_{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+        {\bbox[white]{\evlcrynat[]\op{\arr[g]}}}
+        {\evlcry[]{\fct[R]}{\obj[c]}}}} 
+&
+{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
+        {\evlcry[]{\fct[L]}{\bbox[white]{\obj[d]}}}
+        {\obj[c]}}}
+\ar[d]^{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
+        {\evlcry[]{\fct[L]}{\bbox[white]{\evlcrynat[]\op{\arr[g]}}}}
+        {\obj[c]}}}
+\\
+{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+        {\bbox[white]{\obj[d']}}
+        {\evlcry[]{\fct[R]}{\obj[c]}}}}
+\ar[r]_{\evlcrynat[]{\ntf[\phi]}
+  {\evlbin\cons{\obj[d']}{\bbox[pink]{\obj[c]}}}} 
+\save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
+!D*!U{\small\color{ForestGreen}
+  \bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+    {\bbox[white]{\cat[D]}}
+    {\evlcry[]{\fct[R]}{\obj[c]}}}}\restore 
+\save[].[u].[r]*+<10pt>[F-:<8pt>:ForestGreen]\frm{}
+!D*!U!L(4){\small\color{ForestGreen}\cat[Set]}\restore 
+&
+{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
+        {\evlcry[]{\fct[L]}{\bbox[white]{\obj[d']}}}
+        {\obj[c]}}}
+\save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}!D*!U
+{\small\color{ForestGreen}
+  \bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
+    {\evlcry[]{\fct[L]}{\bbox[white]{\cat[D]}}}
+    {\obj[c]}}}\restore 
+}\end{xy}}
+\end{array}$
+
+这里 
 
