@@ -196,45 +196,47 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 
 由反变米田引理的证明可知 : 对每个左侧集合中的自然同构 $\evlcrynat[]{\ntf[\phi_2]}{\evlbin\cons{\wld}{\bbox[pink]{\obj[c]}}}$ 
 右侧集合中都有一个箭头与之对应 , 即 $\bbox[LightGray]{\evlcry[]{\evlcrynat[]{\ntf[\phi_2]}
-  {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c]}}{\bbox[pink]{\obj[c]}}}}{\id[{\evlcry[]{\fct[R]}{\obj[c]}}]}}=\bbox[LightGray]{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c]}}$ 。如此
+{\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c]}}{\bbox[pink]{\obj[c]}}}}{\id[{\evlcry[]{\fct[R]}{\obj[c]}}]}}=\bbox[LightGray]{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c]}}$ 。如此
 
 - $\ntf[\varepsilon]$ 构成自然变换 。
 
+  > 考虑任意 $\evlcrynat[]\op{\arr[f]}:\evlbin[]\cathom{\obj[c']}{\obj[c]}$ :
+  >
   > $\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=3cm{
   > {\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-  >         {\evlcry[]{\fct[R]}{\bbox[white]{\obj[c]}}}
-  >         {\evlcry[]{\fct[R]}{\obj[c]}}}}
+  >      {\evlcry[]{\fct[R]}{\bbox[white]{\obj[c]}}}
+  >      {\evlcry[]{\fct[R]}{\obj[c]}}}}
   > \ar[r]^{\evlcrynat[]{\ntf[\phi_2]}
-  >   {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c]}}{\bbox[pink]{\obj[c]}}}} 
+  > {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c]}}{\bbox[pink]{\obj[c]}}}} 
   > \ar[d]_{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-  >         {\evlcry[]{\fct[R]}{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}
-  >         {\evlcry[]{\fct[R]}{\obj[c]}}}} 
+  >      {\evlcry[]{\fct[R]}{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}
+  >      {\evlcry[]{\fct[R]}{\obj[c]}}}} 
   > &
   > {\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
-  >         {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\bbox[white]{\obj[c]}}}}
-  >         {\obj[c]}}}
+  >      {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\bbox[white]{\obj[c]}}}}
+  >      {\obj[c]}}}
   > \ar[d]^{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
-  >         {\evlcry[]{\fct[L]}{{\evlcry[]{\fct[R]}{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}}}
-  >         {\obj[c]}}}
+  >      {\evlcry[]{\fct[L]}{{\evlcry[]{\fct[R]}{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}}}
+  >      {\obj[c]}}}
   > \\
   > {\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-  >         {\evlcry[]{\fct[R]}{\bbox[white]{\obj[c']}}}
-  >         {\evlcry[]{\fct[R]}{\bbox[white]{\obj[c]}}}}}
+  >      {\evlcry[]{\fct[R]}{\bbox[white]{\obj[c']}}}
+  >      {\evlcry[]{\fct[R]}{\bbox[white]{\obj[c]}}}}}
   > \ar[r]|{\evlcrynat[]{\ntf[\phi_2]}
-  >   {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c']}}{\bbox[pink]{\obj[c]}}}} 
+  > {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c']}}{\bbox[pink]{\obj[c]}}}} 
   > &
   > {\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
-  >         {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\bbox[white]{\obj[c']}}}}
-  >         {\bbox[white]{\obj[c]}}}}
+  >      {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\bbox[white]{\obj[c']}}}}
+  >      {\bbox[white]{\obj[c]}}}}
   > \\
   > {\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-  >   {\evlcry[]{\fct[R]}{\obj[c']}}
-  >   {\evlcry[]{\fct[R]}{\bbox[white]{\obj[c']}}}}}
+  > {\evlcry[]{\fct[R]}{\obj[c']}}
+  > {\evlcry[]{\fct[R]}{\bbox[white]{\obj[c']}}}}}
   > \ar[r]_{\evlcrynat[]{\ntf[\phi_2]}
-  >   {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c']}}{\bbox[pink]{\obj[c']}}}} 
+  > {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c']}}{\bbox[pink]{\obj[c']}}}} 
   > \ar[u]^{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-  >   {\evlcry[]{\fct[R]}{\obj[c']}}
-  >   {\evlcry[]{\fct[R]}{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}}}
+  > {\evlcry[]{\fct[R]}{\obj[c']}}
+  > {\evlcry[]{\fct[R]}{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}}}
   > %\save[].[uu]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
   > %!D*!U{\small\color{ForestGreen}
   > %  \bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
@@ -247,11 +249,11 @@ $\qquad\evlbin[]{\catcong[\catSet]}
   > %}\restore 
   > &
   > {\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
-  >   {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\obj[c']}}}
-  >   {\bbox[white]{\obj[c']}}}}
+  > {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\obj[c']}}}
+  > {\bbox[white]{\obj[c']}}}}
   > \ar[u]_{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
-  >   {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\obj[c']}}}
-  >   {\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}}
+  > {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\obj[c']}}}
+  > {\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}}
   > %\save[].[uu]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}!D*!U
   > %{\small\color{ForestGreen}
   > %  \bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
@@ -263,51 +265,51 @@ $\qquad\evlbin[]{\catcong[\catSet]}
   > \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=3cm{
   > {\id[{\evlcry[]{\fct[R]}{\obj[c]}}]} 
   > \ar@{|->}[r]^{\evlcrynat[]{\ntf[\phi_2]}
-  >     {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c]}}{\bbox[pink]{\obj[c]}}}} 
+  >  {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c]}}{\bbox[pink]{\obj[c]}}}} 
   > \ar@{|->}[d]_{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-  >   {\evlcry[]{\fct[R]}{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}
-  >   {\evlcry[]{\fct[R]}{\obj[c]}}}} 
+  > {\evlcry[]{\fct[R]}{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}
+  > {\evlcry[]{\fct[R]}{\obj[c]}}}} 
   > &
   > {\pla\smash{\bbox[LightGray]{\evlcry[]
-  >   {\evlcrynat[]{\ntf[\phi_2]}
-  >     {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c]}}{\bbox[pink]{\obj[c]}}}}
-  >   {\id[{\evlcry[]{\fct[R]}{\obj[c]}}]}}\mrlap{= \bbox[LightGray]{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c]}}}}}
+  > {\evlcrynat[]{\ntf[\phi_2]}
+  >  {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c]}}{\bbox[pink]{\obj[c]}}}}
+  > {\id[{\evlcry[]{\fct[R]}{\obj[c]}}]}}\mrlap{= \bbox[LightGray]{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c]}}}}}
   > \ar@{|->}[d]^{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
-  >   {\evlcry[]{\fct[L]}{{\evlcry[]{\fct[R]}{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}}}
-  >   {\obj[c]}}\mrlap{{}=\evlcrynat[]{\evlbin\catcirc
-  >   {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\evlcrynat[]\op{\arr[f]}}}}
-  >     {\wld}}
-  >     {\obj[c]}}}  \\
+  > {\evlcry[]{\fct[L]}{{\evlcry[]{\fct[R]}{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}}}
+  > {\obj[c]}}\mrlap{{}=\evlcrynat[]{\evlbin\catcirc
+  > {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\evlcrynat[]\op{\arr[f]}}}}
+  >  {\wld}}
+  >  {\obj[c]}}}  \\
   > {\evlcry[]{\fct[R]}{\evlcrynat[]\op{\arr[f]}}} 
   > \ar@{|->}[r]|{\evlcrynat[]{\ntf[\phi_2]}
-  >     {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c']}}{\bbox[pink]{\obj[c]}}}} 
+  >  {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c']}}{\bbox[pink]{\obj[c]}}}} 
   > &
   > \evlbin[]\catcirc
-  >   {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\evlcrynat[]\op{\arr[f]}}}}
-  >   {\bbox[LightGray]{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c]}}}\mrlap{{}=
+  > {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\evlcrynat[]\op{\arr[f]}}}}
+  > {\bbox[LightGray]{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c]}}}\mrlap{{}=
   > \evlbin[]{\catcirc[{\cat[D]}]}
-  >   {\bbox[LightGray]{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c']}}}
-  >   {\evlcrynat[]\op{\arr[f]}}}
+  > {\bbox[LightGray]{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c']}}}
+  > {\evlcrynat[]\op{\arr[f]}}}
   > %\save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}\restore 
   > \\
   > {\id[{\evlcry[]{\fct[R]}{\obj[c']}}]} 
   > \ar@{|->}[u]^{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-  >   {\evlcry[]{\fct[R]}{\obj[c']}}
-  >   {\evlcry[]{\fct[R]}{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}}}
+  > {\evlcry[]{\fct[R]}{\obj[c']}}
+  > {\evlcry[]{\fct[R]}{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}}}
   > \ar@{|->}[r]_{\evlcrynat[]{\ntf[\phi_2]}
-  >   {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c']}}{\bbox[pink]{\obj[c']}}}} 
+  > {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c']}}{\bbox[pink]{\obj[c']}}}} 
   > &
   > {\pla\smash{\bbox[LightGray]{\evlcry[]
-  >   {\evlcrynat[]{\ntf[\phi_2]}
-  >     {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c']}}{\bbox[pink]{\obj[c']}}}}
-  >   {\id[{\evlcry[]{\fct[R]}{\obj[c']}}]}}\mrlap{{}=\bbox[LightGray]{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c']}}}}}
+  > {\evlcrynat[]{\ntf[\phi_2]}
+  >  {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c']}}{\bbox[pink]{\obj[c']}}}}
+  > {\id[{\evlcry[]{\fct[R]}{\obj[c']}}]}}\mrlap{{}=\bbox[LightGray]{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c']}}}}}
   > \ar@{|->}[u]_{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-  >   {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\obj[c']}}}
-  >   {\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}\mrlap{{}=
-  >   \evlcrynat[]{\evlbin{\catcirc[{\cat[D]}]}
-  >     {\wld}
-  >     {\evlcrynat[]\op{\arr[f]}}}
-  >     {\evlcry{\fct[L]}{\evlcry[]{\fct[R]}{\obj[c']}}}}}
+  > {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\obj[c']}}}
+  > {\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}\mrlap{{}=
+  > \evlcrynat[]{\evlbin{\catcirc[{\cat[D]}]}
+  >  {\wld}
+  >  {\evlcrynat[]\op{\arr[f]}}}
+  >  {\evlcry{\fct[L]}{\evlcry[]{\fct[R]}{\obj[c']}}}}}
   > }\end{xy}}$
   >
   > 上方右图的第二行的第二个节点说明了一切 。这两张图
@@ -381,132 +383,134 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 
 - $\ntf[\eta]$ 构成自然变换 。
 
+  > 考虑任意 $\arr[g]:\evlbin[]{\cathom[{\cat[D]}]}{\obj[d]}{\obj[d']}$ :
+  >
   > $\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=3cm{
   > {\bbox[LightGreen]{\evlbin[]\cathom
-  >   {\evlcry[]{\fct[L]}{\obj[d]}}
-  >   {\evlcry[]{\fct[L]}{\bbox[white]{\obj[d]}}}}}
+  > {\evlcry[]{\fct[L]}{\obj[d]}}
+  > {\evlcry[]{\fct[L]}{\bbox[white]{\obj[d]}}}}}
   > \ar[r]^{\evlcrynat[]
-  >   {\ntf[\phi_1]}
-  >   {\evlbin\cons
-  >     {\bbox[pink]{\obj[d]}}
-  >     {\evlcry[]{\fct[L]}{\obj[d]}}}} 
+  > {\ntf[\phi_1]}
+  > {\evlbin\cons
+  >  {\bbox[pink]{\obj[d]}}
+  >  {\evlcry[]{\fct[L]}{\obj[d]}}}} 
   > \ar[d]_{\bbox[LightGreen]{\evlbin[]\cathom
-  >   {\evlcry[]{\fct[L]}{\obj[d]}}
-  >   {\evlcry[]{\fct[L]}{\bbox[white]{\arr[g]}}}}}
+  > {\evlcry[]{\fct[L]}{\obj[d]}}
+  > {\evlcry[]{\fct[L]}{\bbox[white]{\arr[g]}}}}}
   > &
   > {\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-  >   {\obj[d]}
-  >   {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\bbox[white]{\obj[d]}}}}}}
+  > {\obj[d]}
+  > {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\bbox[white]{\obj[d]}}}}}}
   > \ar[d]^{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-  >   {\obj[d]}
-  >   {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\bbox[white]{\arr[g]}}}}}}  
+  > {\obj[d]}
+  > {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\bbox[white]{\arr[g]}}}}}}  
   > \\
   > {\bbox[LightGreen]{\evlbin[]\cathom
-  >   {\evlcry[]{\fct[L]}{\bbox[white]{\obj[d]}}}
-  >   {\evlcry[]{\fct[L]}{\bbox[white]{\obj[d']}}}}}
+  > {\evlcry[]{\fct[L]}{\bbox[white]{\obj[d]}}}
+  > {\evlcry[]{\fct[L]}{\bbox[white]{\obj[d']}}}}}
   > \ar[r]|{\evlcrynat[]
-  >   {\ntf[\phi_1]}
-  >   {\evlbin\cons
-  >     {\bbox[pink]{\obj[d]}}
-  >     {\evlcry[]{\fct[L]}{\obj[d']}}}}
+  > {\ntf[\phi_1]}
+  > {\evlbin\cons
+  >  {\bbox[pink]{\obj[d]}}
+  >  {\evlcry[]{\fct[L]}{\obj[d']}}}}
   > &
   > {\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-  >   {\bbox[white]{\obj[d]}}
-  >   {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\bbox[white]{\obj[d']}}}}}}
+  > {\bbox[white]{\obj[d]}}
+  > {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\bbox[white]{\obj[d']}}}}}}
   > \\
   > {\bbox[LightGreen]{\evlbin[]\cathom
-  >   {\evlcry[]{\fct[L]}{\bbox[white]{\obj[d']}}}
-  >   {\evlcry[]{\fct[L]}{\obj[d']}}}}
+  > {\evlcry[]{\fct[L]}{\bbox[white]{\obj[d']}}}
+  > {\evlcry[]{\fct[L]}{\obj[d']}}}}
   > \ar[r]_{\evlcrynat[]
-  >   {\ntf[\phi_1]}
-  >   {\evlbin\cons
-  >     {\bbox[pink]{\obj[d']}}
-  >     {\evlcry[]{\fct[L]}{\obj[d']}}}} 
+  > {\ntf[\phi_1]}
+  > {\evlbin\cons
+  >  {\bbox[pink]{\obj[d']}}
+  >  {\evlcry[]{\fct[L]}{\obj[d']}}}} 
   > \ar[u]^{\bbox[LightGreen]{\evlbin[]\cathom
-  >   {\evlcry[]{\fct[L]}{\bbox[white]{\arr[g]}}}
-  >   {\evlcry[]{\fct[L]}{\obj[d']}}}}
+  > {\evlcry[]{\fct[L]}{\bbox[white]{\arr[g]}}}
+  > {\evlcry[]{\fct[L]}{\obj[d']}}}}
   > &
   > {\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-  >   {\bbox[white]{\obj[d']}}
-  >   {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\obj[d']}}}}}
+  > {\bbox[white]{\obj[d']}}
+  > {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\obj[d']}}}}}
   > \ar[u]_{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-  >   {\bbox[white]{\arr[g]}}
-  >   {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\obj[d']}}}}}
+  > {\bbox[white]{\arr[g]}}
+  > {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\obj[d']}}}}}
   > }\end{xy}}
   > \qquad
   > \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=3cm{
   > {\id[{\evlcry[]{\fct[L]}{\obj[d]}}]}
   > \ar@{|->}[r]^{\evlcrynat[]
-  >   {\ntf[\phi_1]}
-  >   {\evlbin\cons
-  >     {\bbox[pink]{\obj[d]}}
-  >     {\evlcry[]{\fct[L]}{\obj[d]}}}} 
+  > {\ntf[\phi_1]}
+  > {\evlbin\cons
+  >  {\bbox[pink]{\obj[d]}}
+  >  {\evlcry[]{\fct[L]}{\obj[d]}}}} 
   > \ar@{|->}[d]_{\bbox[LightGreen]{\evlbin[]\cathom
-  >   {\evlcry[]{\fct[L]}{\obj[d]}}
-  >   {\evlcry[]{\fct[L]}{\bbox[white]{\arr[g]}}}}}
+  > {\evlcry[]{\fct[L]}{\obj[d]}}
+  > {\evlcry[]{\fct[L]}{\bbox[white]{\arr[g]}}}}}
   > &
   > {\pla\smash{\bbox[LightGray]{\evlcry[]{\evlcrynat[]{\ntf[\phi_1]}
-  >   {\evlbin\cons
-  >     {\bbox[pink]{\obj[d]}}
-  >     {\evlcry[]{\fct[L]}{\obj[d]}}}}
-  >   {\id[{\evlcry[]{\fct[L]}{\obj[d]}}]}}\mrlap{{}=
+  > {\evlbin\cons
+  >  {\bbox[pink]{\obj[d]}}
+  >  {\evlcry[]{\fct[L]}{\obj[d]}}}}
+  > {\id[{\evlcry[]{\fct[L]}{\obj[d]}}]}}\mrlap{{}=
   > \bbox[LightGray]{\evlcrynat[]
-  >   {\ntf[\eta]}
-  >   {\obj[d]}}}}}
+  > {\ntf[\eta]}
+  > {\obj[d]}}}}}
   > \ar@{|->}[d]^{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-  >   {\obj[d]}
-  >   {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\bbox[white]{\arr[g]}}}}}\mrlap{{}=
+  > {\obj[d]}
+  > {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\bbox[white]{\arr[g]}}}}}\mrlap{{}=
   > \evlcrynat[]
-  >   {\evlbin{\catcirc[{\cat[D]}]}
-  >     {\wld}
-  >     {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\bbox[white]{\arr[g]}}}}}
-  >   {\obj[d]}}}  
+  > {\evlbin{\catcirc[{\cat[D]}]}
+  >  {\wld}
+  >  {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\bbox[white]{\arr[g]}}}}}
+  > {\obj[d]}}}  
   > \\
   > {\evlcry[]{\fct[L]}{\bbox[white]{\arr[g]}}}
   > \ar@{|->}[r]|{\evlcrynat[]
-  >   {\ntf[\phi_1]}
-  >   {\evlbin\cons
-  >     {\bbox[pink]{\obj[d]}}
-  >     {\evlcry[]{\fct[L]}{\obj[d']}}}}
+  > {\ntf[\phi_1]}
+  > {\evlbin\cons
+  >  {\bbox[pink]{\obj[d]}}
+  >  {\evlcry[]{\fct[L]}{\obj[d']}}}}
   > &
   > {\evlbin[]{\catcirc[{\cat[D]}]}
-  >   {\bbox[LightGray]{\evlcrynat[]
-  >     {\ntf[\eta]}
-  >     {\obj[d]}}}
-  >   {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\bbox[white]{\arr[g]}}}}\mrlap{{}=
+  > {\bbox[LightGray]{\evlcrynat[]
+  >  {\ntf[\eta]}
+  >  {\obj[d]}}}
+  > {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\bbox[white]{\arr[g]}}}}\mrlap{{}=
   > \evlbin[]{\catcirc[{\cat[D]}]}
-  >   {\arr[g]}
-  >   {\bbox[LightGray]{\evlcrynat[]
-  >     {\ntf[\eta]}
-  >     {\obj[d']}}}
+  > {\arr[g]}
+  > {\bbox[LightGray]{\evlcrynat[]
+  >  {\ntf[\eta]}
+  >  {\obj[d']}}}
   > }}
   > \\
   > {\id[{\evlcry[]{\fct[L]}{\obj[d']}}]}
   > \ar@{|->}[r]_{\evlcrynat[]
-  >   {\ntf[\phi_1]}
-  >   {\evlbin\cons
-  >     {\bbox[pink]{\obj[d']}}
-  >     {\evlcry[]{\fct[L]}{\obj[d']}}}} 
+  > {\ntf[\phi_1]}
+  > {\evlbin\cons
+  >  {\bbox[pink]{\obj[d']}}
+  >  {\evlcry[]{\fct[L]}{\obj[d']}}}} 
   > \ar@{|->}[u]^{\bbox[LightGreen]{\evlbin[]\cathom
-  >   {\evlcry[]{\fct[L]}{\bbox[white]{\arr[g]}}}
-  >   {\evlcry[]{\fct[L]}{\obj[d']}}}}
+  > {\evlcry[]{\fct[L]}{\bbox[white]{\arr[g]}}}
+  > {\evlcry[]{\fct[L]}{\obj[d']}}}}
   > &
   > {\pla\smash{\bbox[LightGray]{\evlcry[]{\evlcrynat[]{\ntf[\phi_1]}
-  >   {\evlbin\cons
-  >     {\bbox[pink]{\obj[d']}}
-  >     {\evlcry[]{\fct[L]}{\obj[d']}}}}
-  >   {\id[{\evlcry[]{\fct[L]}{\obj[d']}}]}}\mrlap{{}=
+  > {\evlbin\cons
+  >  {\bbox[pink]{\obj[d']}}
+  >  {\evlcry[]{\fct[L]}{\obj[d']}}}}
+  > {\id[{\evlcry[]{\fct[L]}{\obj[d']}}]}}\mrlap{{}=
   > \bbox[LightGray]{\evlcrynat[]
-  >   {\ntf[\eta]}
-  >   {\obj[d']}}}}}
+  > {\ntf[\eta]}
+  > {\obj[d']}}}}}
   > \ar@{|->}[u]_{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-  >   {\bbox[white]{\arr[g]}}
-  >   {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\obj[d']}}}}\mrlap{{}=
+  > {\bbox[white]{\arr[g]}}
+  > {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\obj[d']}}}}\mrlap{{}=
   > \evlcrynat[]
-  >   {\evlbin{\catcirc[{\cat[D]}]}
-  >     {\arr[g]}
-  >     {\wld}}
-  >   {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\bbox[white]{\obj[d']}}}}}}
+  > {\evlbin{\catcirc[{\cat[D]}]}
+  >  {\arr[g]}
+  >  {\wld}}
+  > {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\bbox[white]{\obj[d']}}}}}}
   > }\end{xy}}
   > $
   >
@@ -516,3 +520,148 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 <div style="page-break-after: always"></div>
 
 同样 , 给定自然同构 $\ntf[\varepsilon]$ , $\ntf[\eta]$ , 我们也可以推出自然同构 $\ntf[\phi_2]$ 和 $\ntf[\phi_1]$ 。
+
+----
+
+考虑任意 $\evlcrynat[]\op{\arr[f]}:\evlbin[]\cathom{\obj[d]}{\evlcry[]{\fct[R]}{\obj[c]}}$ :
+
+$\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=3cm{
+{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+     {\bbox[white]{\evlcry[]{\fct[R]}{\obj[c]}}}
+     {\evlcry[]{\fct[R]}{\obj[c]}}}}
+\ar[r]^{\evlcrynat[]{\ntf[\phi_2]}
+{\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c]}}{\bbox[pink]{\obj[c]}}}} 
+\ar[d]_{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+     {\bbox[white]{\evlcrynat[]\op{\arr[f]}}}
+     {\evlcry[]{\fct[R]}{\obj[c]}}}} 
+&
+{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
+     {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\bbox[white]{\obj[c]}}}}
+     {\obj[c]}}}
+\ar[d]^{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
+     {\evlcry[]{\fct[L]}{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}
+     {\obj[c]}}}
+\\
+{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+     {\bbox[white]{\obj[d]}}
+     {\evlcry[]{\fct[R]}{\obj[c]}}}}
+\ar[r]_{\evlcrynat[]{\ntf[\phi_2]}
+{\evlbin\cons{\obj[d]}{\bbox[pink]{\obj[c]}}}} 
+&
+{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
+  {\evlcry[]{\fct[L]}{\bbox[white]{\obj[d]}}}
+  {\obj[c]}}}
+}\end{xy}}
+\qquad
+\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=3cm{
+{\id[{\evlcry[]{\fct[R]}{\obj[c]}}]} 
+\ar@{|->}[r]^{\evlcrynat[]{\ntf[\phi_2]}
+  {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c]}}{\bbox[pink]{\obj[c]}}}}  
+\ar@{|->}[d]_{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+  {\bbox[white]{\evlcrynat[]\op{\arr[f]}}}
+  {\evlcry[]{\fct[R]}{\obj[c]}}}} 
+&
+{\bbox[LightGray]{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c]}}}
+\ar@{|->}[d]^{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
+{\evlcry[]{\fct[L]}{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}
+{\obj[c]}}\mrlap{{}=\evlcrynat[]{\evlbin\catcirc
+{\evlcry[]{\fct[L]}{\evlcrynat[]\op{\arr[f]}}}
+ {\wld}}
+ {\obj[c]}}}  
+\\
+{\evlcry[]{\fct[R]}{\evlcrynat[]\op{\arr[f]}}} 
+\ar@{|->}[r]_{\evlcrynat[]{\ntf[\phi_2]}
+{\evlbin\cons{\obj[d]}{\bbox[pink]{\obj[c]}}}} 
+&
+{\evlbin[]\catcirc
+  {\evlcry[]{\fct[L]}{\evlcrynat[]\op{\arr[f]}}}
+  {\bbox[LightGray]{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c]}}}}
+%\save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}\restore 
+}\end{xy}}$
+
+于是我们可以根据上图定义 $\evlcrynat[]{\ntf[\phi_2]}
+{\evlbin\cons{\obj[d]}{\bbox[pink]{\obj[c]}}}$ 。
+
+----
+
+考虑任意 $\arr[g]:\evlbin[]{\cathom[{\cat[D]}]}{\evlcry[]{\fct[L]}{\obj[d]}}{\obj[c]}$ : 
+
+$\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=3cm{
+{\bbox[LightGreen]{\evlbin[]\cathom
+{\evlcry[]{\fct[L]}{\obj[d]}}
+{\bbox[white]{\evlcry[]{\fct[L]}{\obj[d]}}}}}
+\ar[r]^{\evlcrynat[]
+{\ntf[\phi_1]}
+{\evlbin\cons
+ {\bbox[pink]{\obj[d]}}
+ {\evlcry[]{\fct[L]}{\obj[d]}}}} 
+\ar[d]_{\bbox[LightGreen]{\evlbin[]\cathom
+{\evlcry[]{\fct[L]}{\obj[d]}}
+{\bbox[white]{\arr[g]}}}}
+&
+{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+{\obj[d]}
+{\evlcry[]{\fct[R]}{\bbox[white]{\evlcry[]{\fct[L]}{\obj[d]}}}}}}
+\ar[d]^{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+{\obj[d]}
+{\evlcry[]{\fct[R]}{\bbox[white]{\arr[g]}}}}}
+\\
+{\bbox[LightGreen]{\evlbin[]\cathom
+  {\evlcry[]{\fct[L]}{\obj[d]}}
+  {\bbox[white]{\obj[c]}}}}
+\ar[r]_{\evlcrynat[]
+{\ntf[\phi_1]}
+{\evlbin\cons
+ {\bbox[pink]{\obj[d]}}
+ {\obj[c]}}}
+&
+{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+{\obj[d]}
+{\evlcry[]{\fct[R]}{\bbox[white]{\obj[c]}}}}}
+}\end{xy}}
+\qquad
+\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=3cm{
+{\id[{\evlcry[]{\fct[L]}{\obj[d]}}]}
+\ar@{|->}[r]^{\evlcrynat[]
+{\ntf[\phi_1]}
+{\evlbin\cons
+ {\bbox[pink]{\obj[d]}}
+ {\evlcry[]{\fct[L]}{\obj[d]}}}} 
+\ar@{|->}[d]_{\bbox[LightGreen]{\evlbin[]\cathom
+{\evlcry[]{\fct[L]}{\obj[d]}}
+{\bbox[white]{\arr[g]}}}}
+&
+{\bbox[LightGray]{\evlcrynat[]{\ntf[\eta]}{\obj[d]}}}
+\ar@{|->}[d]^{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+{\obj[d]}
+{\evlcry[]{\fct[R]}{\bbox[white]{\arr[g]}}}}\mrlap{{}=
+\evlcrynat[]
+{\evlbin{\catcirc[{\cat[D]}]}
+ {\wld}
+ {\evlcry[]{\fct[R]}{\bbox[white]{\arr[g]}}}}
+{\obj[d]}}}  
+\\
+{\bbox[white]{\arr[g]}}
+\ar@{|->}[r]_{\evlcrynat[]
+{\ntf[\phi_1]}
+{\evlbin\cons
+ {\bbox[pink]{\obj[d]}}
+ {\obj[c]}}}
+&
+{\evlbin[]{\catcirc[{\cat[D]}]}
+{\bbox[LightGray]{\evlcrynat[]
+ {\ntf[\eta]}
+ {\obj[d]}}}
+{\evlcry[]{\fct[R]}{\bbox[white]{\arr[g]}}}}
+}\end{xy}}
+$
+
+于是我们可以根据上图定义 $\evlcrynat[]
+{\ntf[\phi_1]}
+{\evlbin\cons
+ {\bbox[pink]{\obj[d]}}
+ {\obj[c]}}$ 。
+
+
+
+但是这里面怎么体现了用到了 $\ntf[\varepsilon]$ 和 $\ntf[\eta]$ 为自然变换的性质呢 ?
