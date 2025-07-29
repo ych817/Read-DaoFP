@@ -129,250 +129,380 @@ $\qquad \begin{xy}\xymatrix@!C=2cm{
     {\evlcry[]{\fct[L]}{\obj[d]}}
     {\obj[c]}}$ 。如此
 
-- 不难看出这其实蕴含着一个二元的自然同构 $\ntf[\phi_2]$ , 见下 :
+----
 
-  $\qquad\begin{aligned}[t]
-  \ntf[\phi_2]:{}&
-  \evlbin[]{\cathom[{
-    \evlbin[]\cathom
-      {\evlbin\cattimes{\cat[D]}{\cat}}
-      {\catSet}}]}
-    {\evlbin{\cathom[{\cat[D]}]}
-      {\wld}
-      {\evlcry[]{\fct[R]}{\wld}}}
-    {\evlbin{\cathom}
-      {\evlcry[]{\fct[L]}{\wld}}
-      {\wld}}
-  \\
-  \evlcrynat[]{\ntf[\phi_2]}{\evlbin\cons{\wld}{\bbox[pink]{\obj[c]}}}:{}&
-  \evlbin[]{\cathom[{
-    \evlbin[]\cathom
-      {\cat[D]}
-      {\catSet}}]}
-    {\evlbin{\cathom[{\cat[D]}]}
-      {\wld}
-      {\evlcry[]{\fct[R]}{\obj[c]}}}
-    {\evlbin{\cathom}
-      {\evlcry[]{\fct[L]}{\wld}}
-      {\obj[c]}}
-  \\
-  \evlcrynat[]{\ntf[\phi_2]}{\evlbin\cons{\bbox[pink]{\obj[d]}}{\wld}}:{}&
-  \evlbin[]{\cathom[{
-    \evlbin[]\cathom
-      {\cat}
-      {\catSet}}]}
-    {\evlbin{\cathom[{\cat[D]}]}
-      {\obj[d]}
-      {\evlcry[]{\fct[R]}{\wld}}}
-    {\evlbin{\cathom}
-      {\evlcry[]{\fct[L]}{\obj[d]}}
-      {\wld}}
-  \end{aligned}$
+不难看出这其实蕴含着一个二元的自然同构 $\ntf[\phi_2]$ , 见下 :
 
-  套用反变米田引理我们便可获得
+$\qquad\begin{aligned}[t]
+\ntf[\phi_2]:{}&
+\evlbin[]{\cathom[{
+  \evlbin[]\cathom
+    {\evlbin\cattimes{\cat[D]}{\cat}}
+    {\catSet}}]}
+  {\evlbin{\cathom[{\cat[D]}]}
+    {\wld}
+    {\evlcry[]{\fct[R]}{\wld}}}
+  {\evlbin{\cathom}
+    {\evlcry[]{\fct[L]}{\wld}}
+    {\wld}}
+\\
+\evlcrynat[]{\ntf[\phi_2]}{\evlbin\cons{\wld}{\bbox[pink]{\obj[c]}}}:{}&
+\evlbin[]{\cathom[{
+  \evlbin[]\cathom
+    {\cat[D]}
+    {\catSet}}]}
+  {\evlbin{\cathom[{\cat[D]}]}
+    {\wld}
+    {\evlcry[]{\fct[R]}{\obj[c]}}}
+  {\evlbin{\cathom}
+    {\evlcry[]{\fct[L]}{\wld}}
+    {\obj[c]}}
+\\
+\evlcrynat[]{\ntf[\phi_2]}{\evlbin\cons{\bbox[pink]{\obj[d]}}{\wld}}:{}&
+\evlbin[]{\cathom[{
+  \evlbin[]\cathom
+    {\cat}
+    {\catSet}}]}
+  {\evlbin{\cathom[{\cat[D]}]}
+    {\obj[d]}
+    {\evlcry[]{\fct[R]}{\wld}}}
+  {\evlbin{\cathom}
+    {\evlcry[]{\fct[L]}{\obj[d]}}
+    {\wld}}
+\end{aligned}$
 
-  $\qquad\evlbin[]{\catcong[\catSet]}
-  {\underbracket[.4pt]
-    {\evlbin{\cathom[{\evlbin[]{\cathom[\catCat]}
-      {\evlcrynat[]\op{\cat[D]}}
-      {\catSet}}]}
-        {\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-          {\bbox[white]{\pla\wld}}
-          {\evlcry[]{\fct[R]}{\obj[c]}}}}
-        {\bbox[YellowGreen]{\evlbin{\cathom[{\cat}]}
-          {\evlcry[]{\fct[L]}
-            {\bbox[white]{\pla\wld}}}
-          {\obj[c]}}}}_
-     {\text{一堆自然变换}}}
-  {\underbracket[.4pt]
-    {\bbox[YellowGreen]{\evlbin\cathom
-      {\evlcry[]{\fct[L]}
-        {\evlcry[]{\fct[R]}
-          {\obj[c]}}}
-      {\obj[c]}}}_
-    {\text{一堆元素}}}$ 
+套用反变米田引理我们便可获得
 
-  由反变米田引理的证明可知 : 对每个左侧集合中的自然同构 $\evlcrynat[]{\ntf[\phi_2]}{\evlbin\cons{\wld}{\bbox[pink]{\obj[c]}}}$ 
-  都会有一个右侧集合中的箭头与之相对应 , 即 $\bbox[LightGray]{\evlcry[]{\evlcrynat[]{\ntf[\phi_2]}
-    {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c]}}{\bbox[pink]{\obj[c]}}}}{\id[{\evlcry[]{\fct[R]}{\obj[c]}}]}}=\bbox[LightGray]{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c]}}$ 。
-  为何 $\ntf[\varepsilon]$ 构成自然变换呢 ? 下方右图第二行的第二个节点说明了一切 。
-  这两张图这其实就是米田引理证明的两个图拼在一起后的结果 。
+$\qquad\evlbin[]{\catcong[\catSet]}
+{\underbracket[.4pt]
+  {\evlbin{\cathom[{\evlbin[]{\cathom[\catCat]}
+    {\evlcrynat[]\op{\cat[D]}}
+    {\catSet}}]}
+      {\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+        {\bbox[white]{\pla\wld}}
+        {\evlcry[]{\fct[R]}{\obj[c]}}}}
+      {\bbox[YellowGreen]{\evlbin{\cathom[{\cat}]}
+        {\evlcry[]{\fct[L]}
+          {\bbox[white]{\pla\wld}}}
+        {\obj[c]}}}}_
+   {\text{一堆自然变换}}}
+{\underbracket[.4pt]
+  {\bbox[YellowGreen]{\evlbin\cathom
+    {\evlcry[]{\fct[L]}
+      {\evlcry[]{\fct[R]}
+        {\obj[c]}}}
+    {\obj[c]}}}_
+  {\text{一堆元素}}}$ 
 
-  $\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=3cm{
-  {\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-          {\evlcry[]{\fct[R]}{\bbox[white]{\obj[c]}}}
-          {\evlcry[]{\fct[R]}{\obj[c]}}}}
-  \ar[r]^{\evlcrynat[]{\ntf[\phi_2]}
+由反变米田引理的证明可知 : 对每个左侧集合中的自然同构 $\evlcrynat[]{\ntf[\phi_2]}{\evlbin\cons{\wld}{\bbox[pink]{\obj[c]}}}$ 
+都会有一个右侧集合中的箭头与之相对应 , 即 $\bbox[LightGray]{\evlcry[]{\evlcrynat[]{\ntf[\phi_2]}
+  {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c]}}{\bbox[pink]{\obj[c]}}}}{\id[{\evlcry[]{\fct[R]}{\obj[c]}}]}}=\bbox[LightGray]{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c]}}$ 。
+为何 $\ntf[\varepsilon]$ 构成自然变换呢 ? 下方右图第二行的第二个节点说明了一切 。
+这两张图这其实就是反变米田引理证明的两个图拼在一起后的结果 。
+
+$\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=3cm{
+{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+        {\evlcry[]{\fct[R]}{\bbox[white]{\obj[c]}}}
+        {\evlcry[]{\fct[R]}{\obj[c]}}}}
+\ar[r]^{\evlcrynat[]{\ntf[\phi_2]}
+  {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c]}}{\bbox[pink]{\obj[c]}}}} 
+\ar[d]_{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+        {\evlcry[]{\fct[R]}{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}
+        {\evlcry[]{\fct[R]}{\obj[c]}}}} 
+&
+{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
+        {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\bbox[white]{\obj[c]}}}}
+        {\obj[c]}}}
+\ar[d]^{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
+        {\evlcry[]{\fct[L]}{{\evlcry[]{\fct[R]}{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}}}
+        {\obj[c]}}}
+\\
+{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+        {\evlcry[]{\fct[R]}{\bbox[white]{\obj[c']}}}
+        {\evlcry[]{\fct[R]}{\bbox[white]{\obj[c]}}}}}
+\ar[r]|{\evlcrynat[]{\ntf[\phi_2]}
+  {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c']}}{\bbox[pink]{\obj[c]}}}} 
+&
+{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
+        {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\bbox[white]{\obj[c']}}}}
+        {\bbox[white]{\obj[c]}}}}
+\\
+{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+  {\evlcry[]{\fct[R]}{\obj[c']}}
+  {\evlcry[]{\fct[R]}{\bbox[white]{\obj[c']}}}}}
+\ar[r]_{\evlcrynat[]{\ntf[\phi_2]}
+  {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c']}}{\bbox[pink]{\obj[c']}}}} 
+\ar[u]^{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+  {\evlcry[]{\fct[R]}{\obj[c']}}
+  {\evlcry[]{\fct[R]}{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}}}
+%\save[].[uu]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
+%!D*!U{\small\color{ForestGreen}
+%  \bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+%    {\bbox[white]{\cat[D]}}
+%    {\evlcry[]{\fct[R]}{\obj[c]}}}
+%}\restore 
+%\save[].[uu].[r]*+<10pt>[F-:<8pt>:ForestGreen]\frm{}!D*!U!L(6)
+%{\small\color{ForestGreen}
+%\cat[Set]
+%}\restore 
+&
+{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
+  {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\obj[c']}}}
+  {\bbox[white]{\obj[c']}}}}
+\ar[u]_{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
+  {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\obj[c']}}}
+  {\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}}
+%\save[].[uu]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}!D*!U
+%{\small\color{ForestGreen}
+%  \bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
+%    {\evlcry[]{\fct[L]}{\bbox[white]{\cat[D]}}}
+%    {\obj[c]}}
+%}\restore
+}\end{xy}}
+\qquad
+\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=3cm{
+{\id[{\evlcry[]{\fct[R]}{\obj[c]}}]} 
+\ar@{|->}[r]^{\evlcrynat[]{\ntf[\phi_2]}
     {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c]}}{\bbox[pink]{\obj[c]}}}} 
-  \ar[d]_{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-          {\evlcry[]{\fct[R]}{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}
-          {\evlcry[]{\fct[R]}{\obj[c]}}}} 
-  &
-  {\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
-          {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\bbox[white]{\obj[c]}}}}
-          {\obj[c]}}}
-  \ar[d]^{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
-          {\evlcry[]{\fct[L]}{{\evlcry[]{\fct[R]}{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}}}
-          {\obj[c]}}}
-  \\
-  {\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-          {\evlcry[]{\fct[R]}{\bbox[white]{\obj[c']}}}
-          {\evlcry[]{\fct[R]}{\bbox[white]{\obj[c]}}}}}
-  \ar[r]|{\evlcrynat[]{\ntf[\phi_2]}
+\ar@{|->}[d]_{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+  {\evlcry[]{\fct[R]}{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}
+  {\evlcry[]{\fct[R]}{\obj[c]}}}} 
+&
+{\pla\smash{\bbox[LightGray]{\evlcry[]
+  {\evlcrynat[]{\ntf[\phi_2]}
+    {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c]}}{\bbox[pink]{\obj[c]}}}}
+  {\id[{\evlcry[]{\fct[R]}{\obj[c]}}]}}\mrlap{= \bbox[LightGray]{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c]}}}}}
+\ar@{|->}[d]^{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
+  {\evlcry[]{\fct[L]}{{\evlcry[]{\fct[R]}{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}}}
+  {\obj[c]}}\mrlap{{}=\evlcrynat[]{\evlbin\catcirc
+  {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\evlcrynat[]\op{\arr[f]}}}}
+    {\wld}}
+    {\obj[c]}}}  \\
+{\evlcry[]{\fct[R]}{\evlcrynat[]\op{\arr[f]}}} 
+\ar@{|->}[r]|{\evlcrynat[]{\ntf[\phi_2]}
     {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c']}}{\bbox[pink]{\obj[c]}}}} 
-  &
-  {\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
-          {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\bbox[white]{\obj[c']}}}}
-          {\bbox[white]{\obj[c]}}}}
-  \\
-  {\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-    {\evlcry[]{\fct[R]}{\obj[c']}}
-    {\evlcry[]{\fct[R]}{\bbox[white]{\obj[c']}}}}}
-  \ar[r]_{\evlcrynat[]{\ntf[\phi_2]}
-    {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c']}}{\bbox[pink]{\obj[c']}}}} 
-  \ar[u]^{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-    {\evlcry[]{\fct[R]}{\obj[c']}}
-    {\evlcry[]{\fct[R]}{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}}}
-  \save[].[uu]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
-  !D*!U{\small\color{ForestGreen}
-  %  \bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-  %    {\bbox[white]{\cat[D]}}
-  %    {\evlcry[]{\fct[R]}{\obj[c]}}}
-  }\restore 
-  \save[].[uu].[r]*+<10pt>[F-:<8pt>:ForestGreen]\frm{}!D*!U!L(6)
-  {\small\color{ForestGreen}
-  %\cat[Set]
-  }\restore 
-  &
-  {\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
-    {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\obj[c']}}}
-    {\bbox[white]{\obj[c']}}}}
-  \ar[u]_{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
-    {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\obj[c']}}}
-    {\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}}
-  \save[].[uu]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}!D*!U
-  {\small\color{ForestGreen}
-  %  \bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
-  %    {\evlcry[]{\fct[L]}{\bbox[white]{\cat[D]}}}
-  %    {\obj[c]}}
-  }\restore
-  }\end{xy}}
-  \qquad
-  \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=3cm{
-  {\id[{\evlcry[]{\fct[R]}{\obj[c]}}]} 
-  \ar@{|->}[r]^{\evlcrynat[]{\ntf[\phi_2]}
-      {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c]}}{\bbox[pink]{\obj[c]}}}} 
-  \ar@{|->}[d]_{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-    {\evlcry[]{\fct[R]}{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}
-    {\evlcry[]{\fct[R]}{\obj[c]}}}} 
-  &
-  {\bbox[LightGray]{\evlcry[]
-    {\evlcrynat[]{\ntf[\phi_2]}
-      {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c]}}{\bbox[pink]{\obj[c]}}}}
-    {\id[{\evlcry[]{\fct[R]}{\obj[c]}}]}}\mrlap{= \bbox[LightGray]{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c]}}}}
-  \ar@{|->}[d]^{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
-    {\evlcry[]{\fct[L]}{{\evlcry[]{\fct[R]}{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}}}
-    {\obj[c]}}\mrlap{{}=\evlcrynat[]{\evlbin\catcirc
-    {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\evlcrynat[]\op{\arr[f]}}}}
-      {\wld}}
-      {\obj[c]}}}  \\
-  {\evlcry[]{\fct[R]}{\evlcrynat[]\op{\arr[f]}}} 
-  \ar@{|->}[r]|{\evlcrynat[]{\ntf[\phi_2]}
-      {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c']}}{\bbox[pink]{\obj[c]}}}} 
-  &
-  \evlbin[]\catcirc
-    {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\evlcrynat[]\op{\arr[f]}}}}
-    {\bbox[LightGray]{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c]}}}\mrlap{{}=
-  \evlbin[]{\catcirc[{\cat[D]}]}
-    {\bbox[LightGray]{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c']}}}
+&
+\evlbin[]\catcirc
+  {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\evlcrynat[]\op{\arr[f]}}}}
+  {\bbox[LightGray]{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c]}}}\mrlap{{}=
+\evlbin[]{\catcirc[{\cat[D]}]}
+  {\bbox[LightGray]{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c']}}}
+  {\evlcrynat[]\op{\arr[f]}}}
+%\save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}\restore 
+\\
+{\id[{\evlcry[]{\fct[R]}{\obj[c']}}]} 
+\ar@{|->}[u]^{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+  {\evlcry[]{\fct[R]}{\obj[c']}}
+  {\evlcry[]{\fct[R]}{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}}}
+\ar@{|->}[r]_{\evlcrynat[]{\ntf[\phi_2]}
+  {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c']}}{\bbox[pink]{\obj[c']}}}} 
+&
+{\pla\smash{\bbox[LightGray]{\evlcry[]
+  {\evlcrynat[]{\ntf[\phi_2]}
+    {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c']}}{\bbox[pink]{\obj[c']}}}}
+  {\id[{\evlcry[]{\fct[R]}{\obj[c']}}]}}\mrlap{{}=\bbox[LightGray]{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c']}}}}}
+\ar@{|->}[u]_{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+  {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\obj[c']}}}
+  {\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}\mrlap{{}=
+  \evlcrynat[]{\evlbin{\catcirc[{\cat[D]}]}
+    {\wld}
     {\evlcrynat[]\op{\arr[f]}}}
-  %\save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}\restore 
-  \\
-  {\id[{\evlcry[]{\fct[R]}{\obj[c']}}]} 
-  \ar@{|->}[u]^{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-    {\evlcry[]{\fct[R]}{\obj[c']}}
-    {\evlcry[]{\fct[R]}{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}}}
-  \ar@{|->}[r]_{\evlcrynat[]{\ntf[\phi_2]}
-    {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c']}}{\bbox[pink]{\obj[c']}}}} 
-  &
-  {\bbox[LightGray]{\evlcry[]
-    {\evlcrynat[]{\ntf[\phi_2]}
-      {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c']}}{\bbox[pink]{\obj[c']}}}}
-    {\id[{\evlcry[]{\fct[R]}{\obj[c']}}]}}\mrlap{{}=\bbox[LightGray]{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c']}}}}
-  \ar@{|->}[u]_{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-    {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\obj[c']}}}
-    {\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}\mrlap{{}=
-    \evlcrynat[]{\evlbin{\catcirc[{\cat[D]}]}
-      {\wld}
-      {\evlcrynat[]\op{\arr[f]}}}
-      {\evlcry{\fct[L]}{\evlcry[]{\fct[R]}{\obj[c']}}}}}
-  }\end{xy}}$
+    {\evlcry{\fct[L]}{\evlcry[]{\fct[R]}{\obj[c']}}}}}
+}\end{xy}}$
 
-- 不难看出这其实蕴含着一个二元的自然同构 $\ntf[\phi_1]$ , 见下 :
+----
 
-  $\qquad\begin{aligned}[t]
-  \ntf[\phi_1]:{}&
-  \evlbin[]{\cathom[{
-    \evlbin[]\cathom
-      {\evlbin\cattimes{\cat[D]}{\cat}}
-      {\catSet}}]}
-    {\evlbin{\cathom}
-      {\evlcry[]{\fct[L]}{\wld}}
-      {\wld}}
-    {\evlbin{\cathom[{\cat[D]}]}
-      {\wld}
-      {\evlcry[]{\fct[R]}{\wld}}}
-  \\
-  \evlcrynat[]{\ntf[\phi_1]}{\evlbin\cons{\wld}{\bbox[pink]{\obj[c]}}}:{}&
-  \evlbin[]{\cathom[{
-    \evlbin[]\cathom
-      {\cat[D]}
-      {\catSet}}]}
-    {\evlbin{\cathom}
-      {\evlcry[]{\fct[L]}{\wld}}
-      {\obj[c]}}
-    {\evlbin{\cathom[{\cat[D]}]}
-      {\wld}
-      {\evlcry[]{\fct[R]}{\obj[c]}}}
-  \\
-  \evlcrynat[]{\ntf[\phi_1]}{\evlbin\cons{\bbox[pink]{\obj[d]}}{\wld}}:{}&
-  \evlbin[]{\cathom[{
-    \evlbin[]\cathom
-      {\cat}
-      {\catSet}}]}
-    {\evlbin{\cathom}
-      {\evlcry[]{\fct[L]}{\obj[d]}}
-      {\wld}}
-    {\evlbin{\cathom[{\cat[D]}]}
-      {\obj[d]}
-      {\evlcry[]{\fct[R]}{\wld}}}
-  \end{aligned}$
-  
-  套用协变米田引理我们便可获得
-  
-  $\qquad\evlbin[]{\catcong[\catSet]}
-  {\underbracket[.4pt]
-    {\evlbin{\cathom[{\evlbin[]{\cathom[\catCat]}
-      {\cat}
-      {\catSet}}]}
-        {\bbox[LightGreen]{\evlbin\cathom
-          {\evlcry[]{\fct[L]}{\obj[d]}}
-          {\bbox[white]{\pla\wld}}}}
-        {\bbox[YellowGreen]{\evlbin{\cathom[{\cat[D]}]}
-          {\obj[d]}
-          {\evlcry[]{\fct[R]}{\bbox[white]{\pla\wld}}}}}}_
-     {\text{一堆自然变换}}}
-  {\underbracket[.4pt]
-    {\bbox[YellowGreen]{\evlbin{\cathom[{\cat[D]}]}
-          {\obj[d]}
-          {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\obj[d]}}}}}_
-    {\text{一堆元素}}}$
-  
-  由协变米田引理的证明可知 : 对每个左侧集合中的自然同构 $\evlcrynat[]{\ntf[\phi_1]}{\evlbin\cons{\bbox[pink]{\obj[d]}}{\wld}}$ 
-  都会有一个右侧集合中的箭头与之相对应 , 即 $\bbox[LightGray]{\evlcry[]{\evlcrynat[]{\ntf[\phi_1]}
-    {\evlbin\cons{\bbox[pink]{\obj[d]}}{\evlcry[]{\fct[L]}{\obj[d]}}}}{\id[{\evlcry[]{\fct[L]}{\obj[d]}}]}}=\bbox[LightGray]{\evlcrynat[]{\ntf[\eta]}{\obj[d]}}$ 。
-  为何 $\ntf[\eta]$ 构成自然变换呢 ? 下方右图第二行的第二个节点说明了一切 。
-  这两张图这其实就是米田引理证明的两个图拼在一起后的结果 。
+不难看出这其实蕴含着一个二元的自然同构 $\ntf[\phi_1]$ , 见下 :
 
+$\qquad\begin{aligned}[t]
+\ntf[\phi_1]:{}&
+\evlbin[]{\cathom[{
+  \evlbin[]\cathom
+    {\evlbin\cattimes{\cat[D]}{\cat}}
+    {\catSet}}]}
+  {\evlbin{\cathom}
+    {\evlcry[]{\fct[L]}{\wld}}
+    {\wld}}
+  {\evlbin{\cathom[{\cat[D]}]}
+    {\wld}
+    {\evlcry[]{\fct[R]}{\wld}}}
+\\
+\evlcrynat[]{\ntf[\phi_1]}{\evlbin\cons{\wld}{\bbox[pink]{\obj[c]}}}:{}&
+\evlbin[]{\cathom[{
+  \evlbin[]\cathom
+    {\cat[D]}
+    {\catSet}}]}
+  {\evlbin{\cathom}
+    {\evlcry[]{\fct[L]}{\wld}}
+    {\obj[c]}}
+  {\evlbin{\cathom[{\cat[D]}]}
+    {\wld}
+    {\evlcry[]{\fct[R]}{\obj[c]}}}
+\\
+\evlcrynat[]{\ntf[\phi_1]}{\evlbin\cons{\bbox[pink]{\obj[d]}}{\wld}}:{}&
+\evlbin[]{\cathom[{
+  \evlbin[]\cathom
+    {\cat}
+    {\catSet}}]}
+  {\evlbin{\cathom}
+    {\evlcry[]{\fct[L]}{\obj[d]}}
+    {\wld}}
+  {\evlbin{\cathom[{\cat[D]}]}
+    {\obj[d]}
+    {\evlcry[]{\fct[R]}{\wld}}}
+\end{aligned}$
 
+套用协变米田引理我们便可获得
 
+$\qquad\evlbin[]{\catcong[\catSet]}
+{\underbracket[.4pt]
+  {\evlbin{\cathom[{\evlbin[]{\cathom[\catCat]}
+    {\cat}
+    {\catSet}}]}
+      {\bbox[LightGreen]{\evlbin\cathom
+        {\evlcry[]{\fct[L]}{\obj[d]}}
+        {\bbox[white]{\pla\wld}}}}
+      {\bbox[YellowGreen]{\evlbin{\cathom[{\cat[D]}]}
+        {\obj[d]}
+        {\evlcry[]{\fct[R]}{\bbox[white]{\pla\wld}}}}}}_
+   {\text{一堆自然变换}}}
+{\underbracket[.4pt]
+  {\bbox[YellowGreen]{\evlbin{\cathom[{\cat[D]}]}
+        {\obj[d]}
+        {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\obj[d]}}}}}_
+  {\text{一堆元素}}}$
+
+由协变米田引理的证明可知 : 对每个左侧集合中的自然同构 $\evlcrynat[]{\ntf[\phi_1]}{\evlbin\cons{\bbox[pink]{\obj[d]}}{\wld}}$ 
+都会有一个右侧集合中的箭头与之相对应 , 即 $\bbox[LightGray]{\evlcry[]{\evlcrynat[]{\ntf[\phi_1]}
+  {\evlbin\cons{\bbox[pink]{\obj[d]}}{\evlcry[]{\fct[L]}{\obj[d]}}}}{\id[{\evlcry[]{\fct[L]}{\obj[d]}}]}}=\bbox[LightGray]{\evlcrynat[]{\ntf[\eta]}{\obj[d]}}$ 。
+为何 $\ntf[\eta]$ 构成自然变换呢 ? 下方右图第二行的第二个节点说明了一切 。
+这两张图这其实就是协变米田引理证明的两个图拼在一起后的结果 。
+
+$\qquad\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=3cm{
+{\bbox[LightGreen]{\evlbin[]\cathom
+  {\evlcry[]{\fct[L]}{\obj[d]}}
+  {\evlcry[]{\fct[L]}{\bbox[white]{\obj[d]}}}}}
+\ar[r]^{\evlcrynat[]
+  {\ntf[\phi_1]}
+  {\evlbin\cons
+    {\bbox[pink]{\obj[d]}}
+    {\evlcry[]{\fct[L]}{\obj[d]}}}} 
+\ar[d]_{\bbox[LightGreen]{\evlbin[]\cathom
+  {\evlcry[]{\fct[L]}{\obj[d]}}
+  {\evlcry[]{\fct[L]}{\bbox[white]{\arr[g]}}}}}
+&
+{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+  {\obj[d]}
+  {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\bbox[white]{\obj[d]}}}}}}
+\ar[d]^{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+  {\obj[d]}
+  {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\bbox[white]{\arr[g]}}}}}}  
+\\
+{\bbox[LightGreen]{\evlbin[]\cathom
+  {\evlcry[]{\fct[L]}{\bbox[white]{\obj[d]}}}
+  {\evlcry[]{\fct[L]}{\bbox[white]{\obj[d']}}}}}
+\ar[r]|{\evlcrynat[]
+  {\ntf[\phi_1]}
+  {\evlbin\cons
+    {\bbox[pink]{\obj[d]}}
+    {\evlcry[]{\fct[L]}{\obj[d']}}}}
+&
+{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+  {\bbox[white]{\obj[d]}}
+  {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\bbox[white]{\obj[d']}}}}}}
+\\
+{\bbox[LightGreen]{\evlbin[]\cathom
+  {\evlcry[]{\fct[L]}{\bbox[white]{\obj[d']}}}
+  {\evlcry[]{\fct[L]}{\obj[d']}}}}
+\ar[r]_{\evlcrynat[]
+  {\ntf[\phi_1]}
+  {\evlbin\cons
+    {\bbox[pink]{\obj[d']}}
+    {\evlcry[]{\fct[L]}{\obj[d']}}}} 
+\ar[u]^{\bbox[LightGreen]{\evlbin[]\cathom
+  {\evlcry[]{\fct[L]}{\bbox[white]{\arr[g]}}}
+  {\evlcry[]{\fct[L]}{\obj[d']}}}}
+&
+{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+  {\bbox[white]{\obj[d']}}
+  {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\obj[d']}}}}}
+\ar[u]_{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+  {\bbox[white]{\arr[g]}}
+  {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\obj[d']}}}}}
+}\end{xy}}
+\qquad
+\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=3cm{
+{\id[{\evlcry[]{\fct[L]}{\obj[d]}}]}
+\ar@{|->}[r]^{\evlcrynat[]
+  {\ntf[\phi_1]}
+  {\evlbin\cons
+    {\bbox[pink]{\obj[d]}}
+    {\evlcry[]{\fct[L]}{\obj[d]}}}} 
+\ar[d]_{\bbox[LightGreen]{\evlbin[]\cathom
+  {\evlcry[]{\fct[L]}{\obj[d]}}
+  {\evlcry[]{\fct[L]}{\bbox[white]{\arr[g]}}}}}
+&
+{\pla\smash{\bbox[LightGray]{\evlcry[]{\evlcrynat[]{\ntf[\phi_1]}
+  {\evlbin\cons
+    {\bbox[pink]{\obj[d]}}
+    {\evlcry[]{\fct[L]}{\obj[d]}}}}
+  {\id[{\evlcry[]{\fct[L]}{\obj[d]}}]}}\mrlap{{}=
+\bbox[LightGray]{\evlcrynat[]
+  {\ntf[\eta]}
+  {\obj[d]}}}}}
+\ar[d]^{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+  {\obj[d]}
+  {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\bbox[white]{\arr[g]}}}}}\mrlap{{}=
+\evlcrynat[]
+  {\evlbin{\catcirc[{\cat[D]}]}
+    {\wld}
+    {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\bbox[white]{\arr[g]}}}}}
+  {\obj[d]}}}  
+\\
+{\evlcry[]{\fct[L]}{\bbox[white]{\arr[g]}}}
+\ar[r]|{\evlcrynat[]
+  {\ntf[\phi_1]}
+  {\evlbin\cons
+    {\bbox[pink]{\obj[d]}}
+    {\evlcry[]{\fct[L]}{\obj[d']}}}}
+&
+{\evlbin[]{\catcirc[{\cat[D]}]}
+  {\bbox[LightGray]{\evlcrynat[]
+    {\ntf[\eta]}
+    {\obj[d]}}}
+  {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\bbox[white]{\arr[g]}}}}\mrlap{{}=
+\evlbin[]{\catcirc[{\cat[D]}]}
+  {\arr[g]}
+  {\bbox[LightGray]{\evlcrynat[]
+    {\ntf[\eta]}
+    {\obj[d']}}}
+}}
+\\
+{\id[{\evlcry[]{\fct[L]}{\obj[d']}}]}
+\ar@{|->}[r]_{\evlcrynat[]
+  {\ntf[\phi_1]}
+  {\evlbin\cons
+    {\bbox[pink]{\obj[d']}}
+    {\evlcry[]{\fct[L]}{\obj[d']}}}} 
+\ar[u]^{\bbox[LightGreen]{\evlbin[]\cathom
+  {\evlcry[]{\fct[L]}{\bbox[white]{\arr[g]}}}
+  {\evlcry[]{\fct[L]}{\obj[d']}}}}
+&
+{\pla\smash{\bbox[LightGray]{\evlcry[]{\evlcrynat[]{\ntf[\phi_1]}
+  {\evlbin\cons
+    {\bbox[pink]{\obj[d']}}
+    {\evlcry[]{\fct[L]}{\obj[d']}}}}
+  {\id[{\evlcry[]{\fct[L]}{\obj[d']}}]}}\mrlap{{}=
+\bbox[LightGray]{\evlcrynat[]
+  {\ntf[\eta]}
+  {\obj[d']}}}}}
+\ar[u]_{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+  {\bbox[white]{\arr[g]}}
+  {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\obj[d']}}}}\mrlap{{}=
+\evlcrynat[]
+  {\evlbin{\catcirc[{\cat[D]}]}
+    {\arr[g]}
+    {\wld}}
+  {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\bbox[white]{\obj[d']}}}}}}
+}\end{xy}}
+$
