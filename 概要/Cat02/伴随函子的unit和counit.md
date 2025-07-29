@@ -129,7 +129,7 @@ $\qquad \begin{xy}\xymatrix@!C=2cm{
     {\evlcry[]{\fct[L]}{\obj[d]}}
     {\obj[c]}}$ 。如此
 
-----
+<div style="page-break-after: always"></div>
 
 不难看出这其实蕴含着一个二元的自然同构 $\ntf[\phi_2]$ , 见下 :
 
@@ -438,7 +438,7 @@ $\qquad\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=3cm{
   {\evlbin\cons
     {\bbox[pink]{\obj[d]}}
     {\evlcry[]{\fct[L]}{\obj[d]}}}} 
-\ar[d]_{\bbox[LightGreen]{\evlbin[]\cathom
+\ar@{|->}[d]_{\bbox[LightGreen]{\evlbin[]\cathom
   {\evlcry[]{\fct[L]}{\obj[d]}}
   {\evlcry[]{\fct[L]}{\bbox[white]{\arr[g]}}}}}
 &
@@ -450,7 +450,7 @@ $\qquad\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=3cm{
 \bbox[LightGray]{\evlcrynat[]
   {\ntf[\eta]}
   {\obj[d]}}}}}
-\ar[d]^{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+\ar@{|->}[d]^{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
   {\obj[d]}
   {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\bbox[white]{\arr[g]}}}}}\mrlap{{}=
 \evlcrynat[]
@@ -460,7 +460,7 @@ $\qquad\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=3cm{
   {\obj[d]}}}  
 \\
 {\evlcry[]{\fct[L]}{\bbox[white]{\arr[g]}}}
-\ar[r]|{\evlcrynat[]
+\ar@{|->}[r]|{\evlcrynat[]
   {\ntf[\phi_1]}
   {\evlbin\cons
     {\bbox[pink]{\obj[d]}}
@@ -484,7 +484,7 @@ $\qquad\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=3cm{
   {\evlbin\cons
     {\bbox[pink]{\obj[d']}}
     {\evlcry[]{\fct[L]}{\obj[d']}}}} 
-\ar[u]^{\bbox[LightGreen]{\evlbin[]\cathom
+\ar@{|->}[u]^{\bbox[LightGreen]{\evlbin[]\cathom
   {\evlcry[]{\fct[L]}{\bbox[white]{\arr[g]}}}
   {\evlcry[]{\fct[L]}{\obj[d']}}}}
 &
@@ -496,7 +496,7 @@ $\qquad\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=3cm{
 \bbox[LightGray]{\evlcrynat[]
   {\ntf[\eta]}
   {\obj[d']}}}}}
-\ar[u]_{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+\ar@{|->}[u]_{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
   {\bbox[white]{\arr[g]}}
   {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\obj[d']}}}}\mrlap{{}=
 \evlcrynat[]
