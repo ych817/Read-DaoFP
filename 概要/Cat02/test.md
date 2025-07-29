@@ -133,3 +133,84 @@ $\evlbin[]{\catcong[\catSet]}
     {\evlcry[]{\Id[{\cat[D]}]}{\wld}}
     {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\wld}}}}$
 
+$\qquad\begin{array}{c}
+\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
+{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+  {\obj[d]}
+  {\evlcry[]{\fct[R]}{\bbox[white]{\obj[c']}}}}}
+\ar[r]^{\evlcrynat[]{\ntf[\phi]}
+  {\evlbin\cons{\bbox[pink]{\obj[d']}}{\obj[c']}}}
+\save[].[d]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}!U*!D
+{\small\color{ForestGreen}
+  \bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+  {\obj[d]}
+  {\evlcry[]{\fct[R]}{\bbox[white]{\cat}}}}}\restore 
+\save[].[d].[r]*+<10pt>[F-:<8pt>:ForestGreen]\frm{}
+!U*!D!L(4){\small\color{ForestGreen}\cat[Set]}\restore
+&
+{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
+  {\evlcry[]{\fct[L]}{\obj[d]}}
+  {\bbox[white]{\obj[c']}}}}
+\save[].[d]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}!U*!D
+{\small\color{ForestGreen}
+  \bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
+  {\evlcry[]{\fct[L]}{\obj[d]}}
+  {\bbox[white]{\cat}}}}\restore 
+\\
+{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+  {\obj[d]}
+  {\evlcry[]{\fct[R]}{\bbox[white]{\obj[c]}}}}}
+\ar[r]_{\evlcrynat[]{\ntf[\phi]}
+  {\evlbin\cons{\bbox[pink]{\obj[d]}}{\obj[c]}}} 
+\ar[u]^{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+  {\obj[d]}
+  {\evlcry[]{\fct[R]}{\bbox[white]{\arr[f]}}}}}  
+&
+{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
+  {\evlcry[]{\fct[L]}{\obj[d]}}
+  {\bbox[white]{\obj[c]}}}}
+\ar[u]_{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
+  {\evlcry[]{\fct[L]}{\obj[d]}}
+  {\bbox[white]{\arr[f]}}}}
+}\end{xy}}
+\\
+\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
+{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+        {\bbox[white]{\obj[d]}}
+        {\evlcry[]{\fct[R]}{\obj[c]}}}}
+\ar[r]^{\evlcrynat[]{\ntf[\phi]}
+  {\evlbin\cons{\obj[d]}{\bbox[pink]{\obj[c]}}}} 
+\ar[d]_{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+        {\bbox[white]{\evlcrynat[]\op{\arr[g]}}}
+        {\evlcry[]{\fct[R]}{\obj[c]}}}} 
+&
+{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
+        {\evlcry[]{\fct[L]}{\bbox[white]{\obj[d]}}}
+        {\obj[c]}}}
+\ar[d]^{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
+        {\evlcry[]{\fct[L]}{\bbox[white]{\evlcrynat[]\op{\arr[g]}}}}
+        {\obj[c]}}}
+\\
+{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+        {\bbox[white]{\obj[d']}}
+        {\evlcry[]{\fct[R]}{\obj[c]}}}}
+\ar[r]_{\evlcrynat[]{\ntf[\phi]}
+  {\evlbin\cons{\obj[d']}{\bbox[pink]{\obj[c]}}}} 
+\save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
+!D*!U{\small\color{ForestGreen}
+  \bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+    {\bbox[white]{\cat[D]}}
+    {\evlcry[]{\fct[R]}{\obj[c]}}}}\restore 
+\save[].[u].[r]*+<10pt>[F-:<8pt>:ForestGreen]\frm{}
+!D*!U!L(4){\small\color{ForestGreen}\cat[Set]}\restore 
+&
+{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
+        {\evlcry[]{\fct[L]}{\bbox[white]{\obj[d']}}}
+        {\obj[c]}}}
+\save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}!D*!U
+{\small\color{ForestGreen}
+  \bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
+    {\evlcry[]{\fct[L]}{\bbox[white]{\cat[D]}}}
+    {\obj[c]}}}\restore 
+}\end{xy}}
+\end{array}$
