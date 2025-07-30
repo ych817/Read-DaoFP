@@ -804,7 +804,7 @@ $\qquad\begin{array}{c}
     {\fct[R]}
     {\obj[c]}}
 \ar[r]_{\evlcrynat[]{\ntf[\varepsilon]}
-{\obj[c']}}
+{\obj[c]}}
 &
 {\obj[c]}
 \ar@{->}@`{[]+/d+3pc/,[ll]+/d+3pc/}[ll]^{\fct[R]}
@@ -817,32 +817,29 @@ $\qquad\begin{array}{c}
 
 $\qquad\begin{array}{c}
 \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
+{\pla\bbox[white]{\obj[d]}}
+\ar[r]^{\evlcrynat[]{\ntf[\varepsilon]}
+  {\obj[c]}}
+\ar[d]_{\bbox[white]{\arr[g]}}
 &
-{\evlcry[]{\fct[R]}{\obj[c]}}
-\\
-\evlcry[]{\fct[R]}
-  {\bbox[white]{\obj[c]}}
-\ar[r]_{\evlcrynat[]{\ntf[\varepsilon]}
-  {\evlcry{\fct[R]}{\obj[c]}}}
-\ar[ur]^{\id[{\evlcry[]{\fct[R]}{\obj[c]}}]}
-&
-{\evlcry[]{\fct[R]}
+{\bbox[LightGreen]{\evlcry[]
+  {\fct[R]}{\evlcry[]
+    {\fct[L]}
+    {\bbox[white]{\obj[d]}}}}}
+\ar[d]^{\bbox[LightGreen]{\evlcry[]
+  {\fct[R]}
   {\evlcry[]
     {\fct[L]}
-    {\evlcry[]
-      {\fct[R]}
-        {\obj[c]}}}}
-\ar[u]_{\evlcrynat[]{\ntf[\eta]}{\evlcry{\fct[L]}{\obj[d]}}}
-\save[].[l].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
-!R*!L{\small\color{ForestGreen}\cat}\restore
-}\end{xy}}
+    {\bbox[white]{\arr[g]}}}}}
 \\
-\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
 {\bbox[LightGreen]{\evlcry[]{\fct[R]}
-  {\bbox[white]{\obj[c]}}}}
-\ar[d]_{\bbox[white]{\arr[g]}}
-\ar[r]^{\evlcrynat[]{\ntf[\varepsilon]}
-{\evlcry{\fct[R]}{\obj[c]}}} 
+ {\bbox[white]{\obj[c]}}}}
+\ar[r]_{\evlcrynat[]{\ntf[\varepsilon]}
+  {\evlcry{\fct[R]}{\obj[c]}}} 
+\save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
+!U*!D{\small\color{ForestGreen}\bbox[LightGreen]{
+  \evlcry[]{\Id[{\cat[D]}]}
+    {\cat[D]}}}\restore 
 &
 {\bbox[LightGreen]{\evlcry[]{\fct[R]}
   {\evlcry[]
@@ -850,29 +847,83 @@ $\qquad\begin{array}{c}
     {\evlcry[]
       {\fct[R]}
         {\bbox[white]{\obj[c]}}}}}}
-\ar[d]^{\bbox[LightGreen]{\evlcry[]
-  {\fct[R]}
+\save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
+!U*!D{\small\color{ForestGreen}\bbox[LightGreen]{
+  \evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}
+    {\cat[D]}}}}\restore 
+\save[].[u].[l]*+<10pt>[F-:<8pt>:ForestGreen]\frm{}
+!R*!L{\small\color{ForestGreen}\cat[D]}\restore 
+}\end{xy}}
+\\
+\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
+\evlcry[]{\fct[R]}
+  {\bbox[white]{\obj[c]}}
+\ar[r]^{\evlcrynat[]{\ntf[\varepsilon]}
+  {\evlcry{\fct[R]}{\obj[c]}}}
+\ar[dr]_{\id[{\evlcry[]{\fct[R]}{\obj[c]}}]}
+&
+{\evlcry[]{\fct[R]}
   {\evlcry[]
     {\fct[L]}
-    {\bbox[white]{\arr[g]}}}}}
+    {\evlcry[]
+      {\fct[R]}
+        {\obj[c]}}}}
+\ar[d]^{\evlcrynat[]{\ntf[\eta]}{\evlcry{\fct[L]}{\obj[d]}}}
 \\
+&
+{\evlcry[]{\fct[R]}{\obj[c]}}
+\save[].[u].[ul]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
+!R*!L{\small\color{ForestGreen}\cat[D]}\restore
+}\end{xy}}
+\end{array} \vcenter{{}\Longrightarrow{}} 
+\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
 {\pla\bbox[white]{\obj[d]}}
-\ar[r]_{\evlcrynat[]{\ntf[\varepsilon]}
+\ar[r]^{\evlcrynat[]{\ntf[\varepsilon]}
   {\obj[c]}}
-\save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
-!D*!U{\small\color{ForestGreen}\bbox[LightGreen]{
-  \evlcry[]{\Id[{\cat[D]}]}
-    {\cat[D]}}}\restore 
-\save[].[u].[ur]*+<10pt>[F-:<8pt>:ForestGreen]\frm{}
-!R*!L{\small\color{ForestGreen}\cat[C]}\restore 
+\ar[d]_{\bbox[white]{\arr[g]}}
+\ar@`{[]+/u+3pc/,[rr]+/u+3pc/}[rr]^{\fct[L]}
 &
 {\bbox[LightGreen]{\evlcry[]
   {\fct[R]}{\evlcry[]
     {\fct[L]}
     {\bbox[white]{\obj[d]}}}}}
-\save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
-!D*!U{\small\color{ForestGreen}\bbox[LightGreen]{
-  \evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}
-    {\cat[D]}}}}\restore 
-}\end{xy}}
-\end{array} \vcenter{{}\Longrightarrow{}} $
+\ar[d]^{\bbox[LightGreen]{\evlcry[]
+  {\fct[R]}
+  {\evlcry[]
+    {\fct[L]}
+    {\bbox[white]{\arr[g]}}}}}
+&
+{\evlcry[]{\fct[L]}{\obj[d]}}
+\ar[d]^{\evlcrynat[]{\ntf[\eta]}{\obj[d]}}
+\ar@{->}@`{[]+/r+2pc/,[dd]+/r+2pc/}[dd]^{\evlcrynat[]\op{\arr[f]}}
+\\
+\evlcry[]{\fct[R]}
+  {\bbox[white]{\obj[c]}}
+\ar[r]^{\evlcrynat[]{\ntf[\varepsilon]}
+  {\evlcry{\fct[R]}{\obj[c]}}}
+\ar[dr]_{\id[{\evlcry[]{\fct[R]}{\obj[c]}}]}
+&
+{\evlcry[]{\fct[R]}
+  {\evlcry[]
+    {\fct[L]}
+    {\evlcry[]
+      {\fct[R]}
+        {\obj[c]}}}}
+\ar[d]^{\evlcrynat[]{\ntf[\eta]}{\evlcry{\fct[L]}{\obj[d]}}}
+&
+{\evlcry[]
+  {\fct[L]}{\evlcry[]
+    {\fct[R]}
+    {\obj[c]}}}
+\ar[d]^{\evlcry[]{\fct[L]}{\arr[g]}}
+\\
+&
+{\evlcry[]{\fct[R]}{\obj[c]}}
+\save[].[u].[ul].[uul]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
+!R*!L{\small\color{ForestGreen}\cat[D]}\restore
+&
+{\obj[c]}
+\ar@`{[]+/d+2pc/,[l]+/d+2pc/}[l]^{\fct[R]}
+\save[].[u].[uu]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
+!R*!L{\small\color{ForestGreen}\cat[C]}\restore
+}\end{xy}}$
