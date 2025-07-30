@@ -522,7 +522,7 @@ $\qquad\evlbin[]{\catcong[\catSet]}
   > {\evlbin{\catcirc[{\cat[D]}]}
   >  {\arr[g]}
   >  {\wld}}
-  > {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\obj[d']}}}}}
+  > {\evlcry{\fct[R]}{\evlcry[]{\fct[L]}{\obj[d']}}}}}
   > }\end{xy}}
   > $
   >
@@ -662,17 +662,17 @@ $\qquad\evlbin[]{\catcong[\catSet]}
   
 - 对任意 $\cat$ 中对象 $\obj[c]$ 
   及任意 $\cat[D]$ 中对象 $\obj[d]$ 
-  及任意 $\arr[g]:\evlbin[]{\cathom[{\cat[D]}]}{\obj[d]}{\evlcry[]{\fct[R]}{\obj[c]}}$ 始终都存在
-  唯一的 $\arr[f]:\evlbin[]{\cathom[{\cat[C]}]}{\evlcry[]{\fct[L]}{\obj[d]}}{\obj[c]}$ 使下图交换 。
+  及任意 $\arr[g]:\evlbin[]{\cathom[{\cat[D]}]}{\obj[d]}{\evlcry[]{\fct[R]}{\obj[c]}}$ 始终都会存在
+  唯一的 $\evlcrynat[]\op{\arr[f]}:\evlbin[]{\cathom[{\cat[C]}]}{\evlcry[]{\fct[L]}{\obj[d]}}{\obj[c]}$ 使下图交换 。
   
   $\vcenter{\begin{xy}\xymatrix@!C=2cm{
   {\evlcry[]{\fct[L]}{\obj[d]}}
-  \ar@{-->}@[red][d]_[red]{\arr} 
+  \ar@{-->}@[red][d]_[red]{\evlcrynat[]\op{\arr[f]}} 
   & 
   {\evlcry[]{\fct[R]}{
     \evlcry[]{\fct[L]}
       {\obj[d]}}}
-  \ar@[red]@{-->}[d]_[red]{\evlcry[]{\fct[R]}{\arr[f]}}
+  \ar@[red]@{-->}[d]_[red]{\evlcry[]{\fct[R]}{\evlcrynat[]\op{\arr[f]}}}
   &
   {\obj[d]}
   \ar@[magenta][dl]^[magenta]{\arr[g]}  
@@ -700,7 +700,7 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 $\qquad\begin{array}{c}
 \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
 {\evlcry[]{\fct[L]}{\obj[d]}}
-\ar[d]_{\evlcrynat[]{\ntf[\eta]}{\evlcry[]{\fct[L]}{\obj[d]}}}
+\ar[d]_{\evlcrynat[]{\ntf[\eta]}{\evlcry{\fct[L]}{\obj[d]}}}
 \ar[dr]^{\id[{\evlcry[]{\fct[L]}{\obj[d]}}]}
 \\
 {\evlcry[]{\fct[L]}
@@ -709,8 +709,8 @@ $\qquad\begin{array}{c}
     {\evlcry[]
       {\fct[L]}
         {\obj[d]}}}}
-\ar[r]|{\evlcrynat[]{\ntf[\varepsilon]}
-{\obj}} 
+\ar[r]^{\evlcrynat[]{\ntf[\varepsilon]}
+{\evlcry{\fct[L]}{\obj[d]}}} 
 &
 \evlcry[]{\fct[L]}
   {\bbox[white]{\obj[d]}}
@@ -726,7 +726,7 @@ $\qquad\begin{array}{c}
       {\fct[L]}
         {\bbox[white]{\obj[d]}}}}}}
 \ar[r]^{\evlcrynat[]{\ntf[\varepsilon]}
-{\obj}} 
+{\evlcry{\fct[L]}{\obj[d]}}} 
 \ar[d]_{\bbox[LightGreen]{\evlcry[]
   {\fct[L]}
   {\evlcry[]
@@ -742,7 +742,7 @@ $\qquad\begin{array}{c}
     {\fct[R]}
     {\bbox[white]{\obj[c]}}}}}
 \ar[r]_{\evlcrynat[]{\ntf[\varepsilon]}
-{\obj[c']}}
+  {\obj[c]}}
 \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
 !D*!U{\small\color{ForestGreen}\bbox[LightGreen]{
   \evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}
@@ -756,14 +756,14 @@ $\qquad\begin{array}{c}
   \evlcry[]{\Id[{\cat[C]}]}
     {\cat[C]}}}\restore 
 }\end{xy}}
-\end{array}$ $\vcenter{\Longrightarrow}$ $\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
+\end{array} \vcenter{{}\Longrightarrow{}} \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
 {\obj[d]}
 \ar[d]_{\evlcrynat[]{\ntf[\eta]}{\obj[d]}}
 \ar@{->}@`{[]+/u+2pc/,[r]+/u+2pc/}[r]^{\fct[L]}
 \ar@{->}@`{[]+/l+2pc/,[dd]+/l+2pc/}[dd]_{\arr[g]}
 &
 {\evlcry[]{\fct[L]}{\obj[d]}}
-\ar[d]_{\evlcrynat[]{\ntf[\eta]}{\evlcry[]{\fct[L]}{\obj[d]}}}
+\ar[d]_{\evlcrynat[]{\ntf[\eta]}{\evlcry{\fct[L]}{\obj[d]}}}
 \ar[dr]^{\id[{\evlcry[]{\fct[L]}{\obj[d]}}]}
 \\
 {\evlcry[]
@@ -781,8 +781,8 @@ $\qquad\begin{array}{c}
     {\evlcry[]
       {\fct[L]}
         {\obj[d]}}}}
-\ar[r]|{\evlcrynat[]{\ntf[\varepsilon]}
-{\obj}} 
+\ar[r]^{\evlcrynat[]{\ntf[\varepsilon]}
+{\evlcry{\fct[L]}{\obj[d]}}} 
 \ar[d]_{\evlcry[]
   {\fct[L]}
   {\evlcry[]
@@ -814,3 +814,65 @@ $\qquad\begin{array}{c}
 
 
 那为何 $\arr[g]$ 是唯一的呢 ? 假如有 $\arr[g']$ 亦满足上图 , 则
+
+$\qquad\begin{array}{c}
+\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
+&
+{\evlcry[]{\fct[R]}{\obj[c]}}
+\\
+\evlcry[]{\fct[R]}
+  {\bbox[white]{\obj[c]}}
+\ar[r]_{\evlcrynat[]{\ntf[\varepsilon]}
+  {\evlcry{\fct[R]}{\obj[c]}}}
+\ar[ur]^{\id[{\evlcry[]{\fct[R]}{\obj[c]}}]}
+&
+{\evlcry[]{\fct[R]}
+  {\evlcry[]
+    {\fct[L]}
+    {\evlcry[]
+      {\fct[R]}
+        {\obj[c]}}}}
+\ar[u]_{\evlcrynat[]{\ntf[\eta]}{\evlcry{\fct[L]}{\obj[d]}}}
+\save[].[l].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
+!R*!L{\small\color{ForestGreen}\cat}\restore
+}\end{xy}}
+\\
+\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
+{\bbox[LightGreen]{\evlcry[]{\fct[R]}
+  {\bbox[white]{\obj[c]}}}}
+\ar[d]_{\bbox[white]{\arr[g]}}
+\ar[r]^{\evlcrynat[]{\ntf[\varepsilon]}
+{\evlcry{\fct[R]}{\obj[c]}}} 
+&
+{\bbox[LightGreen]{\evlcry[]{\fct[R]}
+  {\evlcry[]
+    {\fct[L]}
+    {\evlcry[]
+      {\fct[R]}
+        {\bbox[white]{\obj[c]}}}}}}
+\ar[d]^{\bbox[LightGreen]{\evlcry[]
+  {\fct[R]}
+  {\evlcry[]
+    {\fct[L]}
+    {\bbox[white]{\arr[g]}}}}}
+\\
+{\pla\bbox[white]{\obj[d]}}
+\ar[r]_{\evlcrynat[]{\ntf[\varepsilon]}
+  {\obj[c]}}
+\save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
+!D*!U{\small\color{ForestGreen}\bbox[LightGreen]{
+  \evlcry[]{\Id[{\cat[D]}]}
+    {\cat[D]}}}\restore 
+\save[].[u].[ur]*+<10pt>[F-:<8pt>:ForestGreen]\frm{}
+!R*!L{\small\color{ForestGreen}\cat[C]}\restore 
+&
+{\bbox[LightGreen]{\evlcry[]
+  {\fct[R]}{\evlcry[]
+    {\fct[L]}
+    {\bbox[white]{\obj[d]}}}}}
+\save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
+!D*!U{\small\color{ForestGreen}\bbox[LightGreen]{
+  \evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}
+    {\cat[D]}}}}\restore 
+}\end{xy}}
+\end{array} \vcenter{{}\Longrightarrow{}} $
