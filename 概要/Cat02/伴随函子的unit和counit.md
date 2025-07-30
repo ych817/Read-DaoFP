@@ -109,7 +109,10 @@ $$
 }
 $$
 
-### 伴随函子的 unit 与 counit
+## 10 伴随函子
+
+若有函子 $\fct[L]:\evlbin[]{\cathom[\catCat]}{\cat[D]}{\cat[C]}$ 
+以及函子 $\fct[R]:\evlbin[]{\cathom[\catCat]}{\cat}{\cat[D]}$ , 即
 
 $\qquad \begin{xy}\xymatrix@!C=2cm{
 \cat
@@ -121,17 +124,26 @@ $\qquad \begin{xy}\xymatrix@!C=2cm{
 \ar@`{[]+/ul+5pc/,[]+/ur+5pc/}[]^{\Id[{\cat[D]}]}
 }\end{xy}$
 
-伴随函子 : 对任意 $\obj[c]$ 和 $\obj[d]$ 有 $\evlbin[]{\catcong[\catSet]}
-  {\evlbin{\cathom[{\cat[D]}]}
-    {\obj[d]}
-    {\evlcry[]{\fct[R]}{\obj[c]}}}  
-  {\evlbin{\cathom}
-    {\evlcry[]{\fct[L]}{\obj[d]}}
-    {\obj[c]}}$ 。如此
+那么规定
+
+### 伴随函子的第一种定义
+
+- $\fct[L]\dashv \fct[R]$ 当且仅当
+  对任意 $\cat$ 中对象 $\obj[c]$ 
+  及任意 $\cat[D]$ 中对象 $\obj[d]$ 
+  都有 $\evlbin[]{\catcong[\catSet]}
+    {\evlbin{\cathom[{\cat[D]}]}
+      {\obj[d]}
+      {\evlcry[]{\fct[R]}{\obj[c]}}}  
+    {\evlbin{\cathom}
+      {\evlcry[]{\fct[L]}{\obj[d]}}
+      {\obj[c]}}$ 。
+
+假如确实有 $\fct[L]\dashv \fct[R]$ , 那么不难得知
 
 <div style="page-break-after: always"></div>
 
-- 不难看出这其实蕴含着一个二元的自然同构 $\ntf[\phi_2]$ , 见下 :
+- 这里蕴含着一个二元的自然同构 $\ntf[\phi_2]$ , 见下 :
 
   $\qquad\begin{aligned}[t]
   \ntf[\phi_2]:{}&
@@ -198,7 +210,7 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 右侧集合中都有一个箭头与之对应 , 即 $\bbox[LightGray]{\evlcry[]{\evlcrynat[]{\ntf[\phi_2]}
 {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c]}}{\bbox[pink]{\obj[c]}}}}{\id[{\evlcry[]{\fct[R]}{\obj[c]}}]}}=\bbox[LightGray]{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c]}}$ 。如此
 
-- $\ntf[\varepsilon]$ 构成自然变换 。
+- $\ntf[\varepsilon]:\evlbin[]{\cathom[{\evlbin[]{\cathom[\catCat]}{\cat[C]}{\cat[C]}}]}{\evlbin[]{\catcirc[\catCat]}{\fct[R]}{\fct[L]}}{\Id[{\cat[C]}]}$ 构成自然变换 。
 
   > 考虑任意 $\evlcrynat[]\op{\arr[f]}:\evlbin[]\cathom{\obj[c']}{\obj[c]}$ :
   >
@@ -317,7 +329,7 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 
 ----
 
-- 不难看出这其实蕴含着一个二元的自然同构 $\ntf[\phi_1]$ , 见下 :
+- 这里蕴含着一个二元的自然同构 $\ntf[\phi_1]$ , 见下 :
 
   $\qquad\begin{aligned}[t]
   \ntf[\phi_1]:{}&
@@ -381,7 +393,7 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 右侧集合中都有一个箭头与之对应 , 即 $\bbox[LightGray]{\evlcry[]{\evlcrynat[]{\ntf[\phi_1]}
   {\evlbin\cons{\bbox[pink]{\obj[d]}}{\evlcry[]{\fct[L]}{\obj[d]}}}}{\id[{\evlcry[]{\fct[L]}{\obj[d]}}]}}=\bbox[LightGray]{\evlcrynat[]{\ntf[\eta]}{\obj[d]}}$ 。如此 。
 
-- $\ntf[\eta]$ 构成自然变换 。
+- $\ntf[\eta]:\evlbin[]{\cathom[{\evlbin[]{\cathom[\catCat]}{\cat[D]}{\cat[D]}}]}{\Id[{\cat[D]}]}{\evlbin[]{\catcirc[\catCat]}{\fct[L]}{\fct[R]}}$ 构成自然变换 。
 
   > 考虑任意 $\arr[g]:\evlbin[]{\cathom[{\cat[D]}]}{\obj[d]}{\obj[d']}$ :
   >
@@ -510,7 +522,7 @@ $\qquad\evlbin[]{\catcong[\catSet]}
   > {\evlbin{\catcirc[{\cat[D]}]}
   >  {\arr[g]}
   >  {\wld}}
-  > {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\bbox[white]{\obj[d']}}}}}}
+  > {\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\obj[d']}}}}}
   > }\end{xy}}
   > $
   >
@@ -519,149 +531,106 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 
 <div style="page-break-after: always"></div>
 
-同样 , 给定自然同构 $\ntf[\varepsilon]$ , $\ntf[\eta]$ , 我们也可以推出自然同构 $\ntf[\phi_2]$ 和 $\ntf[\phi_1]$ 。
+对于前面的 $\ntf[\varepsilon]$ 和 $\ntf[\eta]$ 我们有下述交换图成立 :
 
-----
+- $\vcenter{\begin{xy}\xymatrix@!C=2cm{
+  {\fct[L]}
+  \ar[dr]_{\I[{\fct[L]}]}
+  \ar[r]^{\evlbin[]{\catcirc[???]}{\ntf[\eta]}{\I[{\fct[L]}]}}
+  &
+  {\evlbin[]{\catcirc[\catCat]}
+    {\fct[L]}
+    {\evlbin[]{\catcirc[\catCat]}
+      {\fct[R]}
+      {\fct[L]}}}
+  \ar[d]^{\evlbin[]{\catcirc[???]}{\I[{\fct[L]}]}{\ntf[\varepsilon]}}
+  \\
+  &
+  {\fct[L]}
+  }\end{xy}}$ $\qquad\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{ 
+  \cat
+  \ar@{<-}@`{[]+/l+3pc/,[d]+/l+3pc/}[d]^(.5){}="midb1"|{\fct[L]}
+  \ar@{<-}@`{[]+/r+3pc/,[d]+/r+3pc/}[d]_(.5){}="midb2"|{\fct[L]}
+  \ar@2{>} "midb1";"midb2"^{\I[{\fct[L]}]}
+  \\
+  \cat[D]
+  \ar@{<-}@`{[]+/l+3pc/,[d]+/l+3pc/}[d]^(.5){}="mida1"|{\Id[{\cat[D]}]}
+  \ar@{<-}@`{[]+/r+3pc/,[d]+/r+3pc/}[d]_(.5){}="mida2"|{{\evlbin[]{\catcirc[\catCat]}
+      {\fct[L]}
+      {\fct[R]}}}
+  \ar@2{>} "mida1";"mida2"^{{\ntf[\eta]}}
+  \\
+  \cat[D]
+  \\
+  }\end{xy}}
+  \quad 
+  \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{ 
+  \cat[C]
+  \ar@{<-}@`{[]+/l+3pc/,[d]+/l+3pc/}[d]^(.5){}="midb1"|{{\evlbin[]{\catcirc[\catCat]}
+      {\fct[R]}
+      {\fct[L]}}}
+  \ar@{<-}@`{[]+/r+3pc/,[d]+/r+3pc/}[d]_(.5){}="midb2"|{\Id[{\cat[C]}]}
+  \ar@2{>} "midb1";"midb2"^{\ntf[\varepsilon]}
+  \\
+  \cat
+  \ar@{<-}@`{[]+/l+3pc/,[d]+/l+3pc/}[d]^(.5){}="mida1"|{\fct[L]}
+  \ar@{<-}@`{[]+/r+3pc/,[d]+/r+3pc/}[d]_(.5){}="mida2"|{\fct[L]}
+  \ar@2{>} "mida1";"mida2"^{\I[{\fct[L]}]}
+  \\
+  \cat[D]
+  }\end{xy}}$
 
-考虑任意 $\evlcrynat[]\op{\arr[f]}:\evlbin[]\cathom{\obj[d]}{\evlcry[]{\fct[R]}{\obj[c]}}$ :
+- $\vcenter{\begin{xy}\xymatrix@!C=2cm{
+  {\fct[R]}
+  \ar[dr]_{\I[{\fct[R]}]}
+  \ar[r]^{\evlbin[]{\catcirc[???]}{\I[{\fct[R]}]}{\ntf[\eta]}}
+  &
+  {\evlbin[]{\catcirc[\catCat]}
+    {\fct[R]}
+    {\evlbin[]{\catcirc[\catCat]}
+      {\fct[L]}
+      {\fct[R]}}}
+  \ar[d]^{\evlbin[]{\catcirc[???]}{\ntf[\varepsilon]}{\I[{\fct[R]}]}}
+  \\
+  &
+  {\fct[R]}
+  }\end{xy}}$ $\qquad\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{ 
+  \cat[D]
+  \ar@{<-}@`{[]+/l+3pc/,[d]+/l+3pc/}[d]^(.5){}="mida1"|{\Id[{\cat[D]}]}
+  \ar@{<-}@`{[]+/r+3pc/,[d]+/r+3pc/}[d]_(.5){}="mida2"|{{\evlbin[]{\catcirc[\catCat]}
+      {\fct[L]}
+      {\fct[R]}}}
+  \\
+  \cat[D]
+  \ar@2{>} "mida1";"mida2"^{{\ntf[\eta]}}
+  \ar@{<-}@`{[]+/l+3pc/,[d]+/l+3pc/}[d]^(.5){}="midb1"|{\fct[R]}
+  \ar@{<-}@`{[]+/r+3pc/,[d]+/r+3pc/}[d]_(.5){}="midb2"|{\fct[R]}
+  \\
+  \cat
+  \ar@2{>} "midb1";"midb2"^{\I[{\fct[R]}]}
+  }\end{xy}}
+  \quad \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{ 
+  \cat[D]
+  \ar@{<-}@`{[]+/l+3pc/,[d]+/l+3pc/}[d]^(.5){}="mida1"|{\fct[R]}
+  \ar@{<-}@`{[]+/r+3pc/,[d]+/r+3pc/}[d]_(.5){}="mida2"|{\fct[R]}
+  \\
+  \cat[C]
+  \ar@2{>} "mida1";"mida2"^{\I[{\fct[R]}]}
+  \ar@{<-}@`{[]+/l+3pc/,[d]+/l+3pc/}[d]^(.5){}="midb1"|{{\evlbin[]{\catcirc[\catCat]}
+      {\fct[R]}
+      {\fct[L]}}}
+  \ar@{<-}@`{[]+/r+3pc/,[d]+/r+3pc/}[d]_(.5){}="midb2"|{\Id[{\cat[C]}]}
+  \\
+  \cat
+  \ar@2{>} "midb1";"midb2"^{\ntf[\varepsilon]}
+  }\end{xy}}$
 
-$\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=3cm{
-{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-     {\bbox[white]{\evlcry[]{\fct[R]}{\obj[c]}}}
-     {\evlcry[]{\fct[R]}{\obj[c]}}}}
-\ar[r]^{\evlcrynat[]{\ntf[\phi_2]}
-{\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c]}}{\bbox[pink]{\obj[c]}}}} 
-\ar[d]_{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-     {\bbox[white]{\evlcrynat[]\op{\arr[f]}}}
-     {\evlcry[]{\fct[R]}{\obj[c]}}}} 
-&
-{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
-     {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\bbox[white]{\obj[c]}}}}
-     {\obj[c]}}}
-\ar[d]^{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
-     {\evlcry[]{\fct[L]}{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}
-     {\obj[c]}}}
-\\
-{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-     {\bbox[white]{\obj[d]}}
-     {\evlcry[]{\fct[R]}{\obj[c]}}}}
-\ar[r]_{\evlcrynat[]{\ntf[\phi_2]}
-{\evlbin\cons{\obj[d]}{\bbox[pink]{\obj[c]}}}} 
-&
-{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
-  {\evlcry[]{\fct[L]}{\bbox[white]{\obj[d]}}}
-  {\obj[c]}}}
-}\end{xy}}
-\qquad
-\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=3cm{
-{\id[{\evlcry[]{\fct[R]}{\obj[c]}}]} 
-\ar@{|->}[r]^{\evlcrynat[]{\ntf[\phi_2]}
-  {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c]}}{\bbox[pink]{\obj[c]}}}}  
-\ar@{|->}[d]_{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-  {\bbox[white]{\evlcrynat[]\op{\arr[f]}}}
-  {\evlcry[]{\fct[R]}{\obj[c]}}}} 
-&
-{\bbox[LightGray]{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c]}}}
-\ar@{|->}[d]^{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat}]}
-{\evlcry[]{\fct[L]}{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}
-{\obj[c]}}\mrlap{{}=\evlcrynat[]{\evlbin\catcirc
-{\evlcry[]{\fct[L]}{\evlcrynat[]\op{\arr[f]}}}
- {\wld}}
- {\obj[c]}}}  
-\\
-{\evlcry[]{\fct[R]}{\evlcrynat[]\op{\arr[f]}}} 
-\ar@{|->}[r]_{\evlcrynat[]{\ntf[\phi_2]}
-{\evlbin\cons{\obj[d]}{\bbox[pink]{\obj[c]}}}} 
-&
-{\evlbin[]\catcirc
-  {\evlcry[]{\fct[L]}{\evlcrynat[]\op{\arr[f]}}}
-  {\bbox[LightGray]{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c]}}}}
-%\save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}\restore 
-}\end{xy}}$
+<div style="page-break-after: always"></div>
 
-于是我们可以根据上图定义 $\evlcrynat[]{\ntf[\phi_2]}
-{\evlbin\cons{\obj[d]}{\bbox[pink]{\obj[c]}}}$ 。
+### 伴随函子的第二种定义
 
-----
+假设我们不知道 $\fct[L]$ 和 $\fct[R]$ 构成一对伴随函子 , 且有自然变换 
+ $\ntf[\varepsilon]:\evlbin[]{\cathom[{\evlbin[]{\cathom[\catCat]}{\cat[C]}{\cat[C]}}]}{\evlbin[]{\catcirc[\catCat]}{\fct[R]}{\fct[L]}}{\Id[{\cat[C]}]}$ 和 $\ntf[\eta]:\evlbin[]{\cathom[{\evlbin[]{\cathom[\catCat]}{\cat[D]}{\cat[D]}}]}{\Id[{\cat[D]}]}{\evlbin[]{\catcirc[\catCat]}{\fct[L]}{\fct[R]}}$ 能同时满足
+上页开头的两幅交换图 , 那么
 
-考虑任意 $\arr[g]:\evlbin[]{\cathom[{\cat[D]}]}{\evlcry[]{\fct[L]}{\obj[d]}}{\obj[c]}$ : 
-
-$\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=3cm{
-{\bbox[LightGreen]{\evlbin[]\cathom
-{\evlcry[]{\fct[L]}{\obj[d]}}
-{\bbox[white]{\evlcry[]{\fct[L]}{\obj[d]}}}}}
-\ar[r]^{\evlcrynat[]
-{\ntf[\phi_1]}
-{\evlbin\cons
- {\bbox[pink]{\obj[d]}}
- {\evlcry[]{\fct[L]}{\obj[d]}}}} 
-\ar[d]_{\bbox[LightGreen]{\evlbin[]\cathom
-{\evlcry[]{\fct[L]}{\obj[d]}}
-{\bbox[white]{\arr[g]}}}}
-&
-{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-{\obj[d]}
-{\evlcry[]{\fct[R]}{\bbox[white]{\evlcry[]{\fct[L]}{\obj[d]}}}}}}
-\ar[d]^{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-{\obj[d]}
-{\evlcry[]{\fct[R]}{\bbox[white]{\arr[g]}}}}}
-\\
-{\bbox[LightGreen]{\evlbin[]\cathom
-  {\evlcry[]{\fct[L]}{\obj[d]}}
-  {\bbox[white]{\obj[c]}}}}
-\ar[r]_{\evlcrynat[]
-{\ntf[\phi_1]}
-{\evlbin\cons
- {\bbox[pink]{\obj[d]}}
- {\obj[c]}}}
-&
-{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-{\obj[d]}
-{\evlcry[]{\fct[R]}{\bbox[white]{\obj[c]}}}}}
-}\end{xy}}
-\qquad
-\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=3cm{
-{\id[{\evlcry[]{\fct[L]}{\obj[d]}}]}
-\ar@{|->}[r]^{\evlcrynat[]
-{\ntf[\phi_1]}
-{\evlbin\cons
- {\bbox[pink]{\obj[d]}}
- {\evlcry[]{\fct[L]}{\obj[d]}}}} 
-\ar@{|->}[d]_{\bbox[LightGreen]{\evlbin[]\cathom
-{\evlcry[]{\fct[L]}{\obj[d]}}
-{\bbox[white]{\arr[g]}}}}
-&
-{\bbox[LightGray]{\evlcrynat[]{\ntf[\eta]}{\obj[d]}}}
-\ar@{|->}[d]^{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
-{\obj[d]}
-{\evlcry[]{\fct[R]}{\bbox[white]{\arr[g]}}}}\mrlap{{}=
-\evlcrynat[]
-{\evlbin{\catcirc[{\cat[D]}]}
- {\wld}
- {\evlcry[]{\fct[R]}{\bbox[white]{\arr[g]}}}}
-{\obj[d]}}}  
-\\
-{\bbox[white]{\arr[g]}}
-\ar@{|->}[r]_{\evlcrynat[]
-{\ntf[\phi_1]}
-{\evlbin\cons
- {\bbox[pink]{\obj[d]}}
- {\obj[c]}}}
-&
-{\evlbin[]{\catcirc[{\cat[D]}]}
-{\bbox[LightGray]{\evlcrynat[]
- {\ntf[\eta]}
- {\obj[d]}}}
-{\evlcry[]{\fct[R]}{\bbox[white]{\arr[g]}}}}
-}\end{xy}}
-$
-
-于是我们可以根据上图定义 $\evlcrynat[]
-{\ntf[\phi_1]}
-{\evlbin\cons
- {\bbox[pink]{\obj[d]}}
- {\obj[c]}}$ 。
-
-
-
-但是这里面怎么体现了用到了 $\ntf[\varepsilon]$ 和 $\ntf[\eta]$ 为自然变换的性质呢 ?
+- 
