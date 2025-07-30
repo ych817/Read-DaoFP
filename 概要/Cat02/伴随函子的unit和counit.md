@@ -660,6 +660,14 @@ $\qquad\evlbin[]{\catcong[\catSet]}
   &
   }\end{xy}}$
   
+  如此便有 $\evlbin[]{\catcong[\catSet]}{\evlbin{\cathom}
+      {\evlcry[]{\fct[L]}{\obj[d]}}
+      {\obj[c]}}
+    {\evlbin{\cathom[{\cat[D]}]}
+      {\obj[d]}
+      {\evlcry[]{\fct[R]}{\obj[c]}}}  $ , 
+  即 $\fct[L]\dashv\fct[R]$ 。
+  
 - 对任意 $\cat$ 中对象 $\obj[c]$ 
   及任意 $\cat[D]$ 中对象 $\obj[d]$ 
   及任意 $\arr[g]:\evlbin[]{\cathom[{\cat[D]}]}{\obj[d]}{\evlcry[]{\fct[R]}{\obj[c]}}$ 始终都会存在
@@ -690,12 +698,8 @@ $\qquad\evlbin[]{\catcong[\catSet]}
   {\small\color{ForestGreen}\cat[D]}\restore
   &
   }\end{xy}}$ 
-
-如此也就意味着
-
-- 对任意 $\cat$ 中对象 $\obj[c]$ 
-  及任意 $\cat[D]$ 中对象 $\obj[d]$ 
-  都有 $\evlbin[]{\catcong[\catSet]}{\evlbin{\cathom}
+  
+  如此便有 $\evlbin[]{\catcong[\catSet]}{\evlbin{\cathom}
       {\evlcry[]{\fct[L]}{\obj[d]}}
       {\obj[c]}}
     {\evlbin{\cathom[{\cat[D]}]}
@@ -714,7 +718,7 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > $\qquad\begin{array}{c}
 > \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
 > {\evlcry[]{\fct[L]}{\obj[d]}}
-> \ar[d]_{\evlcrynat[]{\ntf[\eta]}{\evlcry{\fct[L]}{\obj[d]}}}
+> \ar[d]_{\evlcry[]{\fct[L]}{\evlcrynat[]{\ntf[\eta]}{\obj[d]}}}
 > \ar[dr]^{\id[{\evlcry[]{\fct[L]}{\obj[d]}}]}
 > \\
 > {\evlcry[]{\fct[L]}
@@ -723,7 +727,7 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 >  {\evlcry[]
 >    {\fct[L]}
 >      {\obj[d]}}}}
-> \ar[r]^{\evlcrynat[]{\ntf[\varepsilon]}
+> \ar[r]_{\evlcrynat[]{\ntf[\varepsilon]}
 > {\evlcry{\fct[L]}{\obj[d]}}} 
 > &
 > \evlcry[]{\fct[L]}
@@ -778,7 +782,7 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > \ar@[red]@{->}@`{[]+/l+4pc/,[dd]+/l+4pc/}[dd]|{\arr[g']}
 > &
 > {\evlcry[]{\fct[L]}{\obj[d]}}
-> \ar[d]_{\evlcrynat[]{\ntf[\eta]}{\evlcry{\fct[L]}{\obj[d]}}}
+> \ar[d]_{\evlcry[]{\fct[L]}{\evlcrynat[]{\ntf[\eta]}{\obj[d]}}}
 > \ar[dr]^{\id[{\evlcry[]{\fct[L]}{\obj[d]}}]}
 > \ar@[red]@{->}@`{[]+/l+2pc/,[dd]+/l+2pc/}[dd]|{\evlcry[]{\fct[L]}{\arr[g]}}
 > \ar@[red]@{->}@`{[]+/l+4pc/,[dd]+/l+4pc/}[dd]|{\evlcry[]{\fct[L]}{\arr[g']}}
@@ -887,7 +891,7 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 >  {\evlcry[]
 >    {\fct[R]}
 >      {\obj[c]}}}}
-> \ar[d]^{\evlcrynat[]{\ntf[\varepsilon]}{\evlcry{\fct[R]}{\obj[c]}}}
+> \ar[d]^{\evlcry[]{\fct[R]}{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c]}}}
 > \\
 > &
 > {\evlcry[]{\fct[R]}{\obj[c]}}
@@ -934,7 +938,7 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 >  {\evlcry[]
 >    {\fct[R]}
 >      {\obj[c]}}}}
-> \ar@[red][d]^{\evlcrynat[]{\ntf[\varepsilon]}{\evlcry{\fct[R]}{\obj[c]}}}
+> \ar@[red][d]^{\evlcry[]{\fct[R]}{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c]}}}
 > &
 > {\evlcry[]
 > {\fct[L]}{\evlcry[]
