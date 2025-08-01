@@ -124,20 +124,17 @@ $\qquad \begin{xy}\xymatrix@!C=2cm{
 \ar@`{[]+/ul+5pc/,[]+/ur+5pc/}[]^{\Id[{\cat[D]}]}
 }\end{xy}$
 
-那么规定
-
 ### 伴随函子的第一种定义
 
+那么规定
+
 - $\fct[L]\dashv \fct[R]$ 当且仅当
-  对任意 $\cat$ 中对象 $\obj[c]$ 
-  及任意 $\cat[D]$ 中对象 $\obj[d]$ 
-  都有 $\evlbin[]{\catcong[\catSet]}
-    {\evlbin{\cathom[{\cat[D]}]}
-      {\obj[d]}
-      {\evlcry[]{\fct[R]}{\obj[c]}}}  
-    {\evlbin{\cathom}
-      {\evlcry[]{\fct[L]}{\obj[d]}}
-      {\obj[c]}}$ 。
+  函子 ${\evlbin{\cathom}
+      {\evlcry[]{\fct[L]}{\bbox[white]{\pla\wld}}}
+      {\bbox[white]{\pla\wld}}}$ 和 ${\evlbin{\cathom[{\cat[D]}]}
+      {\bbox[white]{\pla\wld}}
+      {\evlcry[]{\fct[R]}{\bbox[white]{\pla\wld}}}}$ 
+  间存在着一个二元的**自然同构** 。
 
 假如确实有 $\fct[L]\dashv \fct[R]$ , 那么不难得知
 
