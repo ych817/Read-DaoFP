@@ -299,7 +299,7 @@ $\qquad\evlbin[]{\catcong[\catSet]}
   > \evlbin[]\catcirc
   > {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}}
   > {\bbox[LightGray]{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c]}}}\mrlap{{}=
-  > \evlbin[]{\catcirc[{\cat[D]}]}
+  > \evlbin[]{\catcirc[{\cat[C]}]}
   > {\bbox[LightGray]{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c']}}}
   > {\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}
   > %\save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}\restore 
@@ -315,10 +315,10 @@ $\qquad\evlbin[]{\catcong[\catSet]}
   > {\evlcrynat[]{\ntf[\phi_2]}
   >  {\evlbin\cons{\evlcry[]{\fct[R]}{\obj[c']}}{\bbox[pink]{\obj[c']}}}}
   > {\id[{\evlcry[]{\fct[R]}{\obj[c']}}]}}\mrlap{{}=\bbox[LightGray]{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c']}}}}}
-  > \ar@{|->}[u]_{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[D]}]}
+  > \ar@{|->}[u]_{\bbox[LightGreen]{\evlbin[]{\cathom[{\cat[C]}]}
   > {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\obj[c']}}}
   > {\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}\mrlap{{}=
-  > \evlcrynat[]{\evlbin{\catcirc[{\cat[D]}]}
+  > \evlcrynat[]{\evlbin{\catcirc[{\cat[C]}]}
   >  {\wld}
   >  {\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}
   >  {\evlcry{\fct[L]}{\evlcry[]{\fct[R]}{\obj[c']}}}}}
