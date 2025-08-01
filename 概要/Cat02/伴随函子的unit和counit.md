@@ -660,7 +660,7 @@ $\qquad\evlbin[]{\catcong[\catSet]}
   &
   }\end{xy}}$
   
-  如此便有 $\evlbin[]{\catcong[\catSet]}{\evlbin{\cathom}
+  如此有 $\evlbin[]{\catcong[\catSet]}{\evlbin{\cathom}
       {\evlcry[]{\fct[L]}{\obj[d]}}
       {\obj[c]}}
     {\evlbin{\cathom[{\cat[D]}]}
@@ -699,7 +699,7 @@ $\qquad\evlbin[]{\catcong[\catSet]}
   &
   }\end{xy}}$ 
   
-  如此便有 $\evlbin[]{\catcong[\catSet]}{\evlbin{\cathom}
+  如此有 $\evlbin[]{\catcong[\catSet]}{\evlbin{\cathom}
       {\evlcry[]{\fct[L]}{\obj[d]}}
       {\obj[c]}}
     {\evlbin{\cathom[{\cat[D]}]}
@@ -898,7 +898,7 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > \save[].[u].[ul]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
 > !R*!L{\small\color{ForestGreen}\cat[D]}\restore
 > }\end{xy}}
-> \end{array} \vcenter{{}\Longrightarrow{}} 
+> \end{array} \vcenter{{}\Longrightarrow{}}\qquad 
 > \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
 > {\pla\obj[d]}
 > \ar[r]^{\evlcrynat[]{\ntf[\eta]}
