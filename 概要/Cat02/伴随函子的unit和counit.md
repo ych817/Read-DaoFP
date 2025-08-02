@@ -632,7 +632,13 @@ $\qquad\evlbin[]{\catcong[\catSet]}
   及任意 $\cat[D]$ 中对象 $\obj[d]$ 
   及任意 $\evlcrynat[]\op{\arr[f]}:\evlbin[]{\cathom[{\cat[C]}]}{\evlcry[]{\fct[L]}{\obj[d]}}{\obj[c]}$ 始终存在
   唯一的 $\arr[g]:\evlbin[]{\cathom[{\cat[D]}]}{\obj[d]}{\evlcry[]{\fct[R]}{\obj[c]}}$ 使下图交换 。
-
+  如此有 $\evlbin[]{\catcong[\catSet]}{\evlbin{\cathom}
+      {\evlcry[]{\fct[L]}{\obj[d]}}
+      {\obj[c]}}
+    {\evlbin{\cathom[{\cat[D]}]}
+      {\obj[d]}
+      {\evlcry[]{\fct[R]}{\obj[c]}}}  $ 。
+  
   $\vcenter{\begin{xy}\xymatrix@!C=2cm{
   {\evlcry[]{\fct[R]}{\obj[c]}}
   & 
@@ -655,20 +661,18 @@ $\qquad\evlbin[]{\catcong[\catSet]}
   \save[].[u].[ur]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
   !R*!L{\small\color{ForestGreen}\cat}\restore
   &
-  }\end{xy}}$
-  
-  如此有 $\evlbin[]{\catcong[\catSet]}{\evlbin{\cathom}
-      {\evlcry[]{\fct[L]}{\obj[d]}}
-      {\obj[c]}}
-    {\evlbin{\cathom[{\cat[D]}]}
-      {\obj[d]}
-      {\evlcry[]{\fct[R]}{\obj[c]}}}  $ , 
-  即 $\fct[L]\dashv\fct[R]$ 。
+  }\end{xy}}$ 
   
 - 对任意 $\cat$ 中对象 $\obj[c]$ 
   及任意 $\cat[D]$ 中对象 $\obj[d]$ 
   及任意 $\arr[g]:\evlbin[]{\cathom[{\cat[D]}]}{\obj[d]}{\evlcry[]{\fct[R]}{\obj[c]}}$ 始终都会存在
   唯一的 $\evlcrynat[]\op{\arr[f]}:\evlbin[]{\cathom[{\cat[C]}]}{\evlcry[]{\fct[L]}{\obj[d]}}{\obj[c]}$ 使下图交换 。
+  如此有 $\evlbin[]{\catcong[\catSet]}{\evlbin{\cathom}
+      {\evlcry[]{\fct[L]}{\obj[d]}}
+      {\obj[c]}}
+    {\evlbin{\cathom[{\cat[D]}]}
+      {\obj[d]}
+      {\evlcry[]{\fct[R]}{\obj[c]}}}  $ 。
   
   $\vcenter{\begin{xy}\xymatrix@!C=2cm{
   {\evlcry[]{\fct[L]}{\obj[d]}}
@@ -695,22 +699,15 @@ $\qquad\evlbin[]{\catcong[\catSet]}
   {\small\color{ForestGreen}\cat[D]}\restore
   &
   }\end{xy}}$ 
-  
-  如此有 $\evlbin[]{\catcong[\catSet]}{\evlbin{\cathom}
-      {\evlcry[]{\fct[L]}{\obj[d]}}
-      {\obj[c]}}
-    {\evlbin{\cathom[{\cat[D]}]}
-      {\obj[d]}
-      {\evlcry[]{\fct[R]}{\obj[c]}}}  $ , 
-  即 $\fct[L]\dashv\fct[R]$ 。
 
 <div style="page-break-after: always"></div>
 
 > 现证明上页的头两条定理 。
 >
-> 下方左图上半部分即为上页第一幅图 ,  而
-> 下方左图下半部分可由 $\ntf[\varepsilon]$ 为自然变换得出 ; 
-> 将两个图拼在一起即可获得下方右图 :
+> 我们将下图称作图 1 。
+> 图 1 上半部分即为上页第一幅图 ,  而
+> 图 1 下半部分可由 $\ntf[\varepsilon]$ 为自然变换得出 。
+> 两图拼在一起即得图 1 右侧部分 。
 >
 > $\qquad\begin{array}{c}
 > \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
@@ -720,10 +717,10 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > \\
 > {\evlcry[]{\fct[L]}
 > {\evlcry[]
->  {\fct[R]}
->  {\evlcry[]
->    {\fct[L]}
->      {\obj[d]}}}}
+> {\fct[R]}
+> {\evlcry[]
+> {\fct[L]}
+>   {\obj[d]}}}}
 > \ar[r]_{\evlcrynat[]{\ntf[\varepsilon]}
 > {\evlcry{\fct[L]}{\obj[d]}}} 
 > &
@@ -736,32 +733,32 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
 > {\bbox[LightGreen]{\evlcry[]{\fct[L]}
 > {\evlcry[]
->  {\fct[R]}
->  {\evlcry[]
->    {\fct[L]}
->      {\bbox[white]{\obj[d]}}}}}}
+> {\fct[R]}
+> {\evlcry[]
+> {\fct[L]}
+>   {\bbox[white]{\obj[d]}}}}}}
 > \ar[r]^{\evlcrynat[]{\ntf[\varepsilon]}
 > {\evlcry{\fct[L]}{\obj[d]}}} 
 > \ar[d]_{\bbox[LightGreen]{\evlcry[]
 > {\fct[L]}
 > {\evlcry[]
->  {\fct[R]}
->  {\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}}} 
+> {\fct[R]}
+> {\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}}} 
 > &
 > {\bbox[LightGreen]{\evlcry[]{\fct[L]}
->  {\bbox[white]{\obj[d]}}}}
+> {\bbox[white]{\obj[d]}}}}
 > \ar[d]^{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}
 > \\
 > {\bbox[LightGreen]{\evlcry[]
 > {\fct[L]}{\evlcry[]
->  {\fct[R]}
->  {\bbox[white]{\obj[c]}}}}}
+> {\fct[R]}
+> {\bbox[white]{\obj[c]}}}}}
 > \ar[r]_{\evlcrynat[]{\ntf[\varepsilon]}
 > {\obj[c]}}
 > \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
 > !D*!U{\small\color{ForestGreen}\bbox[LightGreen]{
 > \evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}
->  {\cat[C]}}}}\restore 
+> {\cat[C]}}}}\restore 
 > \save[].[u].[ur]*+<10pt>[F-:<8pt>:ForestGreen]\frm{}
 > !R*!L{\small\color{ForestGreen}\cat[C]}\restore 
 > &
@@ -769,7 +766,7 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
 > !D*!U{\small\color{ForestGreen}\bbox[LightGreen]{
 > \evlcry[]{\Id[{\cat[C]}]}
->  {\cat[C]}}}\restore 
+> {\cat[C]}}}\restore 
 > }\end{xy}}
 > \end{array} \vcenter{{}\Longrightarrow{}} \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
 > {\obj[d]}
@@ -781,34 +778,34 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > {\evlcry[]{\fct[L]}{\obj[d]}}
 > \ar[d]_{\evlcry[]{\fct[L]}{\evlcrynat[]{\ntf[\eta]}{\obj[d]}}}
 > \ar[dr]^{\id[{\evlcry[]{\fct[L]}{\obj[d]}}]}
-> \ar@[red]@{->}@`{[]+/l+2pc/,[dd]+/l+2pc/}[dd]|{\evlcry[]{\fct[L]}{\arr[g]}}
-> \ar@[red]@{->}@`{[]+/l+4pc/,[dd]+/l+4pc/}[dd]|{\evlcry[]{\fct[L]}{\arr[g']}}
+> \ar@[red]@{->}@`{[]+/l+2pc/,[dd]+/l+2pc/}[dd]_{\evlcry[]{\fct[L]}{\arr[g]}}
+> \ar@[red]@{->}@`{[]+/l+4pc/,[dd]+/l+4pc/}[dd]_{\evlcry[]{\fct[L]}{\arr[g']}}
 > \\
 > {\evlcry[]
 > {\fct[R]}
 > {\evlcry[]
->  {\fct[L]}
->    {\obj[d]}}}
+> {\fct[L]}
+> {\obj[d]}}}
 > \ar[d]_{\evlcry[]
 > {\fct[R]}
 > {\evlcrynat[]\op{\arr[f]}}}
 > &
 > {\evlcry[]{\fct[L]}
 > {\evlcry[]
->  {\fct[R]}
->  {\evlcry[]
->    {\fct[L]}
->      {\obj[d]}}}}
+> {\fct[R]}
+> {\evlcry[]
+> {\fct[L]}
+>   {\obj[d]}}}}
 > \ar[r]|{\evlcrynat[]{\ntf[\varepsilon]}
 > {\evlcry{\fct[L]}{\obj[d]}}} 
 > \ar[d]_{\evlcry[]
 > {\fct[L]}
 > {\evlcry[]
->  {\fct[R]}
->  {\evlcrynat[]\op{\arr[f]}}}}
+> {\fct[R]}
+> {\evlcrynat[]\op{\arr[f]}}}}
 > &
 > \evlcry[]{\fct[L]}
->  {\obj[d]}
+> {\obj[d]}
 > \ar[d]^{\evlcrynat[]\op{\arr[f]}}
 > \\
 > \evlcry[]
@@ -819,8 +816,8 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > &
 > \evlcry[]
 > {\fct[L]}{\evlcry[]
->  {\fct[R]}
->  {\obj[c]}}
+> {\fct[R]}
+> {\obj[c]}}
 > \ar@[red][r]_{\evlcrynat[]{\ntf[\varepsilon]}
 > {\obj[c]}}
 > &
@@ -830,10 +827,10 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > !R*!L{\small\color{ForestGreen}\cat}\restore
 > }\end{xy}}$
 >
-> 为何 $\arr[g]$ 唯一呢 ? 若 $\arr[g']$ 亦满足上图 —— 即上方右图中
-> 右侧的两条 L 形走向的红色路径的复合结果是一致的 , 
-> 则下方右图中的两条红色路径的复合结果也是一致的 ;
-> 如此根据下方右图即可得知 $\arr[g]=\arr[g']$ 。
+> 我们将下图称作图 2 。
+> 图 2 下半部分即为上页第二幅图 ,  而
+> 图 2 上半部分可由 $\ntf[\eta]$ 为自然变换得出 。
+> 两图拼在一起即得图 2 右侧部分 , 即
 >
 > $\qquad\begin{array}{c}
 > \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
@@ -844,13 +841,13 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > &
 > {\bbox[LightGreen]{\evlcry[]
 > {\fct[R]}{\evlcry[]
->  {\fct[L]}
->  {\bbox[white]{\obj[d]}}}}}
+> {\fct[L]}
+> {\bbox[white]{\obj[d]}}}}}
 > \ar[d]^{\bbox[LightGreen]{\evlcry[]
 > {\fct[R]}
 > {\evlcry[]
->  {\fct[L]}
->  {\bbox[white]{\arr[g]}}}}}
+> {\fct[L]}
+> {\bbox[white]{\arr[g]}}}}}
 > \\
 > {\bbox[LightGreen]{\evlcry[]{\fct[R]}
 > {\bbox[white]{\obj[c]}}}}
@@ -859,18 +856,18 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
 > !U*!D{\small\color{ForestGreen}\bbox[LightGreen]{
 > \evlcry[]{\Id[{\cat[D]}]}
->  {\cat[D]}}}\restore 
+> {\cat[D]}}}\restore 
 > &
 > {\bbox[LightGreen]{\evlcry[]{\fct[R]}
 > {\evlcry[]
->  {\fct[L]}
->  {\evlcry[]
->    {\fct[R]}
->      {\bbox[white]{\obj[c]}}}}}}
+> {\fct[L]}
+> {\evlcry[]
+> {\fct[R]}
+>   {\bbox[white]{\obj[c]}}}}}}
 > \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
 > !U*!D{\small\color{ForestGreen}\bbox[LightGreen]{
 > \evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}
->  {\cat[D]}}}}\restore 
+> {\cat[D]}}}}\restore 
 > \save[].[u].[l]*+<10pt>[F-:<8pt>:ForestGreen]\frm{}
 > !R*!L{\small\color{ForestGreen}\cat[D]}\restore 
 > }\end{xy}}
@@ -884,10 +881,10 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > &
 > {\evlcry[]{\fct[R]}
 > {\evlcry[]
->  {\fct[L]}
->  {\evlcry[]
->    {\fct[R]}
->      {\obj[c]}}}}
+> {\fct[L]}
+> {\evlcry[]
+> {\fct[R]}
+>   {\obj[c]}}}}
 > \ar[d]^{\evlcry[]{\fct[R]}{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c]}}}
 > \\
 > &
@@ -906,18 +903,18 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > &
 > {\evlcry[]
 > {\fct[R]}{\evlcry[]
->  {\fct[L]}
->  {\obj[d]}}}
+> {\fct[L]}
+> {\obj[d]}}}
 > \ar@<-2pt>@[red][d]_{\evlcry[]
 > {\fct[R]}
 > {\evlcry[]
->  {\fct[L]}
->  {\arr[g]}}}
+> {\fct[L]}
+> {\arr[g]}}}
 > \ar@<+2pt>@[red][d]^{\evlcry[]
 > {\fct[R]}
 > {\evlcry[]
->  {\fct[L]}
->  {\arr[g']}}}
+> {\fct[L]}
+> {\arr[g']}}}
 > &
 > {\evlcry[]{\fct[L]}{\obj[d]}}
 > \ar[d]^{\evlcrynat[]{\ntf[\eta]}{\obj[d]}}
@@ -931,16 +928,16 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > &
 > {\evlcry[]{\fct[R]}
 > {\evlcry[]
->  {\fct[L]}
->  {\evlcry[]
->    {\fct[R]}
->      {\obj[c]}}}}
+> {\fct[L]}
+> {\evlcry[]
+> {\fct[R]}
+>   {\obj[c]}}}}
 > \ar@[red][d]^{\evlcry[]{\fct[R]}{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c]}}}
 > &
 > {\evlcry[]
 > {\fct[L]}{\evlcry[]
->  {\fct[R]}
->  {\obj[c]}}}
+> {\fct[R]}
+> {\obj[c]}}}
 > \ar[d]^{\evlcry[]{\fct[L]}{\arr[g]}}
 > \\
 > &
@@ -954,4 +951,21 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > !R*!L{\small\color{ForestGreen}\cat[C]}\restore
 > }\end{xy}}$ 
 >
+> 为何 $\arr[g]$ 唯一呢 ? 若 $\arr[g']$ 亦满足上图 —— 即图 1 右侧部分中
+> 两条 L 形走向的红色路径的复合结果是一致的 ,  都为 $\evlcrynat[]\op{\arr[f]}$ ;
+> 则图 2 右侧部分中的两条红色路径的复合结果也是一致的 ;
+> 如此根据下方右图即可得知 $\arr[g]=\arr[g']$ 。
+>
 > 另一侧同理 , 这里不再赘述 。
+
+<div style="page-break-after: always"></div>
+
+### 伴随函子的第三种定义
+
+假设我们不知道 $\fct[L]$ 和 $\fct[R]$ 构成一对伴随函子并且有自然变换 
+ $\ntf[\varepsilon]:\evlbin[]{\cathom[{\evlbin[]{\cathom[\catCat]}{\cat[C]}{\cat[C]}}]}{\evlbin[]{\catcirc[\catCat]}{\fct[R]}{\fct[L]}}{\Id[{\cat[C]}]}$ 和 $\ntf[\eta]:\evlbin[]{\cathom[{\evlbin[]{\cathom[\catCat]}{\cat[D]}{\cat[D]}}]}{\Id[{\cat[D]}]}{\evlbin[]{\catcirc[\catCat]}{\fct[L]}{\fct[R]}}$ , 那么我们有
+
+- 对任意 $\cat$ 中对象 $\obj[c]$ 
+  及任意 $\cat[D]$ 中对象 $\obj[d]$ 
+  及任意 $\evlcrynat[]\op{\arr[f]}:\evlbin[]{\cathom[{\cat[C]}]}{\evlcry[]{\fct[L]}{\obj[d]}}{\obj[c]}$ 始终存在
+  唯一的 $\arr[g]:\evlbin[]{\cathom[{\cat[D]}]}{\obj[d]}{\evlcry[]{\fct[R]}{\obj[c]}}$ 使下图交换 。
