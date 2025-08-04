@@ -626,7 +626,39 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 
 假设我们不知道 $\fct[L]$ 和 $\fct[R]$ 构成一对伴随函子并且有自然变换 
  $\ntf[\varepsilon]:\evlbin[]{\cathom[{\evlbin[]{\cathom[\catCat]}{\cat[C]}{\cat[C]}}]}{\evlbin[]{\catcirc[\catCat]}{\fct[R]}{\fct[L]}}{\Id[{\cat[C]}]}$ 和 $\ntf[\eta]:\evlbin[]{\cathom[{\evlbin[]{\cathom[\catCat]}{\cat[D]}{\cat[D]}}]}{\Id[{\cat[D]}]}{\evlbin[]{\catcirc[\catCat]}{\fct[L]}{\fct[R]}}$ 能同时满足
-上页开头的两幅交换图 , 那么
+上页开头的两幅交换图 , 即
+
+ $\qquad \vcenter{\begin{xy}\xymatrix@!C=2cm{
+{\fct[L]}
+\ar[dr]_{\I[{\fct[L]}]}
+\ar[r]^{\evlbin[]{\catcirc[???]}{\ntf[\eta]}{\I[{\fct[L]}]}}
+&
+{\evlbin[]{\catcirc[\catCat]}
+  {\fct[L]}
+  {\evlbin[]{\catcirc[\catCat]}
+    {\fct[R]}
+    {\fct[L]}}}
+\ar[d]^{\evlbin[]{\catcirc[???]}{\I[{\fct[L]}]}{\ntf[\varepsilon]}}
+\\
+&
+{\fct[L]}
+}\end{xy}}$ $\qquad\vcenter{\begin{xy}\xymatrix@!C=2cm{
+{\fct[R]}
+\ar[dr]_{\I[{\fct[R]}]}
+\ar[r]^{\evlbin[]{\catcirc[???]}{\I[{\fct[R]}]}{\ntf[\eta]}}
+&
+{\evlbin[]{\catcirc[\catCat]}
+  {\fct[R]}
+  {\evlbin[]{\catcirc[\catCat]}
+    {\fct[L]}
+    {\fct[R]}}}
+\ar[d]^{\evlbin[]{\catcirc[???]}{\ntf[\varepsilon]}{\I[{\fct[R]}]}}
+\\
+&
+{\fct[R]}
+}\end{xy}}$
+
+那么
 
 - 对任意 $\cat$ 中对象 $\obj[c]$ 
   及任意 $\cat[D]$ 中对象 $\obj[d]$ 
@@ -965,7 +997,267 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 假设我们不知道 $\fct[L]$ 和 $\fct[R]$ 构成一对伴随函子并且有自然变换 
  $\ntf[\varepsilon]:\evlbin[]{\cathom[{\evlbin[]{\cathom[\catCat]}{\cat[C]}{\cat[C]}}]}{\evlbin[]{\catcirc[\catCat]}{\fct[R]}{\fct[L]}}{\Id[{\cat[C]}]}$ 和 $\ntf[\eta]:\evlbin[]{\cathom[{\evlbin[]{\cathom[\catCat]}{\cat[D]}{\cat[D]}}]}{\Id[{\cat[D]}]}{\evlbin[]{\catcirc[\catCat]}{\fct[L]}{\fct[R]}}$ , 那么我们有
 
-- 对任意 $\cat$ 中对象 $\obj[c]$ 
-  及任意 $\cat[D]$ 中对象 $\obj[d]$ 
-  及任意 $\evlcrynat[]\op{\arr[f]}:\evlbin[]{\cathom[{\cat[C]}]}{\evlcry[]{\fct[L]}{\obj[d]}}{\obj[c]}$ 始终存在
-  唯一的 $\arr[g]:\evlbin[]{\cathom[{\cat[D]}]}{\obj[d]}{\evlcry[]{\fct[R]}{\obj[c]}}$ 使下图交换 。
+- 若对任意 $\cat$ 中对象 $\obj[c]$ 
+  及对任意 $\cat[D]$ 中对象 $\obj[d]$ 
+  及对任意 $\evlcrynat[]\op{\arr[f]}:\evlbin[]{\cathom[{\cat[C]}]}{\evlcry[]{\fct[L]}{\obj[d]}}{\obj[c]}$ 始终都会
+  有唯一的 $\arr[g]:\evlbin[]{\cathom[{\cat[D]}]}{\obj[d]}{\evlcry[]{\fct[R]}{\obj[c]}}$ 使下图交换 , 
+  
+  $\qquad\vcenter{\begin{xy}\xymatrix@!C=2cm{
+  {\evlcry[]{\fct[R]}{\obj[c]}}
+  & 
+  {\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\obj[c]}}} 
+  \ar[r]^{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c]}} 
+  &
+  {\obj[c]}
+  \ar@{->}@`{[]+/u+3pc/,[ll]+/u+3pc/}[ll]_{\fct[R]}
+  \\ 
+  {\obj[d]}
+  \ar@[red]@{-->}[u]^[red]{\arr[g]}
+  \ar@{->}@`{[]+/d+2pc/,[r]+/d+2pc/}[r]_{\fct[L]}
+  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
+  !R*!L{\small\color{ForestGreen}\cat[D]}\restore
+  &  
+  {\evlcry[]{\fct[L]}
+    {\obj[d]}}  
+  \ar@[red]@{-->}[u]^[red]{\evlcry[]{\fct[L]}{\arr[g]}}
+  \ar@[magenta][ur]_[magenta]{\evlcrynat[]\op{\arr[f]}}
+  \save[].[u].[ur]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
+  !R*!L{\small\color{ForestGreen}\cat}\restore
+  &
+  }\end{xy}}$
+  
+  那么
+  
+  $\qquad\begin{aligned}[t]
+  \ntf[\phi_2]:{}&
+  \evlbin[]{\cathom[{
+    \evlbin[]\cathom
+      {\evlbin\cattimes{\cat[D]}{\cat}}
+      {\catSet}}]}
+    {\evlbin{\cathom[{\cat[D]}]}
+      {\wld}
+      {\evlcry[]{\fct[R]}{\wld}}}
+    {\evlbin{\cathom}
+      {\evlcry[]{\fct[L]}{\wld}}
+      {\wld}}
+  \\
+  \evlcrynat[]{\ntf[\phi_2]}{\evlbin\cons{\wld}{\bbox[pink]{\obj[c]}}}:{}&
+  \evlbin[]{\cathom[{
+    \evlbin[]\cathom
+      {\cat[D]}
+      {\catSet}}]}
+    {\evlbin{\cathom[{\cat[D]}]}
+      {\wld}
+      {\evlcry[]{\fct[R]}{\obj[c]}}}
+    {\evlbin{\cathom}
+      {\evlcry[]{\fct[L]}{\wld}}
+      {\obj[c]}}
+  \\
+  \evlcrynat[]{\ntf[\phi_2]}{\evlbin\cons{\bbox[pink]{\obj[d]}}{\wld}}:{}&
+  \evlbin[]{\cathom[{
+    \evlbin[]\cathom
+      {\cat}
+      {\catSet}}]}
+    {\evlbin{\cathom[{\cat[D]}]}
+      {\obj[d]}
+      {\evlcry[]{\fct[R]}{\wld}}}
+    {\evlbin{\cathom}
+      {\evlcry[]{\fct[L]}{\obj[d]}}
+      {\wld}}
+  \end{aligned}$
+  
+  将构成自然同构 。
+  
+- 若对任意 $\cat$ 中对象 $\obj[c]$ 
+  及对任意 $\cat[D]$ 中对象 $\obj[d]$ 
+  及对任意 $\arr[g]:\evlbin[]{\cathom[{\cat[D]}]}{\obj[d]}{\evlcry[]{\fct[R]}{\obj[c]}}$ 始终都存在
+  唯一的 $\evlcrynat[]\op{\arr[f]}:\evlbin[]{\cathom[{\cat[C]}]}{\evlcry[]{\fct[L]}{\obj[d]}}{\obj[c]}$ 使下图交换 , 
+
+  $\qquad\vcenter{\begin{xy}\xymatrix@!C=2cm{
+  {\evlcry[]{\fct[L]}{\obj[d]}}
+  \ar@{-->}@[red][d]_[red]{\evlcrynat[]\op{\arr[f]}} 
+  & 
+  {\evlcry[]{\fct[R]}{
+    \evlcry[]{\fct[L]}
+      {\obj[d]}}}
+  \ar@[red]@{-->}[d]_[red]{\evlcry[]{\fct[R]}{\evlcrynat[]\op{\arr[f]}}}
+  &
+  {\obj[d]}
+  \ar@[magenta][dl]^[magenta]{\arr[g]}  
+  \ar[l]_{\evlcrynat[]{\ntf[\eta]}{\obj[d]}}
+  \ar@{->}@`{[]+/u+3pc/,[ll]+/u+3pc/}[ll]_{\fct[L]} 
+  \\ 
+  {\obj[c]}
+  \ar@{->}@`{[]+/d+2pc/,[r]+/d+2pc/}[r]_{\fct[R]} 
+  \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}!R*!L
+  {\small\color{ForestGreen}\cat}\restore
+  &  
+  {\evlcry[]{\fct[R]}
+    {\obj[c]}} 
+  \save[].[u].[ur]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}!R*!L
+  {\small\color{ForestGreen}\cat[D]}\restore
+  &
+  }\end{xy}}$
+
+  那么
+
+  $\qquad\begin{aligned}[t]
+  \ntf[\phi_1]:{}&
+  \evlbin[]{\cathom[{
+    \evlbin[]\cathom
+      {\evlbin\cattimes{\cat[D]}{\cat}}
+      {\catSet}}]}
+    {\evlbin{\cathom}
+      {\evlcry[]{\fct[L]}{\wld}}
+      {\wld}}
+    {\evlbin{\cathom[{\cat[D]}]}
+      {\wld}
+      {\evlcry[]{\fct[R]}{\wld}}}
+  \\
+  \evlcrynat[]{\ntf[\phi_1]}{\evlbin\cons{\wld}{\bbox[pink]{\obj[c]}}}:{}&
+  \evlbin[]{\cathom[{
+    \evlbin[]\cathom
+      {\cat[D]}
+      {\catSet}}]}
+    {\evlbin{\cathom}
+      {\evlcry[]{\fct[L]}{\wld}}
+      {\obj[c]}}
+    {\evlbin{\cathom[{\cat[D]}]}
+      {\wld}
+      {\evlcry[]{\fct[R]}{\obj[c]}}}
+  \\
+  \evlcrynat[]{\ntf[\phi_1]}{\evlbin\cons{\bbox[pink]{\obj[d]}}{\wld}}:{}&
+  \evlbin[]{\cathom[{
+    \evlbin[]\cathom
+      {\cat}
+      {\catSet}}]}
+    {\evlbin{\cathom}
+      {\evlcry[]{\fct[L]}{\obj[d]}}
+      {\wld}}
+    {\evlbin{\cathom[{\cat[D]}]}
+      {\obj[d]}
+      {\evlcry[]{\fct[R]}{\wld}}}
+  \end{aligned}$
+
+  将构成自然同构 。
+
+<div style="page-break-after: always"></div>
+
+$\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
+{\evlcry[]{\fct[L]}{\obj[d]}}
+\ar[d]_{\evlcry[]{\fct[L]}{\evlcrynat[]{\ntf[\eta]}{\obj[d]}}}
+\ar[dr]^{\evlcrynat[]\op{\arr[f]}}
+\\
+{\evlcry[]{\fct[L]}
+{\evlcry[]
+{\fct[R]}
+{\obj[c]}}}
+\ar[r]_{\evlcrynat[]{\ntf[\varepsilon]}
+{\obj[c]}} 
+&
+{\obj[c]}
+\save[].[l].[lu]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
+!R*!L{\small\color{ForestGreen}\cat}\restore
+}\end{xy}}$
+
+$\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
+{\bbox[LightGreen]{\evlcry[]{\fct[L]}
+{\evlcry[]
+{\fct[R]}
+{\bbox[white]{\obj[c]}}}}}
+\ar[r]^{\evlcrynat[]{\ntf[\varepsilon]}
+{\obj[c]}} 
+\ar[d]_{\bbox[LightGreen]{\evlcry[]
+{\fct[L]}
+{\evlcry[]
+{\fct[R]}
+{\bbox[white]{\evlcrynat[]\op{\arr[f']}}}}}} 
+&
+{\bbox[white]{\obj[c]}}
+\ar[d]^{\bbox[white]{\evlcrynat[]\op{\arr[f']}}}
+\\
+{\bbox[LightGreen]{\evlcry[]
+{\fct[L]}{\evlcry[]
+{\fct[R]}
+{\bbox[white]{\obj[c']}}}}}
+\ar[r]_{\evlcrynat[]{\ntf[\varepsilon]}
+{\obj[c']}}
+\save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
+!D*!U{\small\color{ForestGreen}\bbox[LightGreen]{
+\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}
+{\cat[C]}}}}\restore 
+\save[].[u].[r]*+<10pt>[F-:<8pt>:ForestGreen]\frm{}
+!R*!L{\small\color{ForestGreen}\cat[C]}\restore 
+&
+{\pla\bbox[white]{\obj[c']}}
+\save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
+!D*!U{\small\color{ForestGreen}\bbox[LightGreen]{
+\evlcry[]{\Id[{\cat[C]}]}
+{\cat[C]}}}\restore 
+}\end{xy}}$
+
+$\qquad\begin{array}{c}
+??
+\\
+???
+\end{array} 
+\vcenter{{}\Longrightarrow{}} 
+\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
+{\obj[d]}
+\ar[d]_{\evlcrynat[]{\ntf[\eta]}{\obj[d]}}
+\ar@{->}@`{[]+/u+2pc/,[r]+/u+2pc/}[r]^{\fct[L]}
+\ar@[red]@{->}@`{[]+/l+2pc/,[dd]+/l+2pc/}[dd]|{\arr[g]}
+\ar@[red]@{->}@`{[]+/l+4pc/,[dd]+/l+4pc/}[dd]|{\arr[g']}
+&
+{\evlcry[]{\fct[L]}{\obj[d]}}
+\ar[d]_{\evlcry[]{\fct[L]}{\evlcrynat[]{\ntf[\eta]}{\obj[d]}}}
+\ar[dr]^{\id[{\evlcry[]{\fct[L]}{\obj[d]}}]}
+\ar@[red]@{->}@`{[]+/l+2pc/,[dd]+/l+2pc/}[dd]_{\evlcry[]{\fct[L]}{\arr[g]}}
+\ar@[red]@{->}@`{[]+/l+4pc/,[dd]+/l+4pc/}[dd]_{\evlcry[]{\fct[L]}{\arr[g']}}
+\\
+{\evlcry[]
+{\fct[R]}
+{\evlcry[]
+{\fct[L]}
+{\obj[d]}}}
+\ar[d]_{\evlcry[]
+{\fct[R]}
+{\evlcrynat[]\op{\arr[f]}}}
+&
+{\evlcry[]{\fct[L]}
+{\evlcry[]
+{\fct[R]}
+{\evlcry[]
+{\fct[L]}
+{\obj[d]}}}}
+\ar[r]|{\evlcrynat[]{\ntf[\varepsilon]}
+{\evlcry{\fct[L]}{\obj[d]}}} 
+\ar[d]_{\evlcry[]
+{\fct[L]}
+{\evlcry[]
+{\fct[R]}
+{\evlcrynat[]\op{\arr[f]}}}}
+&
+\evlcry[]{\fct[L]}
+{\obj[d]}
+\ar[d]^{\evlcrynat[]\op{\arr[f]}}
+\\
+\evlcry[]
+{\fct[R]}
+{\obj[c]}
+\save[].[u].[uu]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
+!R*!L{\small\color{ForestGreen}\cat[D]}\restore
+&
+\evlcry[]
+{\fct[L]}{\evlcry[]
+{\fct[R]}
+{\obj[c]}}
+\ar@[red][r]_{\evlcrynat[]{\ntf[\varepsilon]}
+{\obj[c]}}
+&
+{\obj[c]}
+\ar@{->}@`{[]+/d+3pc/,[ll]+/d+3pc/}[ll]^{\fct[R]}
+\save[].[u].[ul].[ulu]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
+!R*!L{\small\color{ForestGreen}\cat}\restore
+}\end{xy}}$
+
