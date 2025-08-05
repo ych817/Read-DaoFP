@@ -736,12 +736,11 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 
 > 现证明上页的头两条定理 。
 >
-> 我们将下图称作图 1 。
-> 图 1 上半部分即为上页第一幅图 ,  而
-> 图 1 下半部分可由 $\ntf[\varepsilon]$ 为自然变换得出 。
-> 两图拼在一起即得图 1 右侧部分 。
->
-> $\qquad\begin{array}{c}
+> 我们将下图称作图 1 。图 1 上半部分即为上页第一幅图 ,  而
+> 图 1 下半部分可由 $\ntf[\varepsilon]$ 为自然变换得出 。两图拼在一起即可得
+> 图 1 右侧部分 。
+> 
+>$\qquad\begin{array}{c}
 > \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
 > {\evlcry[]{\fct[L]}{\obj[d]}}
 > \ar[d]_{\evlcry[]{\fct[L]}{\evlcrynat[]{\ntf[\eta]}{\obj[d]}}}
@@ -752,8 +751,8 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > {\fct[R]}
 > {\evlcry[]
 > {\fct[L]}
->   {\obj[d]}}}}
-> \ar[r]_{\evlcrynat[]{\ntf[\varepsilon]}
+> {\obj[d]}}}}
+>   \ar[r]_{\evlcrynat[]{\ntf[\varepsilon]}
 > {\evlcry{\fct[L]}{\obj[d]}}} 
 > &
 > \evlcry[]{\fct[L]}
@@ -768,8 +767,8 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > {\fct[R]}
 > {\evlcry[]
 > {\fct[L]}
->   {\bbox[white]{\obj[d]}}}}}}
-> \ar[r]^{\evlcrynat[]{\ntf[\varepsilon]}
+> {\bbox[white]{\obj[d]}}}}}}
+>   \ar[r]^{\evlcrynat[]{\ntf[\varepsilon]}
 > {\evlcry{\fct[L]}{\obj[d]}}} 
 > \ar[d]_{\bbox[LightGreen]{\evlcry[]
 > {\fct[L]}
@@ -804,41 +803,42 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > {\obj[d]}
 > \ar[d]_{\evlcrynat[]{\ntf[\eta]}{\obj[d]}}
 > \ar@{->}@`{[]+/u+2pc/,[r]+/u+2pc/}[r]^{\fct[L]}
-> \ar@[magenta]@{->}@`{[]+/l+2pc/,[dd]+/l+2pc/}[dd]|{\arr[\gamma]}
-> \ar@[magenta]@{->}@`{[]+/l+4pc/,[dd]+/l+4pc/}[dd]|{\arr[\gamma']}
+> \ar@{->}@`{[]+/l+2pc/,[dd]+/l+2pc/}[dd]_{\begin{array}{l}\arr[\gamma]~或\\[-3pt]\arr[\gamma']\end{array}}
 > &
 > {\evlcry[]{\fct[L]}{\obj[d]}}
 > \ar[d]_{\evlcry[]{\fct[L]}{\evlcrynat[]{\ntf[\eta]}{\obj[d]}}}
 > \ar[dr]^{\id[{\evlcry[]{\fct[L]}{\obj[d]}}]}
-> \ar@[red]@{->}@`{[]+/l+2pc/,[dd]+/l+2pc/}[dd]_{\evlcry[]{\fct[L]}{\arr[\gamma]}}
-> \ar@[red]@{->}@`{[]+/l+4pc/,[dd]+/l+4pc/}[dd]_{\evlcry[]{\fct[L]}{\arr[\gamma']}}
+> \ar@[red]@{->}@`{[]+/l+2pc/,[dd]+/l+2pc/}[dd]_{\begin{array}{l}\evlcry[]{\fct[L]}{\arr[\gamma]}~或\\[-3pt]\evlcry[]{\fct[L]}{\arr[\gamma']}\end{array}}
 > \\
 > {\evlcry[]
 > {\fct[R]}
 > {\evlcry[]
 > {\fct[L]}
 > {\obj[d]}}}
-> \ar[d]_{\evlcry[]
-> {\fct[R]}
-> {\evlcrynat[]\op{\arr[\varphi]}}}
+> \ar[d]_{\begin{array}{l}
+> \evlcry[]{\fct[R]}{\evlcrynat[]\op{\arr[\varphi]}}%~或\\[-3pt]
+> %\evlcry[]{\fct[R]}{\evlcrynat[]\op{\arr[\varphi']}}
+> \end{array}}
 > &
 > {\evlcry[]{\fct[L]}
 > {\evlcry[]
 > {\fct[R]}
 > {\evlcry[]
 > {\fct[L]}
->   {\obj[d]}}}}
-> \ar[r]|{\evlcrynat[]{\ntf[\varepsilon]}
+> {\obj[d]}}}}
+>   \ar[r]|{\evlcrynat[]{\ntf[\varepsilon]}
 > {\evlcry{\fct[L]}{\obj[d]}}} 
-> \ar[d]_{\evlcry[]
-> {\fct[L]}
-> {\evlcry[]
-> {\fct[R]}
-> {\evlcrynat[]\op{\arr[\varphi]}}}}
+> \ar[d]_{\begin{array}{l}
+> \evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\evlcrynat[]\op{\arr[\varphi]}}}%~或\\[-3pt]
+> %\evlcry[]{\fct[L]}{\evlcry[]{\fct[R]}{\evlcrynat[]\op{\arr[\varphi']}}}
+> \end{array}}
 > &
 > \evlcry[]{\fct[L]}
 > {\obj[d]}
-> \ar[d]^{\evlcrynat[]\op{\arr[\varphi]}}
+> \ar[d]^{\begin{array}{l}
+> \evlcrynat[]\op{\arr[\varphi]}%~或\\[-3pt]
+> %\evlcrynat[]\op{\arr[\varphi']}
+> \end{array}}
 > \\
 > \evlcry[]
 > {\fct[R]}
@@ -858,14 +858,13 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > \save[].[u].[ul].[ulu]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
 > !R*!L{\small\color{ForestGreen}\cat}\restore
 > }\end{xy}}$
->
-> 我们将下图称作图 2 。
-> 图 2 下半部分即为上页第二幅图 ,  而
-> 图 2 上半部分可由 $\ntf[\eta]$ 为自然变换得出 。
-> 两图拼在一起即得图 2 右侧部分 , 即
->
+> 
+>我们将下图称作图 2 。图 2 下半部分即为上页第二幅图 ,  而
+> 图 2 上半部分可由 $\ntf[\eta]$ 为自然变换得出 。两图拼在一起即可得
+> 图 2 右侧部分 。
+> 
 > $\qquad\begin{array}{c}
-> \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
+>\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
 > {\pla\bbox[white]{\obj[d]}}
 > \ar[r]^{\evlcrynat[]{\ntf[\eta]}
 > {\obj[c]}}
@@ -895,9 +894,9 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > {\fct[L]}
 > {\evlcry[]
 > {\fct[R]}
->   {\bbox[white]{\obj[c]}}}}}}
+> {\bbox[white]{\obj[c]}}}}}}
 > \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
-> !U*!D{\small\color{ForestGreen}\bbox[LightGreen]{
+>   !U*!D{\small\color{ForestGreen}\bbox[LightGreen]{
 > \evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}
 > {\cat[D]}}}}\restore 
 > \save[].[u].[l]*+<10pt>[F-:<8pt>:ForestGreen]\frm{}
@@ -916,9 +915,9 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > {\fct[L]}
 > {\evlcry[]
 > {\fct[R]}
->   {\obj[c]}}}}
+> {\obj[c]}}}}
 > \ar[d]^{\evlcry[]{\fct[R]}{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c]}}}
-> \\
+>   \\
 > &
 > {\evlcry[]{\fct[R]}{\obj[c]}}
 > \save[].[u].[ul]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
@@ -929,28 +928,31 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > {\pla\obj[d]}
 > \ar[r]^{\evlcrynat[]{\ntf[\eta]}
 > {\obj[c]}}
-> \ar@<-2pt>[d]_{\arr[\gamma]}
-> \ar@<+2pt>[d]^{\arr[\gamma']}
+> \ar[d]_{\begin{array}{l}
+> \arr[\gamma]~或\\[-3pt]
+> \arr[\gamma']
+> \end{array}}
 > \ar@`{[]+/u+3pc/,[rr]+/u+3pc/}[rr]^{\fct[L]}
 > &
 > {\evlcry[]
 > {\fct[R]}{\evlcry[]
 > {\fct[L]}
 > {\obj[d]}}}
-> \ar@<-2pt>@[red][d]_{\evlcry[]
-> {\fct[R]}
-> {\evlcry[]
-> {\fct[L]}
-> {\arr[\gamma]}}}
-> \ar@<+2pt>@[red][d]^{\evlcry[]
-> {\fct[R]}
-> {\evlcry[]
-> {\fct[L]}
-> {\arr[\gamma']}}}
+> \ar@[red][d]^{\begin{array}{l}
+> \evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\arr[\gamma]}}~或\\[-3pt]
+> \evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\arr[\gamma']}}
+> \end{array}}
+> \ar@`{[]+/r+2pc/,[dd]+/r+2pc/}[dd]^{\begin{array}{l}
+> \evlcry[]{\fct[R]}{\evlcrynat[]\op{\arr[\varphi]}}%~或\\[-3pt]
+> %\evlcrynat[]\op{\arr[\varphi']}
+> \end{array}}
 > &
 > {\evlcry[]{\fct[L]}{\obj[d]}}
 > \ar[d]^{\evlcry[]{\fct[L]}{\arr[\gamma]}}
-> \ar@{->}@`{[]+/r+2pc/,[dd]+/r+2pc/}[dd]^{\evlcrynat[]\op{\arr[\varphi]}}
+> \ar@{->}@`{[]+/r+2pc/,[dd]+/r+2pc/}[dd]^{\begin{array}{l}
+> \evlcrynat[]\op{\arr[\varphi]}%~或\\[-3pt]
+> %\evlcrynat[]\op{\arr[\varphi']}
+> \end{array}}
 > \\
 > \evlcry[]{\fct[R]}
 > {\obj[c]}
@@ -963,9 +965,9 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > {\fct[L]}
 > {\evlcry[]
 > {\fct[R]}
->   {\obj[c]}}}}
+> {\obj[c]}}}}
 > \ar@[red][d]^{\evlcry[]{\fct[R]}{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c]}}}
-> &
+>   &
 > {\evlcry[]
 > {\fct[L]}{\evlcry[]
 > {\fct[R]}
@@ -982,12 +984,12 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > \save[].[u].[uu]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
 > !R*!L{\small\color{ForestGreen}\cat[C]}\restore
 > }\end{xy}}$ 
->
-> 为何 $\arr[\gamma]$ 唯一呢 ? 若 $\arr[\gamma']$ 亦满足上图 —— 即图 1 右侧部分中
-> 两条 L 形走向的红色路径的复合结果是一致的 ,  都为 $\evlcrynat[]\op{\arr[\varphi]}$ ;
-> 则图 2 右侧部分中的两条红色路径的复合结果也是一致的 ;
-> 如此根据下方右图即可得知 $\arr[\gamma]=\arr[\gamma']$ 。
->
+> 
+> 为何 $\arr[\gamma]$ 唯一呢 ?  若 $\arr[\gamma']$ 亦满足上图 —— 即不论是 $\arr[\gamma]$ 还是 $\arr[\gamma']$
+>图 1 右侧部分中 L 形走向红色路径的复合结果都为 $\evlcrynat[]\op{\arr[\varphi]}$ ; 故
+> 图 2 右侧部分中红色路径的复合结果也是一致的 ; 如此根据
+> 图 2 右侧部分即可知 $\arr[\gamma]=\arr[\gamma']$ 。
+> 
 > 另一侧同理 , 这里不再赘述 。
 
 <div style="page-break-after: always"></div>
