@@ -1200,7 +1200,7 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 >     {\wld}}
 > \end{aligned}$
 >
-> - 先验证 $\evlcrynat[]{\ntf[\phi_2]}{\evlbin\cons{\wld}{\bbox[pink]{\obj[c]}}}$ 构成自然变换 :
+> - 先验证 $\evlcrynat[]{\ntf[\phi_2]}{\evlbin\cons{\wld}{\bbox[pink]{\obj[c]}}}$ 构成自然变换 。和上上页一样也是拼图 :
 >
 >   $\qquad\begin{array}{c}
 >   \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
@@ -1300,7 +1300,7 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 >   }\end{xy}}
 >   $
 >
->   如此便证明了下方左侧的相继式 , 而这相当于下方右图 。 
+>   如此也就证明了下方左侧的相继式 , 而这相当于下方右图 。
 >
 >   $\qquad\begin{prooftree}
 >   \AXC{$
@@ -1343,5 +1343,5 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 >   \ar"midld";"midrd"|{\evlcrynat[]{\ntf[\phi_2]}{\evlbin\cons{\obj[d]}{\bbox[white]{\obj[c']}}}}
 >   }\end{xy}}$ 
 >
-> - 再验证 $\evlcrynat[]{\ntf[\phi_2]}{\evlbin\cons{\bbox[pink]{\obj[d]}}{\wld}}$ 构成自然变换 :
+> - 再验证 $\evlcrynat[]{\ntf[\phi_2]}{\evlbin\cons{\bbox[pink]{\obj[d]}}{\wld}}$ 构成自然变换 。和上上页一样也是拼图 :
 
