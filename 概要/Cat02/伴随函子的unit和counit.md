@@ -662,14 +662,14 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 
 - 对任意 $\cat$ 中对象 $\obj[c]$ 
   及任意 $\cat[D]$ 中对象 $\obj[d]$ 
-  及任意 $\evlcrynat[]\op{\arr[f]}:\evlbin[]{\cathom[{\cat[C]}]}{\evlcry[]{\fct[L]}{\obj[d]}}{\obj[c]}$ 始终存在
-  唯一的 $\arr[g]:\evlbin[]{\cathom[{\cat[D]}]}{\obj[d]}{\evlcry[]{\fct[R]}{\obj[c]}}$ 使下图交换 。
+  及任意 $\evlcrynat[]\op{\arr[\varphi]}:\evlbin[]{\cathom[{\cat[C]}]}{\evlcry[]{\fct[L]}{\obj[d]}}{\obj[c]}$ 始终存在
+  唯一的 $\arr[\gamma]:\evlbin[]{\cathom[{\cat[D]}]}{\obj[d]}{\evlcry[]{\fct[R]}{\obj[c]}}$ 使下图交换 。
   如此有 $\evlbin[]{\catcong[\catSet]}{\evlbin{\cathom}
       {\evlcry[]{\fct[L]}{\obj[d]}}
       {\obj[c]}}
     {\evlbin{\cathom[{\cat[D]}]}
       {\obj[d]}
-      {\evlcry[]{\fct[R]}{\obj[c]}}}  $ 。
+      {\evlcry[]{\fct[R]}{\obj[c]}}}$ 。
   
   $\vcenter{\begin{xy}\xymatrix@!C=2cm{
   {\evlcry[]{\fct[R]}{\obj[c]}}
@@ -681,15 +681,15 @@ $\qquad\evlbin[]{\catcong[\catSet]}
   \ar@{->}@`{[]+/u+3pc/,[ll]+/u+3pc/}[ll]_{\fct[R]}
   \\ 
   {\obj[d]}
-  \ar@[red]@{-->}[u]^[red]{\arr[g]}
+  \ar@[red]@{-->}[u]^[red]{\arr[\gamma]}
   \ar@{->}@`{[]+/d+2pc/,[r]+/d+2pc/}[r]_{\fct[L]}
   \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
   !R*!L{\small\color{ForestGreen}\cat[D]}\restore
   &  
   {\evlcry[]{\fct[L]}
     {\obj[d]}}  
-  \ar@[red]@{-->}[u]^[red]{\evlcry[]{\fct[L]}{\arr[g]}}
-  \ar@[magenta][ur]_[magenta]{\evlcrynat[]\op{\arr[f]}}
+  \ar@[red]@{-->}[u]^[red]{\evlcry[]{\fct[L]}{\arr[\gamma]}}
+  \ar@[magenta][ur]_[magenta]{\evlcrynat[]\op{\arr[\varphi]}}
   \save[].[u].[ur]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
   !R*!L{\small\color{ForestGreen}\cat}\restore
   &
@@ -697,8 +697,8 @@ $\qquad\evlbin[]{\catcong[\catSet]}
   
 - 对任意 $\cat$ 中对象 $\obj[c]$ 
   及任意 $\cat[D]$ 中对象 $\obj[d]$ 
-  及任意 $\arr[g]:\evlbin[]{\cathom[{\cat[D]}]}{\obj[d]}{\evlcry[]{\fct[R]}{\obj[c]}}$ 始终都会存在
-  唯一的 $\evlcrynat[]\op{\arr[f]}:\evlbin[]{\cathom[{\cat[C]}]}{\evlcry[]{\fct[L]}{\obj[d]}}{\obj[c]}$ 使下图交换 。
+  及任意 $\arr[\gamma]:\evlbin[]{\cathom[{\cat[D]}]}{\obj[d]}{\evlcry[]{\fct[R]}{\obj[c]}}$ 始终都会存在
+  唯一的 $\evlcrynat[]\op{\arr[\varphi]}:\evlbin[]{\cathom[{\cat[C]}]}{\evlcry[]{\fct[L]}{\obj[d]}}{\obj[c]}$ 使下图交换 。
   如此有 $\evlbin[]{\catcong[\catSet]}{\evlbin{\cathom}
       {\evlcry[]{\fct[L]}{\obj[d]}}
       {\obj[c]}}
@@ -708,15 +708,15 @@ $\qquad\evlbin[]{\catcong[\catSet]}
   
   $\vcenter{\begin{xy}\xymatrix@!C=2cm{
   {\evlcry[]{\fct[L]}{\obj[d]}}
-  \ar@{-->}@[red][d]_[red]{\evlcrynat[]\op{\arr[f]}} 
+  \ar@{-->}@[red][d]_[red]{\evlcrynat[]\op{\arr[\varphi]}} 
   & 
   {\evlcry[]{\fct[R]}{
     \evlcry[]{\fct[L]}
       {\obj[d]}}}
-  \ar@[red]@{-->}[d]_[red]{\evlcry[]{\fct[R]}{\evlcrynat[]\op{\arr[f]}}}
+  \ar@[red]@{-->}[d]_[red]{\evlcry[]{\fct[R]}{\evlcrynat[]\op{\arr[\varphi]}}}
   &
   {\obj[d]}
-  \ar@[magenta][dl]^[magenta]{\arr[g]}  
+  \ar@[magenta][dl]^[magenta]{\arr[\gamma]}  
   \ar[l]_{\evlcrynat[]{\ntf[\eta]}{\obj[d]}}
   \ar@{->}@`{[]+/u+3pc/,[ll]+/u+3pc/}[ll]_{\fct[L]} 
   \\ 
@@ -775,11 +775,11 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > {\fct[L]}
 > {\evlcry[]
 > {\fct[R]}
-> {\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}}} 
+> {\bbox[white]{\evlcrynat[]\op{\arr[\varphi]}}}}}} 
 > &
 > {\bbox[LightGreen]{\evlcry[]{\fct[L]}
 > {\bbox[white]{\obj[d]}}}}
-> \ar[d]^{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}
+> \ar[d]^{\bbox[white]{\evlcrynat[]\op{\arr[\varphi]}}}
 > \\
 > {\bbox[LightGreen]{\evlcry[]
 > {\fct[L]}{\evlcry[]
@@ -804,14 +804,14 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > {\obj[d]}
 > \ar[d]_{\evlcrynat[]{\ntf[\eta]}{\obj[d]}}
 > \ar@{->}@`{[]+/u+2pc/,[r]+/u+2pc/}[r]^{\fct[L]}
-> \ar@[red]@{->}@`{[]+/l+2pc/,[dd]+/l+2pc/}[dd]|{\arr[g]}
-> \ar@[red]@{->}@`{[]+/l+4pc/,[dd]+/l+4pc/}[dd]|{\arr[g']}
+> \ar@[magenta]@{->}@`{[]+/l+2pc/,[dd]+/l+2pc/}[dd]|{\arr[\gamma]}
+> \ar@[magenta]@{->}@`{[]+/l+4pc/,[dd]+/l+4pc/}[dd]|{\arr[\gamma']}
 > &
 > {\evlcry[]{\fct[L]}{\obj[d]}}
 > \ar[d]_{\evlcry[]{\fct[L]}{\evlcrynat[]{\ntf[\eta]}{\obj[d]}}}
 > \ar[dr]^{\id[{\evlcry[]{\fct[L]}{\obj[d]}}]}
-> \ar@[red]@{->}@`{[]+/l+2pc/,[dd]+/l+2pc/}[dd]_{\evlcry[]{\fct[L]}{\arr[g]}}
-> \ar@[red]@{->}@`{[]+/l+4pc/,[dd]+/l+4pc/}[dd]_{\evlcry[]{\fct[L]}{\arr[g']}}
+> \ar@[red]@{->}@`{[]+/l+2pc/,[dd]+/l+2pc/}[dd]_{\evlcry[]{\fct[L]}{\arr[\gamma]}}
+> \ar@[red]@{->}@`{[]+/l+4pc/,[dd]+/l+4pc/}[dd]_{\evlcry[]{\fct[L]}{\arr[\gamma']}}
 > \\
 > {\evlcry[]
 > {\fct[R]}
@@ -820,7 +820,7 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > {\obj[d]}}}
 > \ar[d]_{\evlcry[]
 > {\fct[R]}
-> {\evlcrynat[]\op{\arr[f]}}}
+> {\evlcrynat[]\op{\arr[\varphi]}}}
 > &
 > {\evlcry[]{\fct[L]}
 > {\evlcry[]
@@ -834,11 +834,11 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > {\fct[L]}
 > {\evlcry[]
 > {\fct[R]}
-> {\evlcrynat[]\op{\arr[f]}}}}
+> {\evlcrynat[]\op{\arr[\varphi]}}}}
 > &
 > \evlcry[]{\fct[L]}
 > {\obj[d]}
-> \ar[d]^{\evlcrynat[]\op{\arr[f]}}
+> \ar[d]^{\evlcrynat[]\op{\arr[\varphi]}}
 > \\
 > \evlcry[]
 > {\fct[R]}
@@ -869,7 +869,7 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > {\pla\bbox[white]{\obj[d]}}
 > \ar[r]^{\evlcrynat[]{\ntf[\eta]}
 > {\obj[c]}}
-> \ar[d]_{\bbox[white]{\arr[g]}}
+> \ar[d]_{\bbox[white]{\arr[\gamma]}}
 > &
 > {\bbox[LightGreen]{\evlcry[]
 > {\fct[R]}{\evlcry[]
@@ -879,7 +879,7 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > {\fct[R]}
 > {\evlcry[]
 > {\fct[L]}
-> {\bbox[white]{\arr[g]}}}}}
+> {\bbox[white]{\arr[\gamma]}}}}}
 > \\
 > {\bbox[LightGreen]{\evlcry[]{\fct[R]}
 > {\bbox[white]{\obj[c]}}}}
@@ -929,8 +929,8 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > {\pla\obj[d]}
 > \ar[r]^{\evlcrynat[]{\ntf[\eta]}
 > {\obj[c]}}
-> \ar@<-2pt>[d]_{\arr[g]}
-> \ar@<+2pt>[d]^{\arr[g']}
+> \ar@<-2pt>[d]_{\arr[\gamma]}
+> \ar@<+2pt>[d]^{\arr[\gamma']}
 > \ar@`{[]+/u+3pc/,[rr]+/u+3pc/}[rr]^{\fct[L]}
 > &
 > {\evlcry[]
@@ -941,16 +941,16 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > {\fct[R]}
 > {\evlcry[]
 > {\fct[L]}
-> {\arr[g]}}}
+> {\arr[\gamma]}}}
 > \ar@<+2pt>@[red][d]^{\evlcry[]
 > {\fct[R]}
 > {\evlcry[]
 > {\fct[L]}
-> {\arr[g']}}}
+> {\arr[\gamma']}}}
 > &
 > {\evlcry[]{\fct[L]}{\obj[d]}}
-> \ar[d]^{\evlcrynat[]{\ntf[\eta]}{\obj[d]}}
-> \ar@{->}@`{[]+/r+2pc/,[dd]+/r+2pc/}[dd]^{\evlcrynat[]\op{\arr[f]}}
+> \ar[d]^{\evlcry[]{\fct[L]}{\arr[\gamma]}}
+> \ar@{->}@`{[]+/r+2pc/,[dd]+/r+2pc/}[dd]^{\evlcrynat[]\op{\arr[\varphi]}}
 > \\
 > \evlcry[]{\fct[R]}
 > {\obj[c]}
@@ -970,7 +970,7 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > {\fct[L]}{\evlcry[]
 > {\fct[R]}
 > {\obj[c]}}}
-> \ar[d]^{\evlcry[]{\fct[L]}{\arr[g]}}
+> \ar[d]^{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c]}}
 > \\
 > &
 > {\evlcry[]{\fct[R]}{\obj[c]}}
@@ -983,10 +983,10 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > !R*!L{\small\color{ForestGreen}\cat[C]}\restore
 > }\end{xy}}$ 
 >
-> 为何 $\arr[g]$ 唯一呢 ? 若 $\arr[g']$ 亦满足上图 —— 即图 1 右侧部分中
-> 两条 L 形走向的红色路径的复合结果是一致的 ,  都为 $\evlcrynat[]\op{\arr[f]}$ ;
+> 为何 $\arr[\gamma]$ 唯一呢 ? 若 $\arr[\gamma']$ 亦满足上图 —— 即图 1 右侧部分中
+> 两条 L 形走向的红色路径的复合结果是一致的 ,  都为 $\evlcrynat[]\op{\arr[\varphi]}$ ;
 > 则图 2 右侧部分中的两条红色路径的复合结果也是一致的 ;
-> 如此根据下方右图即可得知 $\arr[g]=\arr[g']$ 。
+> 如此根据下方右图即可得知 $\arr[\gamma]=\arr[\gamma']$ 。
 >
 > 另一侧同理 , 这里不再赘述 。
 
@@ -999,8 +999,8 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 
 - 若对任意 $\cat$ 中对象 $\obj[c]$ 
   及对任意 $\cat[D]$ 中对象 $\obj[d]$ 
-  及对任意 $\evlcrynat[]\op{\arr[f]}:\evlbin[]{\cathom[{\cat[C]}]}{\evlcry[]{\fct[L]}{\obj[d]}}{\obj[c]}$ 始终都会
-  有唯一的 $\arr[g]:\evlbin[]{\cathom[{\cat[D]}]}{\obj[d]}{\evlcry[]{\fct[R]}{\obj[c]}}$ 使下图交换 , 
+  及对任意 $\evlcrynat[]\op{\arr[\varphi]}:\evlbin[]{\cathom[{\cat[C]}]}{\evlcry[]{\fct[L]}{\obj[d]}}{\obj[c]}$ 始终都会
+  有唯一的 $\arr[\gamma]:\evlbin[]{\cathom[{\cat[D]}]}{\obj[d]}{\evlcry[]{\fct[R]}{\obj[c]}}$ 使下图交换 , 
   
   $\qquad\vcenter{\begin{xy}\xymatrix@!C=2cm{
   {\evlcry[]{\fct[R]}{\obj[c]}}
@@ -1012,15 +1012,15 @@ $\qquad\evlbin[]{\catcong[\catSet]}
   \ar@{->}@`{[]+/u+3pc/,[ll]+/u+3pc/}[ll]_{\fct[R]}
   \\ 
   {\obj[d]}
-  \ar@[red]@{-->}[u]^[red]{\arr[g]}
+  \ar@[red]@{-->}[u]^[red]{\arr[\gamma]}
   \ar@{->}@`{[]+/d+2pc/,[r]+/d+2pc/}[r]_{\fct[L]}
   \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
   !R*!L{\small\color{ForestGreen}\cat[D]}\restore
   &  
   {\evlcry[]{\fct[L]}
     {\obj[d]}}  
-  \ar@[red]@{-->}[u]^[red]{\evlcry[]{\fct[L]}{\arr[g]}}
-  \ar@[magenta][ur]_[magenta]{\evlcrynat[]\op{\arr[f]}}
+  \ar@[red]@{-->}[u]^[red]{\evlcry[]{\fct[L]}{\arr[\gamma]}}
+  \ar@[magenta][ur]_[magenta]{\evlcrynat[]\op{\arr[\varphi]}}
   \save[].[u].[ur]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
   !R*!L{\small\color{ForestGreen}\cat}\restore
   &
@@ -1070,20 +1070,20 @@ $\qquad\evlbin[]{\catcong[\catSet]}
   
 - 若对任意 $\cat$ 中对象 $\obj[c]$ 
   及对任意 $\cat[D]$ 中对象 $\obj[d]$ 
-  及对任意 $\arr[g]:\evlbin[]{\cathom[{\cat[D]}]}{\obj[d]}{\evlcry[]{\fct[R]}{\obj[c]}}$ 始终都存在
-  唯一的 $\evlcrynat[]\op{\arr[f]}:\evlbin[]{\cathom[{\cat[C]}]}{\evlcry[]{\fct[L]}{\obj[d]}}{\obj[c]}$ 使下图交换 , 
+  及对任意 $\arr[\gamma]:\evlbin[]{\cathom[{\cat[D]}]}{\obj[d]}{\evlcry[]{\fct[R]}{\obj[c]}}$ 始终都存在
+  唯一的 $\evlcrynat[]\op{\arr[\varphi]}:\evlbin[]{\cathom[{\cat[C]}]}{\evlcry[]{\fct[L]}{\obj[d]}}{\obj[c]}$ 使下图交换 , 
 
   $\qquad\vcenter{\begin{xy}\xymatrix@!C=2cm{
   {\evlcry[]{\fct[L]}{\obj[d]}}
-  \ar@{-->}@[red][d]_[red]{\evlcrynat[]\op{\arr[f]}} 
+  \ar@{-->}@[red][d]_[red]{\evlcrynat[]\op{\arr[\varphi]}} 
   & 
   {\evlcry[]{\fct[R]}{
     \evlcry[]{\fct[L]}
       {\obj[d]}}}
-  \ar@[red]@{-->}[d]_[red]{\evlcry[]{\fct[R]}{\evlcrynat[]\op{\arr[f]}}}
+  \ar@[red]@{-->}[d]_[red]{\evlcry[]{\fct[R]}{\evlcrynat[]\op{\arr[\varphi]}}}
   &
   {\obj[d]}
-  \ar@[magenta][dl]^[magenta]{\arr[g]}  
+  \ar@[magenta][dl]^[magenta]{\arr[\gamma]}  
   \ar[l]_{\evlcrynat[]{\ntf[\eta]}{\obj[d]}}
   \ar@{->}@`{[]+/u+3pc/,[ll]+/u+3pc/}[ll]_{\fct[L]} 
   \\ 
@@ -1146,7 +1146,7 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 $\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
 {\evlcry[]{\fct[L]}{\obj[d]}}
 \ar[d]_{\evlcry[]{\fct[L]}{\evlcrynat[]{\ntf[\eta]}{\obj[d]}}}
-\ar[dr]^{\evlcrynat[]\op{\arr[f]}}
+\ar[dr]^{\evlcrynat[]\op{\arr[\varphi]}}
 \\
 {\evlcry[]{\fct[L]}
 {\evlcry[]
@@ -1171,10 +1171,10 @@ $\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
 {\fct[L]}
 {\evlcry[]
 {\fct[R]}
-{\bbox[white]{\evlcrynat[]\op{\arr[f']}}}}}} 
+{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}}}} 
 &
 {\bbox[white]{\obj[c]}}
-\ar[d]^{\bbox[white]{\evlcrynat[]\op{\arr[f']}}}
+\ar[d]^{\bbox[white]{\evlcrynat[]\op{\arr[f]}}}
 \\
 {\bbox[LightGreen]{\evlcry[]
 {\fct[L]}{\evlcry[]
