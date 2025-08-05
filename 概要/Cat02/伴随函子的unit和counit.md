@@ -874,7 +874,7 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 >\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
 > {\pla\bbox[white]{\obj[d]}}
 > \ar[r]^{\evlcrynat[]{\ntf[\eta]}
-> {\obj[c]}}
+> {\obj[d]}}
 > \ar[d]_{\bbox[white]{\arr[\gamma]}}
 > &
 > {\bbox[LightGreen]{\evlcry[]
@@ -934,7 +934,7 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
 > {\pla\obj[d]}
 > \ar[r]^{\evlcrynat[]{\ntf[\eta]}
-> {\obj[c]}}
+> {\obj[d]}}
 > \ar[d]_{\begin{array}{l}
 > \arr[\gamma]~或\\[-3pt]
 > \arr[\gamma']
@@ -1349,30 +1349,29 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 
 $\qquad\begin{array}{c}
 \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
-{\pla\bbox[white]{\obj[d]}}
+{\pla\bbox[white]{\obj[d']}}
 \ar[r]^{\evlcrynat[]{\ntf[\eta]}
-{\obj[c]}}
-\ar[d]_{\bbox[white]{\arr[g]}}
+{\obj[d']}}
+\ar[d]_{\bbox[white]{\evlcrynat[]\op{\arr[g]}}}
 &
 {\bbox[LightGreen]{\evlcry[]
 {\fct[R]}{\evlcry[]
 {\fct[L]}
-{\bbox[white]{\obj[d]}}}}}
+{\bbox[white]{\obj[d']}}}}}
 \ar[d]^{\bbox[LightGreen]{\evlcry[]
   {\fct[R]}{\evlcry[]
     {\fct[L]}
-    {\bbox[white]{\arr[g]}}}}}
+    {\bbox[white]{\evlcrynat[]\op{\arr[g]}}}}}}
 \\
-{\bbox[white]{\obj[d']}}
-\ar[r]_{\evlcrynat[]{\ntf[\eta]}
-{\evlcry{\fct[R]}{\obj[c]}}} 
+{\bbox[white]{\obj[d]}}
+\ar[r]_{\evlcrynat[]{\ntf[\eta]}{\obj[d]}} 
 \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
 !U*!D{\small\color{ForestGreen}\bbox[LightGreen]{
 \evlcry[]{\Id[{\cat[D]}]}
 {\cat[D]}}}\restore 
 &
 {\bbox[LightGreen]{\evlcry[]{\fct[R]}
-{\evlcry[]{\fct[L]}{\bbox[white]{\obj[d']}}}}}
+{\evlcry[]{\fct[L]}{\bbox[white]{\obj[d]}}}}}
 \save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
 !U*!D{\small\color{ForestGreen}\bbox[LightGreen]{
 \evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}
@@ -1382,8 +1381,7 @@ $\qquad\begin{array}{c}
 }\end{xy}}
 \\
 \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
-\evlcry[]{\fct[R]}
-{\obj[c]}
+{\obj[d]}
 \ar[r]^{\evlcrynat[]{\ntf[\eta]}
 {\evlcry{\fct[R]}{\obj[c]}}}
 \ar[dr]_{\id[{\evlcry[]{\fct[R]}{\obj[c]}}]}
