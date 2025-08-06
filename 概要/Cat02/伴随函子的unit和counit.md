@@ -141,9 +141,82 @@ $\qquad \begin{xy}\xymatrix@!C=2cm{
       {\bbox[white]{\pla\wld}}}$ 和 ${\evlbin{\cathom[{\cat[D]}]}
       {\bbox[white]{\pla\wld}}
       {\evlcry[]{\fct[R]}{\bbox[white]{\pla\wld}}}}$ 
-  间存在着一个二元的**自然同构** 。
+  间存在着一个二元的**自然同构** 
 
-假如确实有 $\fct[L]\dashv \fct[R]$ , 那么不难得知
+假如确实有 $\fct[L]\dashv \fct[R]$ ,  那么
+
+- 对任意范畴 $\cat$ 中的对象 $\obj[c]$
+  及任意范畴 $\cat[D]$ 中的对象 $\obj[d]$
+  及任意箭头 $\evlcrynat[]\op{\arr[\varphi]}: {\evlbin[]{\cathom}    {\evlcry[]{\fct[L]}{\obj[d]}}    {\obj[c]}}$ 
+  和任意的箭头 $\arr[\gamma] : {\evlbin[]{\cathom[{\cat[D]}]}    {\obj[d]}    {\evlcry[]{\fct[R]}{\obj[c]}}}$ 
+  可用下述相继式描述它们的关系 :
+  
+  $\qquad\begin{prooftree}
+  \AXC{$
+    \evlcry[]{\fct[L]}{\obj[d]}
+    \adjarrowu[{\evlcrynat[]\op{\arr[f]}}]
+    \obj[c]$}
+  \UIC{$
+    \obj[d]
+    \adjarrowd[{\arr[g]}]
+    \evlcry[]{\fct[R]}{\obj[c]}
+  $}
+  \end{prooftree}$
+
+此外由于 $\fct[L]\dashv \fct[R]$ 蕴含一个
+二元自然同构 , 因此便会有
+
+- 对任意范畴 $\cat$ 中的对象 $\obj[c]$
+  及任意范畴 $\cat[D]$ 中的对象 $\obj[d]$ :
+  - $\evlbin[]{\catcong[\catSet]}
+    {\evlbin{\cathom}
+    {\evlcry[]{\fct[L]}{\obj[d]}}
+    {\obj[c]}}
+    {\evlbin{\cathom[{\cat[D]}]}
+    {\obj[d]}
+    {\evlcry[]{\fct[R]}{\obj[c]}}}$
+  
+  - 对任意的 $\arr[f]:\evlbin[]\cathom{\obj[c]}{\obj[c']}$ 以及
+    及任意的 $\evlcrynat[]\op{\arr[g]}:\evlbin[]{\cathom[{\evlcrynat[]\op{\cat[D]}}]}{\obj[d']}{\obj[d]}$ 
+    有下述相继式 :
+    - $\begin{prooftree}
+      \AXC{$
+      \evlcry[]{\fct[L]}{\obj[d]}
+      \adjarrowu[{\evlcrynat[]\op{\arr[\varphi]}}]
+      \obj[c]
+      \adjarrowu[{\arr[f]}]
+      \obj[c']
+      $}
+      \UIC{$
+      \obj[d]
+      \adjarrowd[{\arr[\gamma]}]
+      \evlcry[]{\fct[R]}{\obj[c]}
+      \adjarrowd[{\evlcry[]{\fct[R]}{\arr[f]}}]
+      \evlcry[]{\fct[R]}{\obj[c']}
+      $}
+      \end{prooftree}$ 
+  
+    - $\begin{prooftree}
+      \AXC{$
+        \evlcry[]{\fct[L]}{\obj[d']}
+        \adjarrowu[{\evlcry[]{\fct[L]}{\evlcrynat[]\op{\arr[g]}}}]
+        \evlcry[]{\fct[L]}{\obj[d]}
+        \adjarrowu[{\evlcrynat[]\op{\arr[\varphi]}}]
+        \obj[c]$}
+      \UIC{$
+        \obj[d']
+        \adjarrowd[{\evlcrynat[]\op{\arr[g]}}]
+        \obj[d]
+        \adjarrowd[{\arr[\gamma]}]
+        \evlcry[]{\fct[R]}{\obj[c]}
+      $}
+      \end{prooftree}$ 
+  
+
+后面你会发现刚才的性质可
+构成伴随函子的第四种定义 。
+
+现在开始证明一系列的性质 :
 
 <div style="page-break-after: always"></div>
 
@@ -668,8 +741,8 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 那么
 
 - 对任意 $\cat$ 中对象 $\obj[c]$ 
-  及任意 $\cat[D]$ 中对象 $\obj[d]$ 
-  及任意 $\evlcrynat[]\op{\arr[\varphi]}:\evlbin[]{\cathom[{\cat[C]}]}{\evlcry[]{\fct[L]}{\obj[d]}}{\obj[c]}$ 始终存在
+  及任意 $\cat[D]$ 中对象 $\obj[d]$ :
+  对任意 $\evlcrynat[]\op{\arr[\varphi]}:\evlbin[]{\cathom[{\cat[C]}]}{\evlcry[]{\fct[L]}{\obj[d]}}{\obj[c]}$ 始终存在
   唯一的 $\arr[\gamma]:\evlbin[]{\cathom[{\cat[D]}]}{\obj[d]}{\evlcry[]{\fct[R]}{\obj[c]}}$ 使下图交换 。
   如此有 $\evlbin[]{\catcong[\catSet]}{\evlbin{\cathom}
       {\evlcry[]{\fct[L]}{\obj[d]}}
@@ -1028,7 +1101,7 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 ### 伴随函子的第三种定义
 
 假设我们不知道 $\fct[L]$ 和 $\fct[R]$ 构成一对伴随函子并且有自然变换 
- $\ntf[\varepsilon]:\evlbin[]{\cathom[{\evlbin[]{\cathom[\catCat]}{\cat[C]}{\cat[C]}}]}{\evlbin[]{\catcirc[\catCat]}{\fct[R]}{\fct[L]}}{\Id[{\cat[C]}]}$ 和 $\ntf[\eta]:\evlbin[]{\cathom[{\evlbin[]{\cathom[\catCat]}{\cat[D]}{\cat[D]}}]}{\Id[{\cat[D]}]}{\evlbin[]{\catcirc[\catCat]}{\fct[L]}{\fct[R]}}$ , 那么我们有
+ $\ntf[\varepsilon]:\evlbin[]{\cathom[{\evlbin[]{\cathom[\catCat]}{\cat[C]}{\cat[C]}}]}{\evlbin[]{\catcirc[\catCat]}{\fct[R]}{\fct[L]}}{\Id[{\cat[C]}]}$ 和 $\ntf[\eta]:\evlbin[]{\cathom[{\evlbin[]{\cathom[\catCat]}{\cat[D]}{\cat[D]}}]}{\Id[{\cat[D]}]}{\evlbin[]{\catcirc[\catCat]}{\fct[L]}{\fct[R]}}$ , 那么会有
 
 - 若对任意 $\cat$ 中对象 $\obj[c]$ 
   及对任意 $\cat[D]$ 中对象 $\obj[d]$ 
