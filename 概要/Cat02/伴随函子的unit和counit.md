@@ -924,7 +924,7 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > \save[].[u].[ul]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
 > !R*!L{\small\color{ForestGreen}\cat[D]}\restore
 > }\end{xy}}
-> \end{array} \vcenter{{}\Longrightarrow{}}\qquad 
+> \end{array} \vcenter{{}\Longrightarrow{}}\quad 
 > \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
 > {\pla\obj[d]}
 > \ar[r]^{\evlcrynat[]{\ntf[\eta]}
@@ -1179,52 +1179,52 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 > 只证上页第一条定理 , 另一个雷同 。
 >
 > 由定理的假设可知 $\evlbin[]{\catcong[\catSet]}
->   {\evlbin{\cathom}
->     {\evlcry[]{\fct[L]}{\obj[d]}}
->     {\obj[c]}}
->   {\evlbin{\cathom[{\cat[D]}]}
->     {\obj[d]}
->     {\evlcry[]{\fct[R]}{\obj[c]}}}$ ; 因此存在同构
+> {\evlbin{\cathom}
+> {\evlcry[]{\fct[L]}{\obj[d]}}
+> {\obj[c]}}
+> {\evlbin{\cathom[{\cat[D]}]}
+> {\obj[d]}
+> {\evlcry[]{\fct[R]}{\obj[c]}}}$ ; 因此存在同构
 >
 > $\qquad\begin{aligned}[t]
 > \ntf[\phi_2]:{}&
 > \evlbin[]{\cathom[{
->   \evlbin[]\cathom
->     {\evlbin\cattimes{\cat[D]}{\cat}}
->     {\catSet}}]}
->   {\evlbin{\cathom[{\cat[D]}]}
->     {\wld}
->     {\evlcry[]{\fct[R]}{\wld}}}
->   {\evlbin{\cathom}
->     {\evlcry[]{\fct[L]}{\wld}}
->     {\wld}}
+> \evlbin[]\cathom
+> {\evlbin\cattimes{\cat[D]}{\cat}}
+> {\catSet}}]}
+> {\evlbin{\cathom[{\cat[D]}]}
+> {\wld}
+> {\evlcry[]{\fct[R]}{\wld}}}
+> {\evlbin{\cathom}
+> {\evlcry[]{\fct[L]}{\wld}}
+> {\wld}}
 > \\
 > \evlcrynat[]{\ntf[\phi_2]}{\evlbin\cons{\wld}{\bbox[pink]{\obj[c]}}}:{}&
 > \evlbin[]{\cathom[{
->   \evlbin[]\cathom
->     {\cat[D]}
->     {\catSet}}]}
->   {\evlbin{\cathom[{\cat[D]}]}
->     {\wld}
->     {\evlcry[]{\fct[R]}{\obj[c]}}}
->   {\evlbin{\cathom}
->     {\evlcry[]{\fct[L]}{\wld}}
->     {\obj[c]}}
+> \evlbin[]\cathom
+> {\cat[D]}
+> {\catSet}}]}
+> {\evlbin{\cathom[{\cat[D]}]}
+> {\wld}
+> {\evlcry[]{\fct[R]}{\obj[c]}}}
+> {\evlbin{\cathom}
+> {\evlcry[]{\fct[L]}{\wld}}
+> {\obj[c]}}
 > \\
 > \evlcrynat[]{\ntf[\phi_2]}{\evlbin\cons{\bbox[pink]{\obj[d]}}{\wld}}:{}&
 > \evlbin[]{\cathom[{
->   \evlbin[]\cathom
->     {\cat}
->     {\catSet}}]}
->   {\evlbin{\cathom[{\cat[D]}]}
->     {\obj[d]}
->     {\evlcry[]{\fct[R]}{\wld}}}
->   {\evlbin{\cathom}
->     {\evlcry[]{\fct[L]}{\obj[d]}}
->     {\wld}}
+> \evlbin[]\cathom
+> {\cat}
+> {\catSet}}]}
+> {\evlbin{\cathom[{\cat[D]}]}
+> {\obj[d]}
+> {\evlcry[]{\fct[R]}{\wld}}}
+> {\evlbin{\cathom}
+> {\evlcry[]{\fct[L]}{\obj[d]}}
+> {\wld}}
 > \end{aligned}$
 >
-> - 先验证 $\evlcrynat[]{\ntf[\phi_2]}{\evlbin\cons{\wld}{\bbox[pink]{\obj[c]}}}$ 构成自然变换 。和上上页一样也是拼图 :
+> - 先验证 $\evlcrynat[]{\ntf[\phi_2]}{\evlbin\cons{\bbox[pink]{\obj[d]}}{\wld}}$ 构成自然变换 。和上上页一样也是拼图 :
 >
 >   $\qquad\begin{array}{c}
 >   \vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
@@ -1285,12 +1285,12 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 >   {\obj[d]}
 >   \ar[d]_{\arr[\gamma]}
 >   \ar@{->}@`{[]+/u+2pc/,[r]+/u+2pc/}[r]^{\fct[L]}
->   \ar@{->}@`{[]+/l+2pc/,[dd]+/l+2pc/}[dd]_{\evlcry[]{\catcirc[{\cat[D]}]}{\arr[\gamma]}{\evlcry[]{\fct[R]}{\arr[f]}}}
+>   \ar@{->}@`{[]+/l+2pc/,[dd]+/l+2pc/}[dd]_{\evlbin[]{\catcirc[{\cat[D]}]}{\arr[\gamma]}{\evlcry[]{\fct[R]}{\arr[f]}}}
 >   &
 >   {\evlcry[]{\fct[L]}{\obj[d]}}
 >   \ar[d]_{\evlcry[]{\fct[L]}{\arr[\gamma]}}
 >   \ar[dr]^{\evlcrynat[]\op{\arr[\varphi]}}
->   \ar@[red]@{->}@`{[]+/l+2pc/,[dd]+/l+2pc/}[dd]_{\evlcry[]{\fct[L]}{\evlbin{\catcirc[{\cat[D]}]}
+>   \ar@{->}@`{[]+/l+2pc/,[dd]+/l+2pc/}[dd]_{\evlcry[]{\fct[L]}{\evlbin{\catcirc[{\cat[D]}]}
 >   {\arr[\gamma]}
 >   {\evlcry[]{\fct[R]}{\arr[f]}}}}
 >   \\
@@ -1348,134 +1348,111 @@ $\qquad\evlbin[]{\catcong[\catSet]}
 >   {\evlcry[]{\fct[R]}{\bbox[white]{\obj[c]}}}
 >   \ar@[gray][dd]^{\evlcry[]{\fct[R]}{\arr[f]}}
 >   &
->   {\obj[c]}
+>   {\bbox[white]{\obj[c]}}
 >   \ar@[gray][dd]_{\arr[f]}
 >   \\
 >   {\obj[d]}
 >   \ar@[gray][ur]|(.5)*\cir<2pt>{}="midlu"^{\arr[\gamma]}
->   \ar@[gray][dr]|(.5)*\cir<2pt>{}="midld"_{\evlcry[]{\catcirc[{\cat[D]}]}{\arr[\gamma]}{\evlcry[]{\fct[R]}{\arr[f]}}}
+>   \ar@[gray][dr]|(.5)*\cir<2pt>{}="midld"_{\evlbin[]{\catcirc[{\cat[D]}]}{\arr[\gamma]}{\evlcry[]{\fct[R]}{\arr[f]}}}
 >   \ar"midlu";"midld"|{\bbox[LightGreen]{\evlbin[]\cathom{\obj[d]}{\evlcry[]{\fct[R]}{\bbox[white]{\arr[f]}}}}}
 >   &&&
 >   {\evlcry[]{\fct[L]}{\obj[d]}}
 >   \ar@[gray][ul]|(.5)*\cir<2pt>{}="midru"_{\evlcrynat[]\op{\arr[\varphi]}}
->   \ar@[gray][dl]|(.5)*\cir<2pt>{}="midrd"^{\evlcry[]\catcirc{\evlcrynat[]\op{\arr[\varphi]}}{\bbox[white]{\arr[f]}}}
+>   \ar@[gray][dl]|(.5)*\cir<2pt>{}="midrd"^{\evlbin[]\catcirc{\evlcrynat[]\op{\arr[\varphi]}}{\bbox[white]{\arr[f]}}}
 >   \ar"midru";"midrd"|{\bbox[LightGreen]{\evlbin[]\cathom{\evlcry[]{\fct[L]}{\obj[d]}}{\bbox[white]{\arr[f]}}}}
 >   \\
 >   &
 >   {\evlcry[]{\fct[R]}{\bbox[white]{\obj[c']}}}
 >   &
->   {\obj[c']}
+>   {\bbox[white]{\obj[c']}}
 >   \ar"midlu";"midru"|{\evlcrynat[]{\ntf[\phi_2]}{\evlbin\cons{\obj[d]}{\bbox[white]{\obj[c]}}}}
 >   \ar"midld";"midrd"|{\evlcrynat[]{\ntf[\phi_2]}{\evlbin\cons{\obj[d]}{\bbox[white]{\obj[c']}}}}
 >   }\end{xy}}$ 
 >
-> - 再验证 $\evlcrynat[]{\ntf[\phi_2]}{\evlbin\cons{\bbox[pink]{\obj[d]}}{\wld}}$ 构成自然变换 。和上上页一样也是拼图 :
-
-$\qquad\begin{array}{c}
-\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
-{\pla\bbox[white]{\obj[d']}}
-\ar[r]^{\evlcrynat[]{\ntf[\eta]}
-{\obj[d']}}
-\ar[d]_{\bbox[white]{\evlcrynat[]\op{\arr[g]}}}
-&
-{\bbox[LightGreen]{\evlcry[]
-{\fct[R]}{\evlcry[]
-{\fct[L]}
-{\bbox[white]{\obj[d']}}}}}
-\ar[d]^{\bbox[LightGreen]{\evlcry[]
-  {\fct[R]}{\evlcry[]
-    {\fct[L]}
-    {\bbox[white]{\evlcrynat[]\op{\arr[g]}}}}}}
-\\
-{\bbox[white]{\obj[d]}}
-\ar[r]_{\evlcrynat[]{\ntf[\eta]}{\obj[d]}} 
-\save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
-!U*!D{\small\color{ForestGreen}\bbox[LightGreen]{
-\evlcry[]{\Id[{\cat[D]}]}
-{\cat[D]}}}\restore 
-&
-{\bbox[LightGreen]{\evlcry[]{\fct[R]}
-{\evlcry[]{\fct[L]}{\bbox[white]{\obj[d]}}}}}
-\save[].[u]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
-!U*!D{\small\color{ForestGreen}\bbox[LightGreen]{
-\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}
-{\cat[D]}}}}\restore 
-\save[].[u].[l]*+<10pt>[F-:<8pt>:ForestGreen]\frm{}
-!R*!L{\small\color{ForestGreen}\cat[D]}\restore 
-}\end{xy}}
-\\
-\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
-{\obj[d]}
-\ar[r]^{\evlcrynat[]{\ntf[\eta]}
-{\evlcry{\fct[R]}{\obj[c]}}}
-\ar[dr]_{\id[{\evlcry[]{\fct[R]}{\obj[c]}}]}
-&
-{\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\obj[d]}}}
-\ar[d]^{\evlcry[]{\fct[R]}{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c]}}}
-\\
-&
-{\evlcry[]{\fct[R]}{\obj[c]}}
-\save[].[u].[ul]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
-!R*!L{\small\color{ForestGreen}\cat[D]}\restore
-}\end{xy}}
-\end{array} \vcenter{{}\Longrightarrow{}}\qquad 
-\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
-{\pla\obj[d]}
-\ar[r]^{\evlcrynat[]{\ntf[\eta]}
-{\obj[c]}}
-\ar[d]_{\begin{array}{l}
-\arr[\gamma]~或\\[-3pt]
-\arr[\gamma']
-\end{array}}
-\ar@`{[]+/u+3pc/,[rr]+/u+3pc/}[rr]^{\fct[L]}
-&
-{\evlcry[]
-{\fct[R]}{\evlcry[]
-{\fct[L]}
-{\obj[d]}}}
-\ar@[red][d]^{\begin{array}{l}
-\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\arr[\gamma]}}~或\\[-3pt]
-\evlcry[]{\fct[R]}{\evlcry[]{\fct[L]}{\arr[\gamma']}}
-\end{array}}
-\ar@`{[]+/r+2pc/,[dd]+/r+2pc/}[dd]^{\begin{array}{l}
-\evlcry[]{\fct[R]}{\evlcrynat[]\op{\arr[\varphi]}}%~或\\[-3pt]
-%\evlcrynat[]\op{\arr[\varphi']}
-\end{array}}
-&
-{\evlcry[]{\fct[L]}{\obj[d]}}
-\ar[d]^{\evlcry[]{\fct[L]}{\arr[\gamma]}}
-\ar@{->}@`{[]+/r+2pc/,[dd]+/r+2pc/}[dd]^{\begin{array}{l}
-\evlcrynat[]\op{\arr[\varphi]}%~或\\[-3pt]
-%\evlcrynat[]\op{\arr[\varphi']}
-\end{array}}
-\\
-\evlcry[]{\fct[R]}
-{\obj[c]}
-\ar[r]|{\evlcrynat[]{\ntf[\eta]}
-{\evlcry{\fct[R]}{\obj[c]}}}
-\ar[dr]_{\id[{\evlcry[]{\fct[R]}{\obj[c]}}]}
-&
-{\evlcry[]{\fct[R]}
-{\evlcry[]
-{\fct[L]}
-{\evlcry[]
-{\fct[R]}
-{\obj[c]}}}}
-\ar@[red][d]^{\evlcry[]{\fct[R]}{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c]}}}
-&
-{\evlcry[]
-{\fct[L]}{\evlcry[]
-{\fct[R]}
-{\obj[c]}}}
-\ar[d]^{\evlcrynat[]{\ntf[\varepsilon]}{\obj[c]}}
-\\
-&
-{\evlcry[]{\fct[R]}{\obj[c]}}
-\save[].[u].[ul].[uul]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
-!R*!L{\small\color{ForestGreen}\cat[D]}\restore
-&
-{\obj[c]}
-\ar@`{[]+/d+2pc/,[l]+/d+2pc/}[l]^{\fct[R]}
-\save[].[u].[uu]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
-!R*!L{\small\color{ForestGreen}\cat[C]}\restore
-}\end{xy}}$
+> - 再验证 $\evlcrynat[]{\ntf[\phi_2]}{\evlbin\cons{\wld}{\bbox[pink]{\obj[c]}}}$ 构成自然变换 : 
+>
+>   $\qquad\vcenter{\begin{xy}\xymatrix@!R=1cm@!C=2cm{
+>   {\obj[d']}
+>   \ar[d]_{\evlcrynat[]\op{\arr[g]}}
+>   \ar@`{[]+/l+2pc/,[dd]+/l+2pc/}[dd]_{
+>       {\evlbin[]{\catcirc[{\cat[D]}]}
+>         {\evlcrynat[]\op{\arr[g]}}
+>         {\arr[\gamma]}}}
+>   &
+>   {\evlcry[]{\fct[L]}{\obj[d']}}
+>   \ar[d]_{\evlcry[]{\fct[L]}{\evlcrynat[]\op{\arr[g]}}}
+>   \ar@`{[]+/l+2pc/,[dd]+/l+2pc/}[dd]_{
+>     \evlcry[]{\fct[L]}
+>       {\evlbin{\catcirc[{\cat[D]}]}
+>         {\evlcrynat[]\op{\arr[g]}}
+>         {\arr[\gamma]}}}
+>   \ar[ddr]^{\evlbin[]\catcirc{\evlcry[]{\fct[L]}{\evlcrynat[]\op{\arr[g]}}}{\evlcrynat[]\op{\arr[\varphi]}}}
+>   \\
+>   {\obj[d]}
+>   \ar[d]_{\arr[\gamma]}
+>   &
+>   {\evlcry[]{\fct[L]}{\obj[d]}}
+>   \ar[d]_{\evlcry[]{\fct[L]}{\arr[\gamma]}}
+>   \ar[dr]^{\evlcrynat[]\op{\arr[\varphi]}}
+>   \\
+>   {\evlcry[]
+>   {\fct[R]}
+>   {\obj[c]}}
+>   \save[].[u].[uu]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
+>   !R*!L{\small\color{ForestGreen}\cat[D]}\restore
+>   &
+>   {\evlcry[]{\fct[L]}
+>   {\evlcry[]
+>   {\fct[R]}
+>   {\obj[c]}}}
+>   \ar[r]_{\evlcrynat[]{\ntf[\varepsilon]}
+>   {\obj[c]}} 
+>   &
+>   {\obj[c]}
+>   \save[].[l].[luu]*+<3pt>[F-:<5pt>:ForestGreen]\frm{}
+>   !R*!L{\small\color{ForestGreen}\cat}\restore
+>   }\end{xy}}$ 
+>
+>   如此也就证明了下方左侧的相继式 , 而这相当于下方右图 。
+>
+>   $\qquad \begin{prooftree}
+>   \AXC{$
+>     \evlcry[]{\fct[L]}{\obj[d']}
+>     \adjarrowu[{\evlcry[]{\fct[L]}{\evlcrynat[]\op{\arr[g]}}}]
+>     \evlcry[]{\fct[L]}{\obj[d]}
+>     \adjarrowu[{\evlcrynat[]\op{\arr[\varphi]}}]
+>     \obj[c]$}
+>   \UIC{$
+>     \obj[d']
+>     \adjarrowd[{\evlcrynat[]\op{\arr[g]}}]
+>     \obj[d]
+>     \adjarrowd[{\arr[\gamma]}]
+>     \evlcry[]{\fct[R]}{\obj[c]}
+>   $}
+>   \end{prooftree}\qquad \vcenter{\begin{xy}\xymatrix@!R=.5cm@!C=1cm{
+>   &
+>   {\bbox[white]{\obj[d]}}
+>   \ar@{<-}@[gray][dd]^{\evlcrynat[]\op{\arr[g]}}
+>   &
+>   {\evlcry[]{\fct[L]}{\bbox[white]{\obj[d]}}}
+>   \ar@{<-}@[gray][dd]_{\evlcry[]{\fct[L]}{\evlcrynat[]\op{\arr[g]}}}
+>   \\
+>   {\evlcry[]{\fct[R]}{\bbox[white]{\obj[c]}}}
+>   \ar@{<-}@[gray][ur]|(.5)*\cir<2pt>{}="midlu"^{\arr[\gamma]}
+>   \ar@{<-}@[gray][dr]|(.5)*\cir<2pt>{}="midld"_{\evlbin[]{\catcirc[{\cat[D]}]}{\evlcrynat[]\op{\arr[g]}}{\arr[\gamma]}}
+>   \ar"midlu";"midld"|{\bbox[LightGreen]{\evlbin[]\cathom{\bbox[white]{\evlcrynat[]\op{\arr[g]}}}{\evlcry[]{\fct[R]}{\obj[c]}}}}
+>   &&&
+>   {\obj[c]}
+>   \ar@{<-}@[gray][ul]|(.5)*\cir<2pt>{}="midru"_{\evlcrynat[]\op{\arr[\varphi]}}
+>   \ar@{<-}@[gray][dl]|(.5)*\cir<2pt>{}="midrd"^{\evlbin[]\catcirc{\evlcry[]{\fct[L]}{\evlcrynat[]\op{\arr[g]}}}{\evlcrynat[]\op{\arr[\varphi]}}}
+>   \ar"midru";"midrd"|{\bbox[LightGreen]{\evlbin[]\cathom{\evlcry[]{\fct[L]}{\bbox[white]{\evlcrynat[]\op{\arr[g]}}}}{\arr[c]}}}
+>   \\
+>   &
+>   {\bbox[white]{\obj[d']}}
+>   &
+>   {\evlcry[]{\fct[L]}{\bbox[white]{\obj[d']}}}
+>   \ar"midlu";"midru"|{\evlcrynat[]{\ntf[\phi_2]}{\evlbin\cons{\bbox[white]{\obj[d]}}{\obj[c]}}}
+>   \ar"midld";"midrd"|{\evlcrynat[]{\ntf[\phi_2]}{\evlbin\cons{\bbox[white]{\obj[d']}}{\obj[c]}}}
+>   }\end{xy}}$ 
+>
+> 如此 $\phi_2$ 便构成了一个二元的自然同构 。即证 。
